@@ -9,6 +9,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 nav:
+  - Home: 'index.md'
   - Algebra:
     - '1. Macierze i operacje': '1_Algebra/01_macierze_i_operacje.md'
     - '2. Wyznaczniki': '1_Algebra/02_wyznaczniki.md'
