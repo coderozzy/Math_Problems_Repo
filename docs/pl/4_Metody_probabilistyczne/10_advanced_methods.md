@@ -106,4 +106,9 @@ Dla próby prostej $x_1, ..., x_n$ z rozkładu wykładniczego (czas bezawaryjnej
 ## Zadanie 10
 Mamy 3 serwery. Chcemy sprawdzić, czy działają tak samo stabilnie (czy mają taką samą wariancję czasów odpowiedzi), zanim porównamy ich średnie czasy. Wariancje z prób wynoszą: $s_1^2=1.4, \ s_2^2=1.8, \ s_3^2=1.2$.
 
-Zweryfikować hipotezę $H_0: \sigma_1^2 = \sigma_2^2 = \sigma_3^2$ (np. testem Bartletta).
+Liczebności prób dla podanych wariancji są następujące:
+* Serwer 1 ($s_1^2 = 1.4$): $n_1 = 20$
+* Serwer 2 ($s_2^2 = 1.8$): $n_2 = 20$
+* Serwer 3 ($s_3^2 = 1.2$): $n_3 = 20$
+
+Zweryfikować hipotezę $H_0: \sigma_1^2 = \sigma_2^2 = \sigma_3^2$ (np. testem Bartletta) przy $\alpha=0.05$.

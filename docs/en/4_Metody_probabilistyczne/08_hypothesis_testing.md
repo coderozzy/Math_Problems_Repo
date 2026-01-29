@@ -40,7 +40,9 @@ The results of a 5-element sample are: $0.18; 0.56; 0.87; 1.37; 2.46$.
 At the significance level $\alpha=0.05$, verify the hypothesis that this sample comes from a population with an exponential distribution $f(x) = e^{-x}$ for $x>0$.
 
 ## Task 8
-A sample of $n=20$ of a certain feature (e.g., application response time) was taken. The values were ordered in ascending order.
+A sample of $n=20$ of a certain feature (e.g., application response time) was taken. The values were ordered in ascending order:
+$$121.3, 124.1, 128.8, 134.8, 136.4, 141.6, 143.0, 143.0, 143.0, 146.5,$$
+$$146.5, 147.9, 153.6, 154.7, 157.5, 158.1, 159.7, 161.5, 172.8, 173.7$$
 
 Verify the hypothesis of normality of the distribution at the level $\alpha=0.10$, using the Shapiro-Wilk test.
 

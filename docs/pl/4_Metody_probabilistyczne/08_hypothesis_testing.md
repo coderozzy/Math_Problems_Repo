@@ -40,7 +40,9 @@ Wynikami 5-elementowej próby są: $0,18; 0,56; 0,87; 1,37; 2,46$.
 Na poziomie istotności $\alpha=0,05$ zweryfikować hipotezę, że próba ta pochodzi z populacji o rozkładzie wykładniczym $f(x) = e^{-x}$ dla $x>0$.
 
 ## Zadanie 8
-Pobrano próbkę $n=20$ pewnej cechy (np. czas reakcji aplikacji). Wartości uporządkowano rosnąco.
+Pobrano próbkę $n=20$ pewnej cechy (np. czas reakcji aplikacji). Wartości uporządkowano rosnąco:
+$$121.3, 124.1, 128.8, 134.8, 136.4, 141.6, 143.0, 143.0, 143.0, 146.5,$$
+$$146.5, 147.9, 153.6, 154.7, 157.5, 158.1, 159.7, 161.5, 172.8, 173.7$$
 
 Zweryfikować hipotezę o normalności rozkładu na poziomie $\alpha=0,10$, stosując test Shapiro-Wilka.
 
