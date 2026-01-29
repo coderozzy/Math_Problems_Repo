@@ -1,12 +1,15 @@
 # TASK LIST NO. 10: Advanced Statistical Methods
 
-## Task 1
-The execution times of a certain task were measured. The results were ordered in the sequence they were received (in time). Then, for each result, it was determined whether it is above ($a$) or below ($b$) the median.
+## Task 1 (Runs Test - Randomness of a Sample)
+A sample of size $n=20$ of a certain feature $X$ was taken. The values, ordered according to the sequence of observation (in time), are as follows:
+$$15.79, 15.84, 16.28, 16.33, 16.38, 16.41, 16.75,$$
+$$16.87, 16.98, 17.00, 17.00, 17.35, 17.48, 17.56,$$
+$$17.98, 18.12, 18.28, 18.28, 18.32, 18.53.$$
 
-A sequence of symbols was obtained:
-$a, a, b, b, a, a, a, b, b, b, b, a, a, b, ...$
-
-Verify the hypothesis that the sample is random (i.e., the results do not depend on time/order), using the **runs test**.
+a) Determine the median $m_e$ of this sample.
+b) Create a sequence of symbols, writing $a$ if $x_i < m_e$ and $b$ if $x_i > m_e$ (elements equal to the median are omitted).
+c) Verify the hypothesis of the randomness of the sample (lack of trend/cyclicity) using the **runs test** at a significance level of $\alpha=0.05$.
+*(Data from Task 3.87, Krysicki Part II, p. 143)*.
 
 ## Task 2
 We have two sorting algorithms (A and B). 5 independent time measurements were performed for each of them. The results do not follow a normal distribution (outliers are present).

@@ -24,12 +24,24 @@ $$
 Calculate the correlation coefficient $r$ and the means $\bar{x}$ and $\bar{y}$.
 
 ## Task 3
-For a population in which the investigated features $(X, Y)$ have a two-dimensional normal distribution (e.g., processor temperature vs. its clock speed), a sample was taken:
-$(3, 3), (5, 3), (6, 4), (5, 8), (7, 5), (8, 6), (8, 9), (5, 4), (6, 5)...$ (full data in the set).
+For a population in which the studied features $(X, Y)$ have a two-dimensional normal distribution, a sample of 10 elements was taken. The measurement results are listed in the table:
 
-Determine the equation of the linear regression line $y = ax + b$ of the second kind (i.e., regression of $Y$ with respect to $X$).
+| Measurement No. ($i$) | $x_i$ | $y_i$ |
+| :---: | :---: | :---: |
+| 1 | 38.5 | 39.5 |
+| 2 | 41.1 | 42.1 |
+| 3 | 37.8 | 38.0 |
+| 4 | 36.0 | 36.4 |
+| 5 | 32.2 | 34.0 |
+| 6 | 36.8 | 34.5 |
+| 7 | 33.5 | 32.5 |
+| 8 | 35.3 | 36.4 |
+| 9 | 31.1 | 37.5 |
+| 10 | 42.5 | 41.5 |
 
-*Hint: Use the least squares method.*
+a) Construct a **scatter plot** (correlation diagram).
+b) Determine the equation of the linear regression line of $Y$ on $X$ ($y = ax + b$) using the **method of least squares**.
+*(Data based on Table 4.1, Krysicki Part II, p. 149)*.
 
 ## Task 4
 Using the regression line equation determined in Task 3, estimate the predicted value of feature $Y$ (e.g., clock speed) if feature $X$ (temperature) takes the value $x=10$.

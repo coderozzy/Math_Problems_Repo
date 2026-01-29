@@ -1,12 +1,15 @@
 # LISTA ZADAŃ NR 10: Zaawansowane metody statystyczne
 
-## Zadanie 1
-Zmierzono czasy wykonania pewnego zadania. Uporządkowano wyniki w kolejności ich otrzymywania (w czasie). Następnie dla każdego wyniku określono, czy jest on powyżej ($a$) czy poniżej ($b$) mediany.
+## Zadanie 1 (Test serii - losowość próby)
+Pobrano próbkę o liczności $n=20$ pewnej cechy $X$. Wartości uporządkowane według kolejności pobierania (w czasie) są następujące:
+$$15.79, 15.84, 16.28, 16.33, 16.38, 16.41, 16.75,$$
+$$16.87, 16.98, 17.00, 17.00, 17.35, 17.48, 17.56,$$
+$$17.98, 18.12, 18.28, 18.28, 18.32, 18.53.$$
 
-Otrzymano ciąg symboli:
-$a, a, b, b, a, a, a, b, b, b, b, a, a, b, ...$
-
-Zweryfikować hipotezę, że próba jest losowa (tzn. wyniki nie zależą od czasu/kolejności), stosując **test serii**.
+a) Wyznaczyć medianę $m_e$ tej próby.
+b) Utworzyć ciąg symboli, wpisując $a$, gdy $x_i < m_e$ oraz $b$, gdy $x_i > m_e$ (elementy równe medianie pomijamy).
+c) Zweryfikować hipotezę o losowości pobrania tej próby (brak trendu/cykliczności), stosując **test serii** na poziomie istotności $\alpha=0.05$.
+*(Dane pochodzą z Zadania 3.87, Krysicki Cz. II, str. 143)*.
 
 ## Zadanie 2
 Mamy dwa algorytmy sortowania (A i B). Wykonano po 5 niezależnych pomiarów czasu dla każdego z nich. Wyniki nie mają rozkładu normalnego (występują elementy odstające).

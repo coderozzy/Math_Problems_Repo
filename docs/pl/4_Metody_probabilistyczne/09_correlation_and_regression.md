@@ -24,12 +24,24 @@ $$
 Obliczyć współczynnik korelacji $r$ oraz średnie $\bar{x}$ i $\bar{y}$.
 
 ## Zadanie 3
-Dla populacji, w której badane cechy $(X, Y)$ mają dwuwymiarowy rozkład normalny (np. temperatura procesora a jego taktowanie), pobrano próbkę:
-$(3, 3), (5, 3), (6, 4), (5, 8), (7, 5), (8, 6), (8, 9), (5, 4), (6, 5)...$ (pełne dane w zbiorze).
+Dla populacji, w której badane cechy $(X, Y)$ mają dwuwymiarowy rozkład normalny, pobrano 10-elementową próbkę. Wyniki pomiarów zestawiono w tabeli:
 
-Wyznaczyć równanie prostej regresji liniowej $y = ax + b$ drugiego rodzaju (czyli regresji $Y$ względem $X$).
+| Nr pomiaru ($i$) | $x_i$ | $y_i$ |
+| :---: | :---: | :---: |
+| 1 | 38,5 | 39,5 |
+| 2 | 41,1 | 42,1 |
+| 3 | 37,8 | 38,0 |
+| 4 | 36,0 | 36,4 |
+| 5 | 32,2 | 34,0 |
+| 6 | 36,8 | 34,5 |
+| 7 | 33,5 | 32,5 |
+| 8 | 35,3 | 36,4 |
+| 9 | 31,1 | 37,5 |
+| 10 | 42,5 | 41,5 |
 
-*Wskazówka: Wykorzystać metodę najmniejszych kwadratów.*
+a) Sporządzić diagram korelacyjny (wykres rozrzutu).
+b) Wyznaczyć równanie prostej regresji liniowej $Y$ względem $X$ ($y = ax + b$) metodą najmniejszych kwadratów.
+*(Dane na podstawie Tablicy 4.1, Krysicki Cz. II, str. 149)*.
 
 ## Zadanie 4
 Wykorzystując równanie prostej regresji wyznaczone w Zadaniu 3, oszacować przewidywaną wartość cechy $Y$ (np. taktowanie), jeśli cecha $X$ (temperatura) przyjmie wartość $x=10$.
