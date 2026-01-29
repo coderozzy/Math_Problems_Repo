@@ -2,8 +2,11 @@
 
 ## Task 1 (Runs Test - Randomness of a Sample)
 A sample of size $n=20$ of a certain feature $X$ was taken. The values, ordered according to the sequence of observation (in time), are as follows:
+
 $$15.79, 15.84, 16.28, 16.33, 16.38, 16.41, 16.75,$$
+
 $$16.87, 16.98, 17.00, 17.00, 17.35, 17.48, 17.56,$$
+
 $$17.98, 18.12, 18.28, 18.28, 18.32, 18.53.$$
 
 a) Determine the median $m_e$ of this sample.
@@ -51,11 +54,15 @@ We have two datasets on network traffic (before and after firewall implementatio
 **Packet delay measurements (in ms):**
 
 **Before implementation ($n=10$):**
+
 $$12, 15, 18, 14, 13, 16, 12, 19, 15, 17$$
+
 *(Ordered data: 12, 12, 13, 14, 15, 15, 16, 17, 18, 19)*
 
 **After implementation ($m=10$):**
+
 $$18, 22, 20, 19, 21, 25, 23, 20, 24, 28$$
+
 *(Ordered data: 18, 19, 20, 20, 21, 22, 23, 24, 25, 28)*
 
 Based on the empirical distribution functions of both samples, calculate the $D_{n,m}$ statistic and verify the hypothesis of identical distributions (Kolmogorov-Smirnov test).

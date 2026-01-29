@@ -2,8 +2,11 @@
 
 ## Zadanie 1 (Test serii - losowość próby)
 Pobrano próbkę o liczności $n=20$ pewnej cechy $X$. Wartości uporządkowane według kolejności pobierania (w czasie) są następujące:
+
 $$15.79, 15.84, 16.28, 16.33, 16.38, 16.41, 16.75,$$
+
 $$16.87, 16.98, 17.00, 17.00, 17.35, 17.48, 17.56,$$
+
 $$17.98, 18.12, 18.28, 18.28, 18.32, 18.53.$$
 
 a) Wyznaczyć medianę $m_e$ tej próby.
@@ -51,11 +54,15 @@ Mamy dwa zbiory danych o ruchu sieciowym (przed i po wdrożeniu firewalla). Chce
 **Wyniki pomiarów opóźnienia pakietów (w ms):**
 
 **Przed wdrożeniem ($n=10$):**
+
 $$12, 15, 18, 14, 13, 16, 12, 19, 15, 17$$
+
 *(Dane uporządkowane: 12, 12, 13, 14, 15, 15, 16, 17, 18, 19)*
 
 **Po wdrożeniu ($m=10$):**
+
 $$18, 22, 20, 19, 21, 25, 23, 20, 24, 28$$
+
 *(Dane uporządkowane: 18, 19, 20, 20, 21, 22, 23, 24, 25, 28)*
 
 Na podstawie dystrybuant empirycznych obu prób obliczyć statystykę $D_{n,m}$ i zweryfikować hipotezę o identyczności rozkładów (test Kołmogorowa-Smirnowa).
