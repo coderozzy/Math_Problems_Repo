@@ -24,7 +24,7 @@ c) The job will be completed in at most 5 hours.
 d) The job will be completed in at most 5 hours and with at most one error.
 
 ## Task 4
-The figure (block diagram) shows a part of an electrical network consisting of two elements connected in parallel: $a_1$ and $a_2$. Let $A_i, i=1, 2$, denote the event that element $a_i$ remains functional for at least time $t$.
+A fragment of an electrical network consists of two elements connected in parallel: $a_1$ and $a_2$. Let $A_i, i=1, 2$, denote the event that element $a_i$ remains functional for at least time $t$.
 
 Calculate the probability of continuous current flow through this system for at least time $t$, given that $P(A_1)=P(A_2)=p$ and the probability of simultaneous functionality of both elements is $P(A_1 \cap A_2)=p^2$.
 

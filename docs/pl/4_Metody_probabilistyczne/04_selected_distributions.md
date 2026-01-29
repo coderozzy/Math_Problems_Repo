@@ -51,6 +51,8 @@ $$
 f(x) = \begin{cases} \frac{2}{\lambda} x \exp(-\frac{x^2}{\lambda}) & \text{dla } x > 0 \\ 0 & \text{dla } x \leqslant 0 \end{cases}
 $$
 
+(gdzie parametr lambda jest związany z wariancją szumu)
+
 Następnie obliczyć medianę tego rozkładu.
 
 *Wskazówka: Rozkład ten stosuje się często w telekomunikacji do modelowania zaników sygnału.*

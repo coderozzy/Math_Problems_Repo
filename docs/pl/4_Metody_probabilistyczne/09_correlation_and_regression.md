@@ -3,8 +3,18 @@
 ## Zadanie 1
 Zbadano zależność między dwiema cechami $X$ i $Y$ na podstawie 10-elementowej próby (np. $X$ – wielkość pliku w MB, $Y$ – czas przesyłania w sek.). Wyniki pomiarów:
 
-* $x_i$: $3.5, 3.4, 2.1, 5.4, 1.1, 5.1, 6.9, 4.0, 4.5, 2.5$
-* $y_i$: $1.6, 2.9, 1.5, 3.5, 0.6, 2.5, 7.1, 3.5, 2.1, 2.6$
+| $i$ | $x_i$ | $y_i$ |
+| :---: | :---: | :---: |
+| 1 | 3.5 | 1.6 |
+| 2 | 3.4 | 2.9 |
+| 3 | 2.1 | 1.5 |
+| 4 | 5.4 | 3.5 |
+| 5 | 1.1 | 0.6 |
+| 6 | 5.1 | 2.5 |
+| 7 | 6.9 | 7.1 |
+| 8 | 4.0 | 3.5 |
+| 9 | 4.5 | 2.1 |
+| 10 | 2.5 | 2.6 |
 
 Obliczyć współczynnik korelacji liniowej Pearsona $r$. Czy zależność jest silna?
 

@@ -24,7 +24,7 @@ c) Praca zostanie wykonana w czasie co najwyżej 5 godzin.
 d) Praca zostanie wykonana w czasie co najwyżej 5 godzin i najwyżej z jednym błędem.
 
 ## Zadanie 4
-Rysunek (schemat blokowy) przedstawia fragment sieci elektrycznej składający się z dwóch elementów połączonych równolegle: $a_1$ i $a_2$. Niech $A_i, i=1, 2$, oznacza zdarzenie, że element $a_i$ będzie sprawny co najmniej przez czas $t$.
+Fragment sieci elektrycznej składa się z dwóch elementów połączonych równolegle: $a_1$ i $a_2$. Niech $A_i, i=1, 2$, oznacza zdarzenie, że element $a_i$ będzie sprawny co najmniej przez czas $t$.
 
 Obliczyć prawdopodobieństwo ciągłego przepływu prądu przez ten układ co najmniej przez czas $t$, jeżeli wiadomo, że $P(A_1)=P(A_2)=p$ oraz prawdopodobieństwo jednoczesnej sprawności obu elementów wynosi $P(A_1 \cap A_2)=p^2$.
 

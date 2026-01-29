@@ -51,6 +51,8 @@ $$
 f(x) = \begin{cases} \frac{2}{\lambda} x \exp(-\frac{x^2}{\lambda}) & \text{for } x > 0 \\ 0 & \text{for } x \leqslant 0 \end{cases}
 $$
 
+(where parameter lambda is related to noise variance).
+
 Then calculate the median of this distribution.
 
 *Hint: This distribution is often used in telecommunications to model signal fading.*
