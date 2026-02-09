@@ -89,6 +89,9 @@ Calculate the linear correlation coefficient $\rho$ between variables $X$ and $Y
 *Hint: Calculate sequentially: means $EX, EY$, variances $D^2X, D^2Y$, and the mixed moment $E(XY) = \sum x_i y_k p_{ik}$. Covariance is $cov(X,Y) = E(XY) - EX \cdot EY$.*
 
 ## Task 10
-Let $X$ and $Y$ be independent random variables with zero average values ($EX=0, EY=0$). Show that for any $n \in N$, the variables $X$ and $X^n$ as well as $Y$ and $E(X^3)EY$ satisfy the equality: $E(X^3 Y) = E(X^3)E(Y)$.
+
+Let $X$ and $Y$ be independent random variables with zero expected values ($EX=0, EY=0$). Show that the following equality holds:
+
+$$E(X^3 Y) = E(X^3)E(Y)$$
 
 Does the variable $Z = X^3 Y$ have an expected value equal to 0? What does this mean in the context of random signals (noise)?

@@ -89,6 +89,9 @@ Obliczyć współczynnik korelacji liniowej $\rho$ między zmiennymi $X$ i $Y$.
 *Wskazówka: Należy obliczyć kolejno: średnie $EX, EY$, wariancje $D^2X, D^2Y$ oraz moment mieszany $E(XY) = \sum x_i y_k p_{ik}$. Kowariancja to $cov(X,Y) = E(XY) - EX \cdot EY$.*
 
 ## Zadanie 10
-Niech $X$ i $Y$ będą niezależnymi zmiennymi losowymi o zerowych wartościach przeciętnych ($EX=0, EY=0$). Wykazać, że dla dowolnego $n \in N$ zmienne $X$ i $X^n$ oraz $Y$ i $E(X^3)EY$ spełniają równość: $E(X^3 Y) = E(X^3)E(Y)$.
+
+Niech $X$ i $Y$ będą niezależnymi zmiennymi losowymi o zerowych wartościach oczekiwanych ($EX=0, EY=0$). Wykazać, że zachodzi równość:
+
+$$E(X^3 Y) = E(X^3)E(Y)$$
 
 Czy zmienna $Z = X^3 Y$ ma wartość oczekiwaną równą 0? Co to oznacza w kontekście sygnałów losowych (szum)?
