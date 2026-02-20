@@ -29,8 +29,11 @@ The defectiveness of the production of certain products (e.g., erroneous data pa
 Can it be claimed at the significance level $\alpha=0.05$ that the new technology has reduced defectiveness?
 
 ## Task 6
-The number of yeast cells in 400 squares was observed under a microscope (in computer science: the number of requests to a server per unit of time). The results were grouped:
-0 cells: 20 times, 1 cell: 43 times, 2 cells: 53 times, etc.
+The number of yeast cells in 400 squares was observed under a microscope (in computer science: the number of requests to a server per unit of time). The results were grouped in the following table:
+
+| Number of cells ($x_i$) | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Number of squares ($n_i$) | 20 | 43 | 53 | 86 | 70 | 54 | 37 | 21 | 10 | 4 | 2 |
 
 At the level $\alpha=0.05$, verify the hypothesis that the distribution of the number of cells is a Poisson distribution.
 
@@ -49,15 +52,17 @@ $$146.5, 147.9, 153.6, 154.7, 157.5, 158.1, 159.7, 161.5, 172.8, 173.7$$
 Verify the hypothesis of normality of the distribution at the level $\alpha=0.10$, using the Shapiro-Wilk test.
 
 ## Task 9
-The full sequence of residuals for $n=20$ measurements is as follows:
+The execution times of a certain task were measured. The results were ordered in the sequence they were obtained (over time). The full sequence of residuals for $n=20$ measurements is as follows:
 
-$$+, +, -, -, +, +, +, -, -, -, -, +, +, -, -, +, +, -, +, -$$
+$$
++, +, -, -, +, +, +, -, -, -, -, +, +, -, -, +, +, -, +, -
+$$
 
-**Parameters for verification:**
+Parameters for verification:
 
 * Number of positives ($n_1$): 10
 * Number of negatives ($n_2$): 10
-* Number of runs ($k$): 9
+* Number of runs ($k$): 10
 
 Verify the hypothesis of randomness at level $\alpha=0.05$.
 

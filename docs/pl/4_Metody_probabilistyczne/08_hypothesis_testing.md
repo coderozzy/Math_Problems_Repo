@@ -29,8 +29,11 @@ Wadliwość produkcji pewnych wyrobów (np. błędnych pakietów danych) wynosi�
 Czy na poziomie istotności $\alpha=0,05$ można twierdzić, że nowa technologia zmniejszyła wadliwość?
 
 ## Zadanie 6
-Obserwowano pod mikroskopem liczbę komórek drożdży w 400 kwadratach (w informatyce: liczba zapytań do serwera w jednostce czasu). Wyniki pogrupowano:
-0 komórek: 20 razy, 1 komórka: 43 razy, 2 komórki: 53 razy, itd.
+Obserwowano pod mikroskopem liczbę komórek drożdży w 400 kwadratach (w informatyce: liczba zapytań do serwera w jednostce czasu). Wyniki pogrupowano w poniższej tabeli:
+
+| Liczba komórek ($x_i$) | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Liczba kwadratów ($n_i$) | 20 | 43 | 53 | 86 | 70 | 54 | 37 | 21 | 10 | 4 | 2 |
 
 Na poziomie $\alpha=0,05$ zweryfikować hipotezę, że rozkład liczby komórek jest rozkładem Poissona.
 
@@ -49,19 +52,19 @@ $$146.5, 147.9, 153.6, 154.7, 157.5, 158.1, 159.7, 161.5, 172.8, 173.7$$
 Zweryfikować hipotezę o normalności rozkładu na poziomie $\alpha=0,10$, stosując test Shapiro-Wilka.
 
 ## Zadanie 9
-Zmierzono czasy wykonania pewnego zadania. Uporządkowano wyniki w kolejności otrzymywania (w czasie).
+Zmierzono czasy wykonania pewnego zadania. Uporządkowano wyniki w kolejności otrzymywania (w czasie). Pełny ciąg reszt dla $n=20$ pomiarów wygląda następująco:
 
-Pełny ciąg reszt dla $n=20$ pomiarów wygląda następująco:
+$$
++, +, -, -, +, +, +, -, -, -, -, +, +, -, -, +, +, -, +, -
+$$
 
-$$+, +, -, -, +, +, +, -, -, -, -, +, +, -, -, +, +, -, +, -$$
-
-**Parametry do weryfikacji:**
+Parametry do weryfikacji:
 
 * Liczba plusów ($n_1$): 10
 * Liczba minusów ($n_2$): 10
-* Liczba serii ($k$): 9
+* Liczba serii ($k$): 10
 
-Zweryfikować hipotezę o losowości na poziomie $\alpha=0.05$.
+Zweryfikować hipotezę o losowości na poziomie $\alpha=0,05$.
 
 ## Zadanie 10
 Dla 7 par pomiarów (np. wydajność przed i po aktualizacji sterownika) odnotowano, czy wynik się poprawił (+), czy pogorszył (-). Otrzymano sekwencję:
