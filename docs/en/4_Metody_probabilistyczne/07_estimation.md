@@ -53,6 +53,6 @@ A simple sample of size $n=5$ is given: $\{2, 4, 6, 8, 10\}$. Calculate the valu
 Explain why we divide by $n-1$ instead of $n$ for variance.
 
 ## Task 10
-The table presents the results of the percentage starch content in 80 potatoes (data grouped into a frequency distribution). The sample mean is $\bar{x}=17.525\%$, and the standard deviation is $s=1.84\%$.
+The percentage starch content was examined in 80 potatoes. The sample mean was $\bar{x}=17.525\%$, and the standard deviation was $s=1.84\%$.
 
 Assuming a confidence level of 0.95, estimate the average starch content in the entire batch.

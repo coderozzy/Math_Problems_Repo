@@ -35,7 +35,7 @@ Spośród 120 wylosowanych pracowników pewnego zakładu, 17 nie wykonywało nor
 Wyznaczyć 95%-ową realizację przedziału ufności dla frakcji $p$ pracowników niewykonujących normy w całym zakładzie.
 
 ## Zadanie 7
-Wykonano 15 pomiarów czasu likwidowania zrywów przędzy na krosnach. Obliczono wariancję z próby $s^2 = 134,2$. Zakładając, że czas ten ma rozkład normalny, wyznaczyć 90%-owy przedział ufności dla wariancji $\sigma^2$ oraz odchylenia standardowego $\sigma$].
+Wykonano 15 pomiarów czasu likwidowania zrywów przędzy na krosnach. Obliczono wariancję z próby $s^2 = 134,2$. Zakładając, że czas ten ma rozkład normalny, wyznaczyć 90%-owy przedział ufności dla wariancji $\sigma^2$ oraz odchylenia standardowego $\sigma$.
 
 *Wskazówka: Należy skorzystać z tablic rozkładu chi-kwadrat ($\chi^2$)*.
 
@@ -53,6 +53,6 @@ Dana jest próbka prosta o liczebności $n=5$: $\{2, 4, 6, 8, 10\}$. Obliczyć w
 Wyjaśnić, dlaczego przy wariancji dzielimy przez $n-1$, a nie przez $n$.
 
 ## Zadanie 10
-Tabela przedstawia wyniki procentowej zawartości skrobi w 80 ziemniakach (dane pogrupowane w szereg rozdzielczy). Średnia z próby $\bar{x}=17,525\%$, odchylenie standardowe $s=1,84\%$.
+Zbadano procentową zawartość skrobi w 80 ziemniakach. Średnia z próby wyniosła $\bar{x}=17,525\%$, a odchylenie standardowe $s=1,84\%$.
 
 Przyjmując poziom ufności 0,95, oszacować średnią zawartość skrobi w całej partii.
