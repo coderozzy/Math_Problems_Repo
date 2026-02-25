@@ -6,9 +6,9 @@ Repozytorium jest dwujęzyczne i zaprojektowane w sposób umożliwiający budow�
 
 > ## Manifest pracy w kursie
 >
-> Ten kurs nie polega na rozwiązywaniu list zadań, lecz na budowaniu własnego rozumienia fizyki poprzez systematyczną pracę z problemami.
+> Ten kurs nie polega na rozwiązywaniu list zadań, lecz na budowaniu własnego rozumienia matematyki poprzez systematyczną pracę z problemami.
 >
-> Repozytorium, które tworzysz, jest Twoim osobistym podręcznikiem — zapisem sposobu, w jaki analizujesz modele fizyczne, interpretujesz wyniki i organizujesz wiedzę.
+> Repozytorium, które tworzysz, jest Twoim osobistym podręcznikiem — zapisem sposobu, w jaki analizujesz modele matematyczne, interpretujesz wyniki i organizujesz wiedzę.
 >
 > Zadania pełnią rolę narzędzi myślenia: ich celem nie jest uzyskanie liczby, lecz rozwinięcie procesu rozumowania, który będziesz w stanie samodzielnie odtworzyć bez wsparcia technologii.
 >
@@ -97,4 +97,4 @@ Podczas pracy z AI:
 - zapisuj w repozytorium własne interpretacje i komentarze,
 - traktuj AI jako rozmówcę i tutora, a nie kalkulator.
 
-Celem korzystania z AI jest rozwijanie zdolności samodzielnego myślenia fizycznego oraz budowanie spójnego, osobistego zapisu wiedzy.
+Celem korzystania z AI jest rozwijanie zdolności samodzielnego myślenia matematycznego oraz budowanie spójnego, osobistego zapisu wiedzy.

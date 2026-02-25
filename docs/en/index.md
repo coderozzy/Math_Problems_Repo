@@ -6,9 +6,9 @@ The repository is bilingual and designed to enable you to build your own knowled
 
 > ## Course Work Manifesto
 >
-> This course is not about solving lists of tasks, but about building your own understanding of physics through systematic work with problems.
+> This course is not about solving lists of tasks, but about building your own understanding of mathematics through systematic work with problems.
 >
-> The repository you create is your personal textbook — a record of how you analyze physical models, interpret results, and organize knowledge.
+> The repository you create is your personal textbook — a record of how you analyze mathematical models, interpret results, and organize knowledge.
 >
 > Tasks serve as tools for thinking: their goal is not to obtain a number, but to develop a reasoning process that you will be able to reproduce independently without technological support.
 >
@@ -96,4 +96,4 @@ While working with AI:
 - record your own interpretations and comments in the repository,
 - treat AI as a conversational partner and tutor, not a calculator.
 
-The goal of using AI is to develop the capacity for independent physical thinking and to build a coherent, personal record of knowledge.
+The goal of using AI is to develop the capacity for independent mathematical thinking and to build a coherent, personal record of knowledge.
