@@ -8,7 +8,7 @@ Repozytorium jest dwujęzyczne i zaprojektowane w sposób umożliwiający budow�
 >
 > Ten kurs nie polega na rozwiązywaniu list zadań, lecz na budowaniu własnego rozumienia matematyki poprzez systematyczną pracę z problemami.
 >
-> Repozytorium, które tworzysz, jest Twoim osobistym podręcznikiem — zapisem sposobu, w jaki analizujesz modele matematyczne, interpretujesz wyniki i organizujesz wiedzę.
+> Repozytorium, które tworzysz, jest Twoim osobistym podręcznikiem — zapisem sposobu, w jaki analizujesz problemy matematyczne, interpretujesz wyniki i organizujesz wiedzę.
 >
 > Zadania pełnią rolę narzędzi myślenia: ich celem nie jest uzyskanie liczby, lecz rozwinięcie procesu rozumowania, który będziesz w stanie samodzielnie odtworzyć bez wsparcia technologii.
 >

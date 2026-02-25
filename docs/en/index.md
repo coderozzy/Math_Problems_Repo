@@ -8,7 +8,7 @@ The repository is bilingual and designed to enable you to build your own knowled
 >
 > This course is not about solving lists of tasks, but about building your own understanding of mathematics through systematic work with problems.
 >
-> The repository you create is your personal textbook — a record of how you analyze mathematical models, interpret results, and organize knowledge.
+> The repository you create is your personal textbook — a record of how you analyze mathematical problems, interpret results, and organize knowledge.
 >
 > Tasks serve as tools for thinking: their goal is not to obtain a number, but to develop a reasoning process that you will be able to reproduce independently without technological support.
 >
