@@ -24,11 +24,11 @@ To correctly use the provided materials, follow the procedure below:
 2.  **Cloning**: Download the repository to your local computer.
 3.  **Creating Documentation**:
     * Task lists are located in the relevant sections in the menu.
-    * Each task file (e.g., `problem_set_01_mathematical_foundations.md`) has a dedicated solutions directory (e.g., `problem_set_01_mathematical_foundations_solution/`).
-    * These directories are your **workspace** — this is where you create and maintain Markdown files with solutions, proofs, and theoretical notes.
-    * The structure is pre-prepared: each task list has its own solution directory (folder), containing placeholders for tasks (e.g., `task_01.md`, `task_02.md`, …).
+    * Each topic/task file (e.g., `01_events_and_probability.md`) has a dedicated solutions directory in the same section (e.g., `solution_01_events_and_probability/`).
+    * These solution directories are your **workspace** — this is where you create and maintain Markdown files with solutions, proofs, and theoretical notes.
+    * The structure is pre-prepared: each topic has its own solution folder containing placeholder files for individual problems (e.g., `sol_prob_01.md`, `sol_prob_02.md`, …).
     * Your task is not to create the material structure, but to systematically fill the existing files with your own reasoning, comments, and solution analysis — the repository is a ready-made workshop that you fill with content during the semester.
-    * In these same directories, you can place additional materials supporting the discussion of topics (e.g., graphics, charts, HTML/JS files, input data, simulation results). For the sake of order, keep the solution for each task primarily in its corresponding `task_XX.md` file, and store supporting materials in sensibly named subfolders. Messiness in the file structure will be poorly received and may be considered during grading — just like the content of the solutions and the way they are presented.
+    * In these same directories, you can place additional materials supporting the discussion of topics (e.g., graphics, charts, HTML/JS files, input data, simulation results). For the sake of order, keep the solution for each problem primarily in its corresponding `sol_prob_XX.md` file, and store supporting materials in sensibly named subfolders. Messiness in the file structure will be poorly received and may be considered during grading — just like the content of the solutions and the way they are presented.
 4.  **Committing Changes**: Regularly upload your solutions to the server (Commit & Push).
 
 ## The Role of Notes in Exam Preparation

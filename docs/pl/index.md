@@ -24,11 +24,11 @@ Aby poprawnie korzystać z udostępnionych materiałów, należy postępować zg
 2.  **Klonowanie**: Pobierz repozytorium na swój komputer lokalny.
 3.  **Tworzenie Dokumentacji**:
     * Listy zadań znajdują się w odpowiednich działach w menu.
-    * Do każdego pliku z zadaniami (np. `problem_set_01_mathematical_foundations.md`) przypisany jest dedykowany katalog na rozwiązania (np. `problem_set_01_mathematical_foundations_solution/`).
-    * Katalogi te są Twoją **przestrzenią roboczą** — to w nich tworzysz i utrzymujesz pliki Markdown z rozwiązaniami, dowodami oraz notatkami teoretycznymi.
-    * Struktura jest przygotowana z góry: każda lista zadań ma swój katalog (folder) na rozwiązania, a w nim placeholdery na zadania (np. `task_01.md`, `task_02.md`, …).
+    * Każdy plik z tematem/zadaniami (np. `01_events_and_probability.md`) ma odpowiadający mu katalog na rozwiązania w tym samym dziale (np. `solution_01_events_and_probability/`).
+    * Katalogi z rozwiązaniami są Twoją **przestrzenią roboczą** — to w nich tworzysz i utrzymujesz pliki Markdown z rozwiązaniami, dowodami oraz notatkami teoretycznymi.
+    * Struktura jest przygotowana z góry: każdy temat ma swój folder na rozwiązania, a w nim pliki-szablony dla kolejnych zadań/problemów (np. `sol_prob_01.md`, `sol_prob_02.md`, …).
     * Twoim zadaniem nie jest tworzenie struktury materiałów, lecz systematyczne uzupełnianie istniejących plików własnym rozumowaniem, komentarzami oraz analizą rozwiązań — repozytorium jest gotowym warsztatem pracy, który w trakcie semestru wypełniasz treścią.
-    * W tych samych katalogach możesz umieszczać dodatkowe materiały wspierające omawianie tematów (np. grafiki, wykresy, pliki HTML/JS, dane wejściowe, wyniki symulacji). Dla porządku trzymaj rozwiązanie każdego zadania przede wszystkim w odpowiadającym mu pliku `task_XX.md`, a materiały pomocnicze odkładaj do sensownie nazwanych podfolderów. Bałagan w strukturze plików będzie źle odbierany i może być brany pod uwagę przy ocenianiu — tak samo jak treść rozwiązań i sposób ich prezentacji.
+    * W tych samych katalogach możesz umieszczać dodatkowe materiały wspierające omawianie tematów (np. grafiki, wykresy, pliki HTML/JS, dane wejściowe, wyniki symulacji). Dla porządku trzymaj rozwiązanie każdego problemu przede wszystkim w odpowiadającym mu pliku `sol_prob_XX.md`, a materiały pomocnicze odkładaj do sensownie nazwanych podfolderów. Bałagan w strukturze plików będzie źle odbierany i może być brany pod uwagę przy ocenianiu — tak samo jak treść rozwiązań i sposób ich prezentacji.
 4.  **Utrwalanie zmian**: Regularnie przesyłaj swoje rozwiązania na serwer (Commit & Push).
 
 ## Rola notatek w przygotowaniu do egzaminu
