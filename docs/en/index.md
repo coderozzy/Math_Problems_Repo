@@ -19,7 +19,7 @@ The repository is bilingual and designed to enable you to build your own knowled
 To correctly use the provided materials, follow the procedure below:
 
 1.  **Forking the Repository**:
-    * Go to the source repository: **[https://github.com/dchorazkiewicz/Physics_Problems_Repo](https://github.com/dchorazkiewicz/Physics_Problems_Repo)**
+    * Go to the source repository: **[https://github.com/dchorazkiewicz/Math_Problems_Repo](https://github.com/dchorazkiewicz/Math_Problems_Repo)**
     * Create your own copy of the materials using the `Fork` button on GitHub.
 2.  **Cloning**: Download the repository to your local computer.
 3.  **Creating Documentation**:
