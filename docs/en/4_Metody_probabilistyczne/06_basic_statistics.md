@@ -2,28 +2,37 @@
 
 ## Task 1 (Frequency Distribution)
 From a general population, a sample of size $n=50$ was drawn (measurement results). The following raw results were obtained:
+
 $$3.6, 5.0, 4.0, 4.7, 5.2, 5.9, 4.5, 5.3, 5.5, 3.9,$$
+
 $$5.6, 3.5, 5.4, 5.2, 4.1, 5.0, 3.1, 5.8, 4.8, 4.4,$$
+
 $$4.6, 5.1, 4.7, 3.0, 5.5, 6.1, 3.8, 4.9, 5.6, 6.1,$$
+
 $$5.9, 4.2, 6.4, 5.3, 4.5, 4.9, 4.0, 5.2, 3.3, 5.4,$$
+
 $$4.7, 6.4, 5.1, 3.4, 5.2, 6.2, 4.4, 4.3, 5.8, 3.7.$$
 
 Based on this data:
+
 1. Construct a **frequency distribution table**, assuming the number of classes $k=7$.
 2. Determine the range $R$ and the class width $b$.
-*(Data based on Task 1.1, Krysicki Part II, p. 7)*.
 
 ## Task 2 (Measures of Location)
 For the sample from Task 1, after arranging the results in ascending order:
+
 $$3.0, 3.1, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.0, 4.1, 4.2, 4.3, 4.4, 4.4, 4.5, 4.5, 4.6, 4.7,$$
+
 $$4.7, 4.7, 4.8, 4.9, 4.9, 5.0, 5.0, 5.1, 5.1, 5.2, 5.2, 5.2, 5.2, 5.3, 5.3, 5.4, 5.4, 5.5, 5.5, 5.6,$$
+
 $$5.6, 5.8, 5.8, 5.9, 5.9, 6.1, 6.1, 6.2, 6.4, 6.4.$$
 
 Determine:
+
 1. The **Median** ($m_e$) – the middle value.
 2. The **Mode** ($m_o$) – the most frequent value.
 3. Compare whether in this case $m_e \approx \bar{x}$ (where $\bar{x} = 4.844$).
-*(Ordered data based on Task 1.10, Krysicki Part II, p. 14)*.
+
 
 ## Task 3
 In a certain chemical experiment (or processor production process), the amount of pure substance was investigated. For 5 measurements, the following results were obtained: $3.5, 3.4, 2.1, 5.4, 1.1$.

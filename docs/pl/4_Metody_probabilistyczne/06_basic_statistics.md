@@ -2,28 +2,37 @@
 
 ## Zadanie 1 (Szereg rozdzielczy)
 Z populacji generalnej pobrano $n=50$-elementową próbkę (wyniki pomiarów). Otrzymano następujące wyniki surowe:
+
 $$3.6, 5.0, 4.0, 4.7, 5.2, 5.9, 4.5, 5.3, 5.5, 3.9,$$
+
 $$5.6, 3.5, 5.4, 5.2, 4.1, 5.0, 3.1, 5.8, 4.8, 4.4,$$
+
 $$4.6, 5.1, 4.7, 3.0, 5.5, 6.1, 3.8, 4.9, 5.6, 6.1,$$
+
 $$5.9, 4.2, 6.4, 5.3, 4.5, 4.9, 4.0, 5.2, 3.3, 5.4,$$
+
 $$4.7, 6.4, 5.1, 3.4, 5.2, 6.2, 4.4, 4.3, 5.8, 3.7.$$
 
 Na podstawie tych danych:
+
 1. Sporządzić szereg rozdzielczy, przyjmując liczbę klas $k=7$.
 2. Wyznaczyć rozstęp $R$ oraz długość klasy $b$.
-*(Dane pochodzą z Zadania 1.1, Krysicki Cz. II, str. 7)*.
 
 ## Zadanie 2 (Miary położenia)
 Dla próbki z Zadania 1, po uporządkowaniu wyników rosnąco:
+
 $$3.0, 3.1, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.0, 4.1, 4.2, 4.3, 4.4, 4.4, 4.5, 4.5, 4.6, 4.7,$$
+
 $$4.7, 4.7, 4.8, 4.9, 4.9, 5.0, 5.0, 5.1, 5.1, 5.2, 5.2, 5.2, 5.2, 5.3, 5.3, 5.4, 5.4, 5.5, 5.5, 5.6,$$
+
 $$5.6, 5.8, 5.8, 5.9, 5.9, 6.1, 6.1, 6.2, 6.4, 6.4.$$
 
 Wyznaczyć:
+
 1. **Medianę** ($m_e$) – wartość środkową.
 2. **Modę** ($m_o$) – wartość najczęstszą.
 3. Porównać, czy w tym przypadku $m_e \approx \bar{x}$ (gdzie $\bar{x} = 4.844$).
-*(Dane uporządkowane wg Zadania 1.10, Krysicki Cz. II, str. 14)*.
+
 
 ## Zadanie 3
 W pewnym eksperymencie chemicznym (lub procesie produkcji procesorów) badano ilość czystej substancji. Dla 5 pomiarów otrzymano wyniki: $3.5, 3.4, 2.1, 5.4, 1.1$.
