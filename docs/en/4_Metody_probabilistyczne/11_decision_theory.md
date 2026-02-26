@@ -31,10 +31,8 @@ $$
 
 The safety requirements are:
 
-- The probability of a Type I error (rejecting the norm when it is true) must be  
-  $$\alpha = 0.01.$$
-- The probability of a Type II error (accepting the norm when the true mean is shifted by 2 units) must not exceed  
-  $$\beta = 0.05.$$
+- The probability of a Type I error (rejecting the norm when it is true) must be  $\alpha = 0.01$.
+- The probability of a Type II error (accepting the norm when the true mean is shifted by 2 units) must not exceed  $\beta = 0.05$.
 
 Assuming the test is based on the statistic
 

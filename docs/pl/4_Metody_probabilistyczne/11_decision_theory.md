@@ -32,10 +32,9 @@ $$
 
 Wymagania bezpieczeństwa są następujące:
 
-- Ryzyko błędu I rodzaju (odrzucenie normy, gdy jest spełniona) ma wynosić  
-  $$\alpha = 0{,}01.$$
+- Ryzyko błędu I rodzaju (odrzucenie normy, gdy jest spełniona) ma wynosić  $\alpha = 0.01$.
 - Ryzyko błędu II rodzaju (przyjęcie normy, gdy rzeczywiste przesunięcie średniej wynosi 2 jednostki) ma nie przekraczać  
-  $$\beta = 0{,}05.$$
+  $\beta = 0.05$.
 
 Zakładając, że test oparty jest na statystyce
 
