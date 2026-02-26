@@ -1,7 +1,7 @@
 # TASK LIST NO. 2: Random Variables (One-dimensional and Two-dimensional)
 
 ## Task 1
-A test was conducted in a student group. Let $X$ denote the grade (on a four-point scale) of a randomly selected student. Is $X$ a random variable?
+A test was conducted in a student group. Let $X$ denote the grade (on the grading scale 2–5) of a randomly selected student. Is $X$ a random variable?
 
 If we assume that the group consists of 10 people, and their grades form the set $\{5, 4, 3, 3, 4, 5, 3, 3, 4, 2\}$, how should this random variable be defined, and what is the probability of obtaining individual grades?
 

@@ -35,7 +35,7 @@ Spośród 120 wylosowanych pracowników pewnego zakładu, 17 nie wykonywało nor
 Wyznaczyć 95%-ową realizację przedziału ufności dla frakcji $p$ pracowników niewykonujących normy w całym zakładzie.
 
 ## Zadanie 7
-Wykonano 15 pomiarów czasu likwidowania zrywów przędzy na krosnach. Obliczono wariancję z próby $s^2 = 134,2$. Zakładając, że czas ten ma rozkład normalny, wyznaczyć 90%-owy przedział ufności dla wariancji $\sigma^2$ oraz odchylenia standardowego $\sigma$.
+Wykonano 15 pomiarów czasu likwidowania zrywów przędzy na krosnach. Obliczono wariancję z próby $s^2 = 134,2$. Zakładając, że czas ten ma rozkład normalny, wyznaczyć 90%-owy przedział ufności dla wariancji $\sigma^2$ oraz odchylenia standardowego $\sigma$. Wariancja próbkowa ( s^2 ) została obliczona z dzieleniem przez ( n-1 ).
 
 *Wskazówka: Należy skorzystać z tablic rozkładu chi-kwadrat ($\chi^2$)*.
 

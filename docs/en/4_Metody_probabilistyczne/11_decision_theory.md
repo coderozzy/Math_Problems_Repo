@@ -16,6 +16,7 @@ For a mean test $H_0: \mu = 100$ with known $\sigma=5$ and $n=25$:
 
 1. Determine the formula for the operating characteristic (OC) function: $L(\mu) = P(\text{acceptance of } H_0 | \mu)$.
 2. How will changing the sample size to $n=100$ affect the steepness of this curve (discriminatory ability)?
+Consider a one-sided test at significance level ( \alpha = 0.05 ).
 
 ## Task 4
 
@@ -65,11 +66,13 @@ E(n) \approx \frac{\alpha\ln A + (1-\alpha) \ln B}{E(z)}
 $$
 
 where $A, B$ are decision thresholds.
+Here ( z ) denotes the log-likelihood ratio for a single observation.
 
 ## Task 8
 An automated machine produces parts with a nominal diameter $\mu_0$. We suspect that the machine has become decalibrated and the mean has increased to $\mu_1$. The deviation $\sigma$ is known.
 
 Construct a sequential test verifying $H_0: \mu = \mu_0$ against $H_1: \mu = \mu_1$. Write the "stop" condition for this algorithm.
+Assume error probabilities ( \alpha = 0.05 ) and ( \beta = 0.10 ).
 
 ## Task 9
 We have two possible decisions $d_1$ (system deployment) and $d_2$ (no deployment) and two states of nature $\theta_1$ (system works correctly) and $\theta_2$ (system has errors). The loss (cost) matrix is as follows:

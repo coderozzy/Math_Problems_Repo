@@ -35,7 +35,7 @@ Among 120 randomly selected employees of a certain plant, 17 did not meet the wo
 Determine the 95% realization of the confidence interval for the fraction $p$ of employees not meeting the standard in the entire plant.
 
 ## Task 7
-15 measurements were made of the time to repair yarn breaks on looms. The sample variance was calculated as $s^2 = 134.2$. Assuming that this time has a normal distribution, determine the 90% confidence interval for the variance $\sigma^2$ and the standard deviation $\sigma$.
+15 measurements were made of the time to repair yarn breaks on looms. The sample variance was calculated as $s^2 = 134.2$. Assuming that this time has a normal distribution, determine the 90% confidence interval for the variance $\sigma^2$ and the standard deviation $\sigma$. The sample variance ( s^2 ) is calculated using division by ( n-1 ).
 
 *Hint: Use the chi-square ($\chi^2$) distribution tables*.
 

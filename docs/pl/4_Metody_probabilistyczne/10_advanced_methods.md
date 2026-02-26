@@ -66,6 +66,7 @@ $$18, 22, 20, 19, 21, 25, 23, 20, 24, 28$$
 *(Dane uporządkowane: 18, 19, 20, 20, 21, 22, 23, 24, 25, 28)*
 
 Na podstawie dystrybuant empirycznych obu prób obliczyć statystykę $D_{n,m}$ i zweryfikować hipotezę o identyczności rozkładów (test Kołmogorowa-Smirnowa).
+Hipotezę zweryfikować przy poziomie istotności ( \alpha = 0.05 ).
 
 ## Zadanie 6
 Badamy czas kompilacji kodu ($Y$) w zależności od liczby plików ($X_1$) i liczby linii kodu w pliku ($X_2$).

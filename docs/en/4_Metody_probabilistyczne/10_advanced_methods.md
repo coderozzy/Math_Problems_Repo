@@ -66,6 +66,7 @@ $$18, 22, 20, 19, 21, 25, 23, 20, 24, 28$$
 *(Ordered data: 18, 19, 20, 20, 21, 22, 23, 24, 25, 28)*
 
 Based on the empirical distribution functions of both samples, calculate the $D_{n,m}$ statistic and verify the hypothesis of identical distributions (Kolmogorov-Smirnov test).
+Verify the hypothesis at significance level ( \alpha = 0.05 ).
 
 ## Task 6
 We investigate code compilation time ($Y$) depending on the number of files ($X_1$) and the number of lines of code in a file ($X_2$).

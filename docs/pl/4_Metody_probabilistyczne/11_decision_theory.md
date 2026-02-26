@@ -16,6 +16,7 @@ Dla testu średniej $H_0: \mu = 100$ przy znanym $\sigma=5$ i $n=25$:
 
 1. Wyznaczyć wzór na funkcję operacyjno-charakterystyczną (OC): $L(\mu) = P(\text{akceptacja } H_0 | \mu)$.
 2. Jak zmiana liczebności próby na $n=100$ wpłynie na stromość tej krzywej (zdolność rozróżniania)?
+Rozważamy test jednostronny przy poziomie istotności ( \alpha = 0.05 ).
 
 ## Zadanie 4
 
@@ -67,11 +68,13 @@ E(n) \approx \frac{\alpha\ln A + (1-\alpha) \ln B}{E(z)}
 $$
 
 gdzie $A, B$ to progi decyzyjne.
+Zmienne ( z ) oznacza logarytm ilorazu wiarygodności dla pojedynczej obserwacji.
 
 ## Zadanie 8
 Automat produkuje detale o średnicy nominalnej $\mu_0$. Podejrzewamy, że maszyna się rozkalibrowała i średnia wzrosła do $\mu_1$. Odchylenie $\sigma$ jest znane.
 
 Skonstruować test sekwencyjny weryfikujący $H_0: \mu = \mu_0$ przeciwko $H_1: \mu = \mu_1$. Napisać warunek „stop” dla tego algorytmu.
+Przyjmujemy poziomy błędów ( \alpha = 0.05 ) oraz ( \beta = 0.10 ).
 
 ## Zadanie 9
 Mamy dwie możliwe decyzje $d_1$ (wdrożenie systemu) i $d_2$ (brak wdrożenia) oraz dwa stany natury $\theta_1$ (system działa poprawnie) i $\theta_2$ (system ma błędy). Macierz strat (kosztów) wygląda następująco:

@@ -1,7 +1,7 @@
 # LISTA ZADAŃ NR 2: Zmienne losowe (jednowymiarowe i dwuwymiarowe)
 
 ## Zadanie 1
-W grupie studenckiej przeprowadzono sprawdzian. Niech $X$ oznacza ocenę (przy czterostopniowej skali ocen) losowo wybranego studenta. Czy $X$ jest zmienną losową?
+W grupie studenckiej przeprowadzono sprawdzian. Niech $X$ oznacza ocenę (na skali ocen 2–5) losowo wybranego studenta. Czy $X$ jest zmienną losową?
 
 Jeżeli przyjmiemy, że grupę stanowi 10 osób, a ich oceny to zbiór $\{5, 4, 3, 3, 4, 5, 3, 3, 4, 2\}$, to jak zdefiniować tę zmienną losową i jakie jest prawdopodobieństwo uzyskania poszczególnych ocen?
 
