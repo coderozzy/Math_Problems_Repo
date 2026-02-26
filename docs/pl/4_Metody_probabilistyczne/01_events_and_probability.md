@@ -5,10 +5,10 @@ Niech przestrzeń $\Omega$ zdarzeń elementarnych doświadczenia składa się z 
 
 Znaleźć zdarzenia:
 
-a) $A \cup B$ (suma zdarzeń)
-b) $A \cap B$ (iloczyn zdarzeń)
-c) $B \backslash A$ (różnica zdarzeń)
-d) $A \backslash B$
+1. $A \cup B$ (suma zdarzeń)
+2. $A \cap B$ (iloczyn zdarzeń)
+3. $B \backslash A$ (różnica zdarzeń)
+4. $A \backslash B$
 
 ## Zadanie 2
 Rozważamy układ elektryczny, w którym element $a_1$ połączony jest szeregowo z blokiem składającym się z dwóch elementów $a_2$ i $a_3$ połączonych równolegle. Niech $A_i, i=1, 2, 3$, oznacza zdarzenie „element $a_i$ będzie sprawny w czasie $t$”.
@@ -18,10 +18,10 @@ Za pomocą działań na zdarzeniach $A_i$ oraz symboli sumy ($\cup$) i iloczynu 
 ## Zadanie 3
 Osoba $X$ wykonuje pewną pracę w ciągu 4, 5 albo 6 godzin i może popełnić przy tym 0, 1 albo 2 błędy. Zakładając jednakowe prawdopodobieństwo dla każdego z 9 możliwych zdarzeń elementarnych (par: czas, liczba błędów), znaleźć prawdopodobieństwo następujących zdarzeń:
 
-a) Praca zostanie wykonana w ciągu 4 godzin.
-b) Praca zostanie wykonana bezbłędnie w czasie 6 godzin.
-c) Praca zostanie wykonana w czasie co najwyżej 5 godzin.
-d) Praca zostanie wykonana w czasie co najwyżej 5 godzin i najwyżej z jednym błędem.
+1. Praca zostanie wykonana w ciągu 4 godzin.
+2. Praca zostanie wykonana bezbłędnie w czasie 6 godzin.
+3. Praca zostanie wykonana w czasie co najwyżej 5 godzin.
+4. Praca zostanie wykonana w czasie co najwyżej 5 godzin i najwyżej z jednym błędem.
 
 ## Zadanie 4
 Fragment sieci elektrycznej składa się z dwóch elementów połączonych równolegle: $a_1$ i $a_2$. Niech $A_i, i=1, 2$, oznacza zdarzenie, że element $a_i$ będzie sprawny co najmniej przez czas $t$.
@@ -37,31 +37,31 @@ Rozpatrujemy ilość (w $dm^3$) wody, jaką może mieć do przeprowadzenia w ci�
 
 Obliczyć prawdopodobieństwo:
 
-a) $P(A')$ (zdarzenie przeciwne do A)
-b) $P(A \cap B)$ (wspólna część przedziałów)
-c) $P(A' \cap B')$ (ilość wody nie mieści się w żadnym z tych przedziałów)
+1. $P(A')$ (zdarzenie przeciwne do A)
+2. $P(A \cap B)$ (wspólna część przedziałów)
+3. $P(A' \cap B')$ (ilość wody nie mieści się w żadnym z tych przedziałów)
 
 ## Zadanie 6
 Na przenośnik taśmowy trafiają jednakowe produkty wytwarzane przez 2 automaty. Stosunek ilościowy produkcji pierwszego automatu do produkcji drugiego wynosi $3:2$. Pierwszy automat wytwarza średnio $65\%$ produktów w pierwszym gatunku, drugi zaś – $85\%$.
 
-a) Spośród produktów na przenośniku pobieramy losowo jeden produkt. Obliczyć prawdopodobieństwo, że będzie to produkt pierwszego gatunku (zastosować wzór na prawdopodobieństwo całkowite).
-b) Losowo pobrany produkt okazał się pierwszej jakości. Obliczyć prawdopodobieństwo, że został wyprodukowany przez pierwszy automat (zastosować wzór Bayesa).
+1. Spośród produktów na przenośniku pobieramy losowo jeden produkt. Obliczyć prawdopodobieństwo, że będzie to produkt pierwszego gatunku (zastosować wzór na prawdopodobieństwo całkowite).
+2. Losowo pobrany produkt okazał się pierwszej jakości. Obliczyć prawdopodobieństwo, że został wyprodukowany przez pierwszy automat (zastosować wzór Bayesa).
 
 ## Zadanie 7
 Na linii łączności nadaje się dwa rodzaje sygnałów w postaci kodowych kombinacji 111 albo 000 z prawdopodobieństwami a priori odpowiednio $0,65$ i $0,35$. Sygnały podlegają losowym zakłóceniom, w rezultacie czego symbol 1 może być odebrany jako 0 z prawdopodobieństwem $0,2$ i z takim samym prawdopodobieństwem symbol 0 może być odebrany jako 1. Zakładamy, że symbole 1 i 0 ulegają zakłóceniom niezależnie jeden od drugiego.
 
 Obliczyć prawdopodobieństwo odebrania sygnału:
 
-a) 111
-b) 000
-c) 010
+1. 111
+2. 000
+3. 010
 
 ## Zadanie 8
 Kodowa informacja składa się z siedmiu impulsów postaci $A, B, C$ w ilościach: cztery impulsy $A$, dwa impulsy $B$ i jeden impuls $C$. Zakładając losowy układ impulsów, znaleźć prawdopodobieństwo tego, że:
 
-a) pierwszym odebranym impulsem będzie $A$,
-b) pierwszym odebranym impulsem będzie $A$ albo $C$,
-c) dwoma pierwszymi impulsami będą kolejno $A$ i $C$.
+1. pierwszym odebranym impulsem będzie $A$,
+2. pierwszym odebranym impulsem będzie $A$ albo $C$,
+3. dwoma pierwszymi impulsami będą kolejno $A$ i $C$.
 
 ## Zadanie 9
 Pewien towar produkują 3 zakłady. Prawdopodobieństwo wyprodukowania przez te zakłady towaru pierwszej jakości wynosi odpowiednio $0,97$; $0,90$; $0,86$.
@@ -79,5 +79,5 @@ Kanałem łączności nadaje się tylko 3 rodzaje ciągów liter: $AAAA$, $BBBB$
 
 Znaleźć prawdopodobieństwo odebrania na wyjściu sygnału:
 
-a) $AAAA$
-b) $ACAA$
+1. $AAAA$
+2. $ACAA$

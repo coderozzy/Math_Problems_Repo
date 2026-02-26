@@ -9,8 +9,8 @@ $$5.9, 4.2, 6.4, 5.3, 4.5, 4.9, 4.0, 5.2, 3.3, 5.4,$$
 $$4.7, 6.4, 5.1, 3.4, 5.2, 6.2, 4.4, 4.3, 5.8, 3.7.$$
 
 Based on this data:
-a) Construct a **frequency distribution table**, assuming the number of classes $k=7$.
-b) Determine the range $R$ and the class width $b$.
+1. Construct a **frequency distribution table**, assuming the number of classes $k=7$.
+2. Determine the range $R$ and the class width $b$.
 *(Data based on Task 1.1, Krysicki Part II, p. 7)*.
 
 ## Task 2 (Measures of Location)
@@ -20,9 +20,9 @@ $$4.7, 4.7, 4.8, 4.9, 4.9, 5.0, 5.0, 5.1, 5.1, 5.2, 5.2, 5.2, 5.2, 5.3, 5.3, 5.4
 $$5.6, 5.8, 5.8, 5.9, 5.9, 6.1, 6.1, 6.2, 6.4, 6.4.$$
 
 Determine:
-a) The **Median** ($m_e$) – the middle value.
-b) The **Mode** ($m_o$) – the most frequent value.
-c) Compare whether in this case $m_e \approx \bar{x}$ (where $\bar{x} = 4.844$).
+1. The **Median** ($m_e$) – the middle value.
+2. The **Mode** ($m_o$) – the most frequent value.
+3. Compare whether in this case $m_e \approx \bar{x}$ (where $\bar{x} = 4.844$).
 *(Ordered data based on Task 1.10, Krysicki Part II, p. 14)*.
 
 ## Task 3
@@ -30,9 +30,9 @@ In a certain chemical experiment (or processor production process), the amount o
 
 Calculate:
 
-a) The arithmetic mean of the sample $\bar{x}$.
-b) The sample variance $s^2$ (using the formula for a small sample).
-c) The standard deviation $s$.
+1. The arithmetic mean of the sample $\bar{x}$.
+2. The sample variance $s^2$ (using the formula for a small sample).
+3. The standard deviation $s$.
 
 ## Task 4
 A vehicle (or a data packet in a network) traveled a path consisting of three sections of the same length but with different speeds: $v_1=50, v_2=60, v_3=70$ km/h. Calculate the average speed over the entire route.

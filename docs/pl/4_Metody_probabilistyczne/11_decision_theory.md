@@ -5,8 +5,8 @@ Rozważamy partię towaru (np. procesorów), w której badamy wadliwość. Testu
 
 Obliczyć:
 
-a) Prawdopodobieństwo błędu I rodzaju $\alpha$ (odrzucenie dobrej partii – ryzyko producenta).
-b) Prawdopodobieństwo błędu II rodzaju $\beta$ (przyjęcie złej partii – ryzyko konsumenta).
+1. Prawdopodobieństwo błędu I rodzaju $\alpha$ (odrzucenie dobrej partii – ryzyko producenta).
+2. Prawdopodobieństwo błędu II rodzaju $\beta$ (przyjęcie złej partii – ryzyko konsumenta).
 
 ## Zadanie 2
 Dla testu z Zadania 1 wyznaczyć moc testu ($1-\beta$) dla kilku alternatywnych wartości parametru $p$. Sporządzić wykres krzywej mocy testu (funkcji mocy). Co ten wykres mówi nam o „czułości” algorytmu decyzyjnego na odchylenia od normy?
@@ -14,8 +14,8 @@ Dla testu z Zadania 1 wyznaczyć moc testu ($1-\beta$) dla kilku alternatywnych 
 ## Zadanie 3
 Dla testu średniej $H_0: \mu = 100$ przy znanym $\sigma=5$ i $n=25$:
 
-a) Wyznaczyć wzór na funkcję operacyjno-charakterystyczną (OC): $L(\mu) = P(\text{akceptacja } H_0 | \mu)$.
-b) Jak zmiana liczebności próby na $n=100$ wpłynie na stromość tej krzywej (zdolność rozróżniania)?
+1. Wyznaczyć wzór na funkcję operacyjno-charakterystyczną (OC): $L(\mu) = P(\text{akceptacja } H_0 | \mu)$.
+2. Jak zmiana liczebności próby na $n=100$ wpłynie na stromość tej krzywej (zdolność rozróżniania)?
 
 ## Zadanie 4
 
@@ -51,8 +51,8 @@ Wadliwość produkcji pewnych wyrobów wynosiła do tej pory 10% ($p_0=0,1$). No
 
 Skonstruować test sekwencyjny ilorazu wiarogodności (test Walda), ustalając ryzyka $\alpha=0,05$ i $\beta=0,10$.
 
-a) Wyznaczyć proste decyzyjne (obszar akceptacji, odrzucenia i obszar kontynuacji badania).
-b) Przedstawić procedurę w formie algorytmu (pseudokodu).
+1. Wyznaczyć proste decyzyjne (obszar akceptacji, odrzucenia i obszar kontynuacji badania).
+2. Przedstawić procedurę w formie algorytmu (pseudokodu).
 
 ## Zadanie 6
 Dla testu z Zadania 5, przypuśćmy, że wylosowano kolejno:

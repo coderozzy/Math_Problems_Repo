@@ -3,8 +3,8 @@
 ## Task 1
 **Poisson Theorem – rare events**
 The defect rate of a certain electronic component is $p=0.002$. A batch of goods contains $n=1000$ such components. Calculate the probability that in this batch:
-a) there will not be a single defective item,
-b) there will be at most 3 defective items.
+1. there will not be a single defective item,
+2. there will be at most 3 defective items.
 
 *Hint: Since $n$ is large ($n \ge 100$), $p$ is small ($p \le 0.1$), and $np \le 10$, the Poisson approximation with parameter $\lambda = np$ should be used.*
 
@@ -43,9 +43,9 @@ Event $A$ occurs in a single experiment with a probability $p=0.6$. We repeat th
 ## Task 8
 **Comparison of approximations**
 The probability of success in a single trial is $p=0.1$. We perform $n=30$ trials. Calculate the probability of obtaining exactly 2 successes using:
-a) the exact Bernoulli formula,
-b) the Poisson approximation,
-c) the local De Moivre-Laplace theorem.
+1. the exact Bernoulli formula,
+2. the Poisson approximation,
+3. the local De Moivre-Laplace theorem.
 Compare the results.
 
 ## Task 9

@@ -5,8 +5,8 @@ We consider a batch of goods (e.g., processors) in which we examine defectivenes
 
 Calculate:
 
-a) The probability of a Type I error $\alpha$ (rejecting a good batch – producer's risk).
-b) The probability of a Type II error $\beta$ (accepting a bad batch – consumer's risk).
+1. The probability of a Type I error $\alpha$ (rejecting a good batch – producer's risk).
+2. The probability of a Type II error $\beta$ (accepting a bad batch – consumer's risk).
 
 ## Task 2
 For the test from Task 1, determine the power of the test ($1-\beta$) for several alternative values of parameter $p$. Prepare a graph of the test power curve (power function). What does this graph tell us about the "sensitivity" of the decision algorithm to deviations from the norm?
@@ -14,8 +14,8 @@ For the test from Task 1, determine the power of the test ($1-\beta$) for severa
 ## Task 3
 For a mean test $H_0: \mu = 100$ with known $\sigma=5$ and $n=25$:
 
-a) Determine the formula for the operating characteristic (OC) function: $L(\mu) = P(\text{acceptance of } H_0 | \mu)$.
-b) How will changing the sample size to $n=100$ affect the steepness of this curve (discriminatory ability)?
+1. Determine the formula for the operating characteristic (OC) function: $L(\mu) = P(\text{acceptance of } H_0 | \mu)$.
+2. How will changing the sample size to $n=100$ affect the steepness of this curve (discriminatory ability)?
 
 ## Task 4
 
@@ -50,8 +50,8 @@ The defectiveness of the production of certain products has been 10% ($p_0=0.1$)
 
 Construct a sequential probability ratio test (Wald test), setting risks $\alpha=0.05$ and $\beta=0.10$.
 
-a) Determine the decision lines (acceptance region, rejection region, and continuation region).
-b) Present the procedure in the form of an algorithm (pseudocode).
+1. Determine the decision lines (acceptance region, rejection region, and continuation region).
+2. Present the procedure in the form of an algorithm (pseudocode).
 
 ## Task 6
 For the test from Task 5, suppose the following were drawn sequentially:

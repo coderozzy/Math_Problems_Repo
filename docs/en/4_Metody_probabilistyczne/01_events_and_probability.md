@@ -5,10 +5,10 @@ Let the sample space $\Omega$ of elementary events of an experiment consist of f
 
 Find the events:
 
-a) $A \cup B$ (union of events)
-b) $A \cap B$ (intersection of events)
-c) $B \backslash A$ (difference of events)
-d) $A \backslash B$
+1. $A \cup B$ (union of events)
+2. $A \cap B$ (intersection of events)
+3. $B \backslash A$ (difference of events)
+4. $A \backslash B$
 
 ## Task 2
 Consider an electrical circuit in which element $a_1$ is connected in series with a block consisting of two elements $a_2$ and $a_3$ connected in parallel. Let $A_i, i=1, 2, 3$, denote the event "element $a_i$ is functional at time $t$".
@@ -18,10 +18,10 @@ Using operations on events $A_i$ and the symbols for union ($\cup$) and intersec
 ## Task 3
 Person $X$ performs a certain job in 4, 5, or 6 hours and may commit 0, 1, or 2 errors. Assuming equal probability for each of the 9 possible elementary events (pairs: time, number of errors), find the probability of the following events:
 
-a) The job will be completed in 4 hours.
-b) The job will be completed flawlessly in 6 hours.
-c) The job will be completed in at most 5 hours.
-d) The job will be completed in at most 5 hours and with at most one error.
+1. The job will be completed in 4 hours.
+2. The job will be completed flawlessly in 6 hours.
+3. The job will be completed in at most 5 hours.
+4. The job will be completed in at most 5 hours and with at most one error.
 
 ## Task 4
 A fragment of an electrical network consists of two elements connected in parallel: $a_1$ and $a_2$. Let $A_i, i=1, 2$, denote the event that element $a_i$ remains functional for at least time $t$.
@@ -37,31 +37,31 @@ We consider the volume (in $dm^3$) of water that a concrete culvert can conduct 
 
 Calculate the probability:
 
-a) $P(A')$ (complementary event to A)
-b) $P(A \cap B)$ (intersection of intervals)
-c) $P(A' \cap B')$ (water volume does not fall into either of these intervals)
+1. $P(A')$ (complementary event to A)
+2. $P(A \cap B)$ (intersection of intervals)
+3. $P(A' \cap B')$ (water volume does not fall into either of these intervals)
 
 ## Task 6
 Identical products manufactured by 2 automated machines are placed on a conveyor belt. The quantitative ratio of production of the first machine to the production of the second is $3:2$. The first machine produces on average $65\%$ of first-grade products, while the second produces $85\%$.
 
-a) One product is randomly selected from the products on the conveyor belt. Calculate the probability that it will be a first-grade product (use the total probability formula).
-b) A randomly selected product turned out to be of first quality. Calculate the probability that it was produced by the first machine (use Bayes' theorem).
+1. One product is randomly selected from the products on the conveyor belt. Calculate the probability that it will be a first-grade product (use the total probability formula).
+2. A randomly selected product turned out to be of first quality. Calculate the probability that it was produced by the first machine (use Bayes' theorem).
 
 ## Task 7
 On a communication line, two types of signals are transmitted in the form of code combinations 111 or 000 with a priori probabilities of $0.65$ and $0.35$ respectively. The signals are subject to random interference, as a result of which the symbol 1 can be received as 0 with a probability of $0.2$, and with the same probability, the symbol 0 can be received as 1. We assume that symbols 1 and 0 are subject to interference independently of each other.
 
 Calculate the probability of receiving the signal:
 
-a) 111
-b) 000
-c) 010
+1. 111
+2. 000
+3. 010
 
 ## Task 8
 Coded information consists of seven pulses of types $A, B, C$ in quantities: four pulses of $A$, two pulses of $B$, and one pulse of $C$. Assuming a random arrangement of pulses, find the probability that:
 
-a) the first received pulse will be $A$,
-b) the first received pulse will be $A$ or $C$,
-c) the first two pulses will be $A$ and $C$ in that order.
+1. the first received pulse will be $A$,
+2. the first received pulse will be $A$ or $C$,
+3. the first two pulses will be $A$ and $C$ in that order.
 
 ## Task 9
 A certain good is produced by 3 plants. The probability of producing first-quality goods by these plants is $0.97$, $0.90$, and $0.86$, respectively.
@@ -79,5 +79,5 @@ Only 3 types of letter sequences are transmitted via a communication channel: $A
 
 Find the probability of receiving the signal at the output:
 
-a) $AAAA$
-b) $ACAA$
+1. $AAAA$
+2. $ACAA$

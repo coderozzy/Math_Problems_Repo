@@ -49,8 +49,8 @@ Dla populacji, w której badane cechy $(X, Y)$ mają dwuwymiarowy rozkład norma
 | 9 | 31,1 | 37,5 |
 | 10 | 42,5 | 41,5 |
 
-a) Sporządzić diagram korelacyjny (wykres rozrzutu).
-b) Wyznaczyć równanie prostej regresji liniowej $Y$ względem $X$ ($y = ax + b$) metodą najmniejszych kwadratów.
+1. Sporządzić diagram korelacyjny (wykres rozrzutu).
+2. Wyznaczyć równanie prostej regresji liniowej $Y$ względem $X$ ($y = ax + b$) metodą najmniejszych kwadratów.
 *(Dane na podstawie Tablicy 4.1, Krysicki Cz. II, str. 149)*.
 
 ## Zadanie 4

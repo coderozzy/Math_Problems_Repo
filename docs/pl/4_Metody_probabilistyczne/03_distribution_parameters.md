@@ -10,10 +10,10 @@ Dla zmiennej losowej $X$ o funkcji prawdopodobieństwa danej tabelką:
 
 Wyznaczyć:
 
-a) Wartość oczekiwaną $E(X)$ (średnią).
-b) Wariancję $D^2(X)$ (korzystając ze wzoru $D^2(X) = E(X^2) - (EX)^2$).
-c) Odchylenie standardowe $\sigma$.
-d) Medianę $x_{0,5}$ (wartość środkową).
+1. Wartość oczekiwaną $E(X)$ (średnią).
+2. Wariancję $D^2(X)$ (korzystając ze wzoru $D^2(X) = E(X^2) - (EX)^2$).
+3. Odchylenie standardowe $\sigma$.
+4. Medianę $x_{0,5}$ (wartość środkową).
 
 ## Zadanie 2
 Miesięczny koszt $U$ prowadzenia pewnego systemu zależy od liczby $X$ aktywnych użytkowników (pracowników) według wzoru:
@@ -60,14 +60,14 @@ Która cecha (wzrost czy waga) jest bardziej "stabilna" (ma mniejszy rozrzut wzg
 ## Zadanie 6
 Prawdopodobieństwo nieprzekroczenia w ciągu doby limitu zużycia energii elektrycznej przez pewien zakład wynosi $p=0,8$. Obserwujemy ten zakład przez $n=5$ dni. Niech $X$ oznacza liczbę dni, w których nie przekroczono limitu.
 
-a) Jaki to typ rozkładu? Podać wzór na prawdopodobieństwo $P(X=k)$.
-b) Obliczyć wartość oczekiwaną i wariancję zmiennej $X$, korzystając z gotowych wzorów dla tego rozkładu ($EX=np$, $D^2X=npq$).
+1. Jaki to typ rozkładu? Podać wzór na prawdopodobieństwo $P(X=k)$.
+2. Obliczyć wartość oczekiwaną i wariancję zmiennej $X$, korzystając z gotowych wzorów dla tego rozkładu ($EX=np$, $D^2X=npq$).
 
 ## Zadanie 7
 Czas (w minutach) między kolejnymi zgłoszeniami abonentów w centrali telefonicznej jest zmienną losową o rozkładzie wykładniczym z parametrem (wartością oczekiwaną) $\lambda = 2$.
 
-a) Obliczyć średni czas oczekiwania na zgłoszenie ($EX$).
-b) Obliczyć prawdopodobieństwo, że czas między zgłoszeniami będzie krótszy niż 3 minuty ($P(X<3)$).
+1. Obliczyć średni czas oczekiwania na zgłoszenie ($EX$).
+2. Obliczyć prawdopodobieństwo, że czas między zgłoszeniami będzie krótszy niż 3 minuty ($P(X<3)$).
 
 ## Zadanie 8
 Automat produkuje odważniki. Błędy pomiarów masy mają rozkład normalny o wartości oczekiwanej $\mu=0$ g i odchyleniu standardowym $\sigma=0,01$ g. Obliczyć prawdopodobieństwo, że błąd pomiaru (co do modułu) nie przekroczy $0,02$ g.

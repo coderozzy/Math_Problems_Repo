@@ -3,8 +3,8 @@
 ## Zadanie 1
 **Twierdzenie Poissona – rzadkie zdarzenia**
 Wadliwość produkcji pewnego elementu elektronicznego wynosi $p=0,002$. W partii towaru znajduje się $n=1000$ sztuk tych elementów. Obliczyć prawdopodobieństwo, że w tej partii:
-a) nie będzie ani jednej sztuki wadliwej,
-b) będą co najwyżej 3 sztuki wadliwe.
+1. nie będzie ani jednej sztuki wadliwej,
+2. będą co najwyżej 3 sztuki wadliwe.
 
 *Wskazówka: Ponieważ $n$ jest duże ($n \ge 100$), a $p$ małe ($p \le 0,1$) i $np \le 10$, należy zastosować przybliżenie rozkładem Poissona z parametrem $\lambda = np$.*
 
@@ -43,9 +43,9 @@ Zdarzenie $A$ występuje w pojedynczym doświadczeniu z prawdopodobieństwem $p=
 ## Zadanie 8
 **Porównanie aproksymacji**
 Prawdopodobieństwo sukcesu w pojedynczej próbie wynosi $p=0,1$. Wykonujemy $n=30$ prób. Obliczyć prawdopodobieństwo uzyskania dokładnie 2 sukcesów, stosując:
-a) dokładny wzór Bernoulliego,
-b) przybliżenie Poissona,
-c) lokalne twierdzenie Moivre’a-Laplace’a.
+1. dokładny wzór Bernoulliego,
+2. przybliżenie Poissona,
+3. lokalne twierdzenie Moivre’a-Laplace’a.
 Porównać wyniki.
 
 ## Zadanie 9

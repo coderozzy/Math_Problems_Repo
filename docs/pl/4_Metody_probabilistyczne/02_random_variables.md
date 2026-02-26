@@ -8,9 +8,9 @@ Jeżeli przyjmiemy, że grupę stanowi 10 osób, a ich oceny to zbiór $\{5, 4, 
 ## Zadanie 2
 Zakładając, że stosunek ocen bardzo dobrych, dobrych, dostatecznych i niedostatecznych ma się tak, jak $1:3:4:2$, wyznaczyć dla określonej tam zmiennej losowej $X$:
 
-a) funkcję prawdopodobieństwa i jej wykres,
-b) dystrybuantę i jej wykres,
-c) prawdopodobieństwo $P(X < 3,5)$.
+1. funkcję prawdopodobieństwa i jej wykres,
+2. dystrybuantę i jej wykres,
+3. prawdopodobieństwo $P(X < 3,5)$.
 
 ## Zadanie 3
 Miesięczny koszt $u$ prowadzenia przykładowego laboratorium jest zależny od liczby $x$ zatrudnionych w nim pracowników. Załóżmy, że zależność ta jest postaci:
@@ -36,8 +36,8 @@ $$
 
 (jest to tzw. rozkład wykładniczy). Niech parametr $\lambda = 10$ (np. godzin).
 
-a) Obliczyć prawdopodobieństwo, że urządzenie będzie działać bezawaryjnie od 5 do 10 godzin: $P(5 \leqslant X \leqslant 10)$.
-b) Wyznaczyć dystrybuantę tej zmiennej losowej.
+1. Obliczyć prawdopodobieństwo, że urządzenie będzie działać bezawaryjnie od 5 do 10 godzin: $P(5 \leqslant X \leqslant 10)$.
+2. Wyznaczyć dystrybuantę tej zmiennej losowej.
 
 ## Zadanie 5
 Dobrać tak stałe $A$ i $B$, by funkcja określona wzorem:

@@ -3,8 +3,8 @@
 ## Zadanie 1
 Prawdopodobieństwo awarii aparatury doświadczalnej w jednym doświadczeniu wynosi $p=0,02$. Doświadczenia można przeprowadzać dowolną liczbę razy. Obliczyć prawdopodobieństwo, że druga z kolei awaria:
 
-a) zdarzy się przy dziesiątym doświadczeniu,
-b) nie zdarzy się w pierwszych dziesięciu doświadczeniach.
+1. zdarzy się przy dziesiątym doświadczeniu,
+2. nie zdarzy się w pierwszych dziesięciu doświadczeniach.
 
 ## Zadanie 2
 Prawdopodobieństwo, że produkt poddawany próbie nie wytrzyma tej próby wynosi $p=0,01$. Obliczyć prawdopodobieństwo, że wśród 200 takich produktów (niezależnie poddanych próbie) co najwyżej 2 nie wytrzymają próby.
@@ -17,9 +17,9 @@ Czas (w minutach) między kolejnymi zgłoszeniami abonentów w pewnej centrali t
 ## Zadanie 4
 Czas bezawaryjnej pracy $X$ pewnego urządzenia ma rozkład wykładniczy z parametrem (wartością oczekiwaną) $\lambda=5$. Obliczyć:
 
-a) wartość przeciętną bezawaryjnego czasu pracy urządzenia,
-b) medianę,
-c) prawdopodobieństwo, że bezawaryjny czas pracy urządzenia wynosi co najmniej 5 godzin.
+1. wartość przeciętną bezawaryjnego czasu pracy urządzenia,
+2. medianę,
+3. prawdopodobieństwo, że bezawaryjny czas pracy urządzenia wynosi co najmniej 5 godzin.
 
 ## Zadanie 5
 Odstęp między kolejnymi podziałkami skali stopera wynosi $0,1$ s. Czas na tym stoperze odczytuje się z dokładnością do całej podziałki. Zakładając jednostajny rozkład błędu odczytu czasu, obliczyć prawdopodobieństwo, że zmierzono czas z błędem przekraczającym $0,02$ s.
@@ -32,14 +32,14 @@ Automat produkuje odważniki 10-gramowe. Błędy pomiarów masy tych odważnikó
 ## Zadanie 7
 Niech zmienna losowa $X$ ma rozkład $N(\mu, \sigma)$. Obliczyć prawdopodobieństwo $P(|X-\mu| < k\sigma)$ dla:
 
-a) $k=1,96$ (poziom ufności 0,95),
-b) $k=2,58$ (poziom ufności 0,99).
+1. $k=1,96$ (poziom ufności 0,95),
+2. $k=2,58$ (poziom ufności 0,99).
 
 ## Zadanie 8
 Pewien przyrząd pomiarowy robi błąd systematyczny $1$ m w stronę zawyżenia pomiaru i błąd losowy o rozkładzie $N(0; 0,5)$.
 
-a) Obliczyć wartość przeciętną błędu pomiaru.
-b) Wyznaczyć prawdopodobieństwo tego, że błąd z jakim mierzone jest badane przedmioty nie przekracza $2$ m.
+1. Obliczyć wartość przeciętną błędu pomiaru.
+2. Wyznaczyć prawdopodobieństwo tego, że błąd z jakim mierzone jest badane przedmioty nie przekracza $2$ m.
 
 ## Zadanie 9
 Wytrzymałość stalowych lin pochodzących z produkcji masowej jest zmienną losową o rozkładzie $N(1000 \text{ kg/cm}^2, 50 \text{ kg/cm}^2)$. Obliczyć jaki procent lin ma wytrzymałość mniejszą od $900 \text{ kg/cm}^2$.

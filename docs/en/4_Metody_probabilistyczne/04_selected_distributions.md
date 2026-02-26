@@ -3,8 +3,8 @@
 ## Task 1
 The probability of failure of experimental equipment in a single experiment is $p=0.02$. Experiments can be performed any number of times. Calculate the probability that the second failure:
 
-a) occurs at the tenth experiment,
-b) does not occur in the first ten experiments.
+1. occurs at the tenth experiment,
+2. does not occur in the first ten experiments.
 
 ## Task 2
 The probability that a product subjected to a test fails the test is $p=0.01$. Calculate the probability that among 200 such products (independently tested), at most 2 will fail the test.
@@ -17,9 +17,9 @@ The time (in minutes) between consecutive subscriber calls at a certain telephon
 ## Task 4
 The failure-free operation time $X$ of a certain device has an exponential distribution with parameter (expected value) $\lambda=5$. Calculate:
 
-a) the average failure-free operation time of the device,
-b) the median,
-c) the probability that the failure-free operation time of the device is at least 5 hours.
+1. the average failure-free operation time of the device,
+2. the median,
+3. the probability that the failure-free operation time of the device is at least 5 hours.
 
 ## Task 5
 The interval between consecutive graduations of a stopwatch scale is $0.1$ s. Time on this stopwatch is read with an accuracy of a whole graduation. Assuming a uniform distribution of the time reading error, calculate the probability that the time was measured with an error exceeding $0.02$ s.
@@ -32,14 +32,14 @@ An automated machine produces 10-gram weights. The mass measurement errors of th
 ## Task 7
 Let the random variable $X$ have a distribution $N(\mu, \sigma)$. Calculate the probability $P(|X-\mu| < k\sigma)$ for:
 
-a) $k=1.96$ (confidence level 0.95),
-b) $k=2.58$ (confidence level 0.99).
+1. $k=1.96$ (confidence level 0.95),
+2. $k=2.58$ (confidence level 0.99).
 
 ## Task 8
 A certain measuring instrument makes a systematic error of $1$ m in the direction of overestimating the measurement and a random error with a distribution $N(0; 0.5)$.
 
-a) Calculate the average value of the measurement error.
-b) Determine the probability that the error with which the examined objects are measured does not exceed $2$ m.
+1. Calculate the average value of the measurement error.
+2. Determine the probability that the error with which the examined objects are measured does not exceed $2$ m.
 
 ## Task 9
 The strength of steel ropes from mass production is a random variable with a distribution $N(1000 \text{ kg/cm}^2, 50 \text{ kg/cm}^2)$. Calculate what percentage of ropes has a strength less than $900 \text{ kg/cm}^2$.

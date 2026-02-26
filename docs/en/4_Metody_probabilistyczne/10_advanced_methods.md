@@ -9,9 +9,9 @@ $$16.87, 16.98, 17.00, 17.00, 17.35, 17.48, 17.56,$$
 
 $$17.98, 18.12, 18.28, 18.28, 18.32, 18.53.$$
 
-a) Determine the median $m_e$ of this sample.
-b) Create a sequence of symbols, writing $a$ if $x_i < m_e$ and $b$ if $x_i > m_e$ (elements equal to the median are omitted).
-c) Verify the hypothesis of the randomness of the sample (lack of trend/cyclicity) using the **runs test** at a significance level of $\alpha=0.05$.
+1. Determine the median $m_e$ of this sample.
+2. Create a sequence of symbols, writing $a$ if $x_i < m_e$ and $b$ if $x_i > m_e$ (elements equal to the median are omitted).
+3. Verify the hypothesis of the randomness of the sample (lack of trend/cyclicity) using the **runs test** at a significance level of $\alpha=0.05$.
 *(Data from Task 3.87, Krysicki Part II, p. 143)*.
 
 ## Task 2

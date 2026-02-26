@@ -10,10 +10,10 @@ For a random variable $X$ with the probability function given by the table:
 
 Determine:
 
-a) The expected value $E(X)$ (mean).
-b) The variance $D^2(X)$ (using the formula $D^2(X) = E(X^2) - (EX)^2$).
-c) The standard deviation $\sigma$.
-d) The median $x_{0.5}$ (middle value).
+1. The expected value $E(X)$ (mean).
+2. The variance $D^2(X)$ (using the formula $D^2(X) = E(X^2) - (EX)^2$).
+3. The standard deviation $\sigma$.
+4. The median $x_{0.5}$ (middle value).
 
 ## Task 2
 The monthly cost $U$ of running a certain system depends on the number $X$ of active users (employees) according to the formula:
@@ -60,14 +60,14 @@ Which feature (height or weight) is more "stable" (has a smaller relative disper
 ## Task 6
 The probability of not exceeding the daily electricity consumption limit by a certain plant is $p=0.8$. We observe this plant for $n=5$ days. Let $X$ denote the number of days in which the limit was not exceeded.
 
-a) What type of distribution is this? Provide the formula for the probability $P(X=k)$.
-b) Calculate the expected value and variance of the variable $X$, using the ready-made formulas for this distribution ($EX=np$, $D^2X=npq$).
+1. What type of distribution is this? Provide the formula for the probability $P(X=k)$.
+2. Calculate the expected value and variance of the variable $X$, using the ready-made formulas for this distribution ($EX=np$, $D^2X=npq$).
 
 ## Task 7
 The time (in minutes) between consecutive subscriber calls at a telephone exchange is a random variable with an exponential distribution with the parameter (expected value) $\lambda = 2$.
 
-a) Calculate the average waiting time for a call ($EX$).
-b) Calculate the probability that the time between calls will be shorter than 3 minutes ($P(X<3)$).
+1. Calculate the average waiting time for a call ($EX$).
+2. Calculate the probability that the time between calls will be shorter than 3 minutes ($P(X<3)$).
 
 ## Task 8
 A machine produces weights. Mass measurement errors have a normal distribution with an expected value $\mu=0$ g and a standard deviation $\sigma=0.01$ g. Calculate the probability that the measurement error (in terms of modulus) does not exceed $0.02$ g.

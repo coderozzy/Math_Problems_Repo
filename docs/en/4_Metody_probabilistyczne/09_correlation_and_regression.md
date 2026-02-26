@@ -49,8 +49,8 @@ For a population in which the studied features $(X, Y)$ have a two-dimensional n
 | 9 | 31.1 | 37.5 |
 | 10 | 42.5 | 41.5 |
 
-a) Construct a **scatter plot** (correlation diagram).
-b) Determine the equation of the linear regression line of $Y$ on $X$ ($y = ax + b$) using the **method of least squares**.
+1. Construct a **scatter plot** (correlation diagram).
+2. Determine the equation of the linear regression line of $Y$ on $X$ ($y = ax + b$) using the **method of least squares**.
 *(Data based on Table 4.1, Krysicki Part II, p. 149)*.
 
 ## Task 4

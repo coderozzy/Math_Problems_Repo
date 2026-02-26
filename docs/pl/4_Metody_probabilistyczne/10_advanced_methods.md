@@ -9,9 +9,9 @@ $$16.87, 16.98, 17.00, 17.00, 17.35, 17.48, 17.56,$$
 
 $$17.98, 18.12, 18.28, 18.28, 18.32, 18.53.$$
 
-a) Wyznaczyć medianę $m_e$ tej próby.
-b) Utworzyć ciąg symboli, wpisując $a$, gdy $x_i < m_e$ oraz $b$, gdy $x_i > m_e$ (elementy równe medianie pomijamy).
-c) Zweryfikować hipotezę o losowości pobrania tej próby (brak trendu/cykliczności), stosując **test serii** na poziomie istotności $\alpha=0.05$.
+1. Wyznaczyć medianę $m_e$ tej próby.
+2. Utworzyć ciąg symboli, wpisując $a$, gdy $x_i < m_e$ oraz $b$, gdy $x_i > m_e$ (elementy równe medianie pomijamy).
+3. Zweryfikować hipotezę o losowości pobrania tej próby (brak trendu/cykliczności), stosując **test serii** na poziomie istotności $\alpha=0.05$.
 *(Dane pochodzą z Zadania 3.87, Krysicki Cz. II, str. 143)*.
 
 ## Zadanie 2

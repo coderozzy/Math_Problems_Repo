@@ -8,9 +8,9 @@ If we assume that the group consists of 10 people, and their grades form the set
 ## Task 2
 Assuming that the ratio of very good, good, satisfactory, and failing grades is $1:3:4:2$, determine for the random variable $X$ defined there:
 
-a) the probability mass function and its graph,
-b) the cumulative distribution function (CDF) and its graph,
-c) the probability $P(X < 3.5)$.
+1. the probability mass function and its graph,
+2. the cumulative distribution function (CDF) and its graph,
+3. the probability $P(X < 3.5)$.
 
 ## Task 3
 The monthly cost $u$ of running an example laboratory depends on the number $x$ of employees hired. Let us assume that this dependence is of the form:
@@ -36,8 +36,8 @@ $$
 
 (this is the so-called exponential distribution). Let the parameter $\lambda = 10$ (e.g., hours).
 
-a) Calculate the probability that the device will operate without failure from 5 to 10 hours: $P(5 \leqslant X \leqslant 10)$.
-b) Determine the cumulative distribution function of this random variable.
+1. Calculate the probability that the device will operate without failure from 5 to 10 hours: $P(5 \leqslant X \leqslant 10)$.
+2. Determine the cumulative distribution function of this random variable.
 
 ## Task 5
 Select constants $A$ and $B$ such that the function defined by the formula:

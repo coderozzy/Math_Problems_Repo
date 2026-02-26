@@ -9,8 +9,8 @@ $$5.9, 4.2, 6.4, 5.3, 4.5, 4.9, 4.0, 5.2, 3.3, 5.4,$$
 $$4.7, 6.4, 5.1, 3.4, 5.2, 6.2, 4.4, 4.3, 5.8, 3.7.$$
 
 Na podstawie tych danych:
-a) Sporządzić szereg rozdzielczy, przyjmując liczbę klas $k=7$.
-b) Wyznaczyć rozstęp $R$ oraz długość klasy $b$.
+1. Sporządzić szereg rozdzielczy, przyjmując liczbę klas $k=7$.
+2. Wyznaczyć rozstęp $R$ oraz długość klasy $b$.
 *(Dane pochodzą z Zadania 1.1, Krysicki Cz. II, str. 7)*.
 
 ## Zadanie 2 (Miary położenia)
@@ -20,9 +20,9 @@ $$4.7, 4.7, 4.8, 4.9, 4.9, 5.0, 5.0, 5.1, 5.1, 5.2, 5.2, 5.2, 5.2, 5.3, 5.3, 5.4
 $$5.6, 5.8, 5.8, 5.9, 5.9, 6.1, 6.1, 6.2, 6.4, 6.4.$$
 
 Wyznaczyć:
-a) **Medianę** ($m_e$) – wartość środkową.
-b) **Modę** ($m_o$) – wartość najczęstszą.
-c) Porównać, czy w tym przypadku $m_e \approx \bar{x}$ (gdzie $\bar{x} = 4.844$).
+1. **Medianę** ($m_e$) – wartość środkową.
+2. **Modę** ($m_o$) – wartość najczęstszą.
+3. Porównać, czy w tym przypadku $m_e \approx \bar{x}$ (gdzie $\bar{x} = 4.844$).
 *(Dane uporządkowane wg Zadania 1.10, Krysicki Cz. II, str. 14)*.
 
 ## Zadanie 3
@@ -30,9 +30,9 @@ W pewnym eksperymencie chemicznym (lub procesie produkcji procesorów) badano il
 
 Obliczyć:
 
-a) Średnią arytmetyczną z próby $\bar{x}$.
-b) Wariancję z próby $s^2$ (używając wzoru dla małej próby).
-c) Odchylenie standardowe $s$.
+1. Średnią arytmetyczną z próby $\bar{x}$.
+2. Wariancję z próby $s^2$ (używając wzoru dla małej próby).
+3. Odchylenie standardowe $s$.
 
 ## Zadanie 4
 Pojazd (lub pakiet danych w sieci) przebył drogę złożoną z trzech odcinków o tej samej długości, ale z różnymi prędkościami: $v_1=50, v_2=60, v_3=70$ km/h. Obliczyć średnią prędkość na całej trasie.
