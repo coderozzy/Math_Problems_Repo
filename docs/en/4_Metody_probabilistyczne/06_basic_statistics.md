@@ -19,15 +19,7 @@ Based on this data:
 2. Determine the range $R$ and the class width $b$.
 
 ## Task 2 (Measures of Location)
-For the sample from Task 1, after arranging the results in ascending order:
-
-$$3.0, 3.1, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.0, 4.1, 4.2, 4.3, 4.4, 4.4, 4.5, 4.5, 4.6, 4.7,$$
-
-$$4.7, 4.7, 4.8, 4.9, 4.9, 5.0, 5.0, 5.1, 5.1, 5.2, 5.2, 5.2, 5.2, 5.3, 5.3, 5.4, 5.4, 5.5, 5.5, 5.6,$$
-
-$$5.6, 5.8, 5.8, 5.9, 5.9, 6.1, 6.1, 6.2, 6.4, 6.4.$$
-
-Determine:
+For the sample from Task 1, after arranging the results in ascending order determine:
 
 1. The **Median** ($m_e$) – the middle value.
 2. The **Mode** ($m_o$) – the most frequent value.

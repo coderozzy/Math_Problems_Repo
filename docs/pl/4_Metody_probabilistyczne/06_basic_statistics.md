@@ -19,15 +19,7 @@ Na podstawie tych danych:
 2. Wyznaczyć rozstęp $R$ oraz długość klasy $b$.
 
 ## Zadanie 2 (Miary położenia)
-Dla próbki z Zadania 1, po uporządkowaniu wyników rosnąco:
-
-$$3.0, 3.1, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.0, 4.1, 4.2, 4.3, 4.4, 4.4, 4.5, 4.5, 4.6, 4.7,$$
-
-$$4.7, 4.7, 4.8, 4.9, 4.9, 5.0, 5.0, 5.1, 5.1, 5.2, 5.2, 5.2, 5.2, 5.3, 5.3, 5.4, 5.4, 5.5, 5.5, 5.6,$$
-
-$$5.6, 5.8, 5.8, 5.9, 5.9, 6.1, 6.1, 6.2, 6.4, 6.4.$$
-
-Wyznaczyć:
+Dla próbki z Zadania 1, po uporządkowaniu wyników rosnąco wyznaczyć:
 
 1. **Medianę** ($m_e$) – wartość środkową.
 2. **Modę** ($m_o$) – wartość najczęstszą.
