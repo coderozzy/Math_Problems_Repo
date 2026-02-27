@@ -78,7 +78,7 @@ _Select a section from the menu on the left to begin._
 
 ## How to use Artificial Intelligence in this course
 
-Artificial Intelligence is a tool supporting your understanding of physics, not replacing the thinking process. For AI assistance to align with the course objectives, it is necessary to provide it with the appropriate context.
+Artificial Intelligence is a tool supporting your understanding of mathematics, not replacing the thinking process. For AI assistance to align with the course objectives, it is necessary to provide it with the appropriate context.
 
 At the beginning of working with AI:
 
