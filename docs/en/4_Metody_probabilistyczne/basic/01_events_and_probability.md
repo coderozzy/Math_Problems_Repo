@@ -1,4 +1,4 @@
-# Task List 1 — Random Events and Sample Spaces
+# Task List 1 — Events and Probability (Sample Spaces)
 
 ## Visualizing Sample Spaces with Tree Diagrams
 

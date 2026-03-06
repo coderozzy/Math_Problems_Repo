@@ -1,4 +1,4 @@
-# Probability Theory Exercises – Selected Distributions
+# Task List 2 — Probability Distributions (Selected Models)
 
 ## Introduction
 
@@ -6,23 +6,23 @@ In many real-world random situations we are interested in the number of occurren
 
 Each distribution describes a different type of random experiment and corresponds to different assumptions about how events occur.
 
-In this set of exercises we use five important models:
+In this task list we use five important models:
 
-- **Bernoulli scheme** – describes situations in which an experiment consists of many independent trials and each trial has only two possible outcomes (for example success or failure).
+- **Binomial distribution (Bernoulli trials)** – models the number of successes in a fixed number of independent trials with two outcomes (success/failure).
 - **Hypergeometric distribution** – used when we draw elements **without replacement** from a finite population containing elements of different types.
 - **Geometric distribution** – describes the number of trials needed to obtain the **first success** in a sequence of independent trials.
 - **Poisson distribution** – models the number of events occurring within a given time or space interval.
-- **Multinomial distribution** – a generalization of the Bernoulli scheme when each trial can result in **more than two possible outcomes**.
+- **Multinomial distribution** – a generalization of the binomial model when each trial can result in **more than two possible outcomes**.
 
 The analysis of these models allows us to formally describe random experiments and compute probabilities of events in many practical situations.
 
 ---
 
-## Exercises – Probability Theory
+## Tasks — Probability Distributions
 
-### Part I – Modeling and Sample Spaces
+### Part I — Modeling and Sample Spaces
 
-#### Exercise 1 – Bernoulli Scheme (Quality Control)
+#### Task 1 — Binomial Model (Quality Control)
 
 In a factory, screws are produced. Each screw can be either **good** or **defective**.  
 The probability that a randomly selected screw is defective equals \(p\).
@@ -38,7 +38,7 @@ We consider an experiment consisting of checking **3 consecutive screws**.
 
 ---
 
-#### Exercise 2 – Hypergeometric Scheme (Sampling from a Batch)
+#### Task 2 — Hypergeometric Model (Sampling from a Batch)
 
 A warehouse contains **20 components**, of which **5 are defective** and **15 are functional**.
 
@@ -54,7 +54,7 @@ We randomly select **4 components without replacement** for inspection.
 
 ---
 
-#### Exercise 3 – Geometric Scheme (Waiting for the First Event)
+#### Task 3 — Geometric Model (Waiting for the First Event)
 
 In a printing house, each printed page may contain a **printing error** with probability \(p\).
 
@@ -69,7 +69,7 @@ The experiment consists of observing consecutive pages until the **first error**
 
 ---
 
-#### Exercise 4 – Poisson Distribution (Arrival of Events)
+#### Task 4 — Poisson Model (Arrival of Events)
 
 A web service receives on average **3 error reports per hour**.
 
@@ -84,7 +84,7 @@ We assume that the number of reports in a given time interval follows a **Poisso
 
 ---
 
-#### Exercise 5 – Multinomial Scheme (Categories of Outcomes)
+#### Task 5 — Multinomial Model (Categories of Outcomes)
 
 A player rolls a **die 5 times**.
 
@@ -103,9 +103,9 @@ The outcomes are grouped into three categories:
 
 ---
 
-### Part II – Exploration and Calculations
+### Part II — Exploration and Calculations
 
-#### Exercise 6 – Bernoulli Scheme
+#### Task 6 — Binomial Model
 
 The probability of producing a defective part is **0.04**.
 
@@ -118,7 +118,7 @@ Calculate the probability that:
 
 ---
 
-#### Exercise 7 – Hypergeometric Scheme
+#### Task 7 — Hypergeometric Model
 
 A box contains:
 
@@ -131,7 +131,7 @@ Calculate the probability that the sample contains **exactly 2 defective bulbs**
 
 ---
 
-#### Exercise 8 – Geometric Scheme
+#### Task 8 — Geometric Model
 
 The probability of an error in program compilation is **0.1** for each compilation.
 
@@ -144,7 +144,7 @@ Calculate the probability that:
 
 ---
 
-#### Exercise 9 – Poisson Distribution
+#### Task 9 — Poisson Model
 
 A customer service center receives on average **5 requests per hour**.
 
@@ -155,7 +155,7 @@ Calculate the probability that during one hour there will be:
 
 ---
 
-#### Exercise 10 – Multinomial Scheme
+#### Task 10 — Multinomial Model
 
 A box contains candies of three flavors:
 
