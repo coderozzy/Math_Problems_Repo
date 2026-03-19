@@ -1330,6 +1330,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="3. Two particular people must sit opposite each other">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bonus-what-if-there-were-8-people" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonus: What if there were 8 people?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2183,6 +2200,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="3. Two particular people must sit opposite each other">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bonus-what-if-there-were-8-people" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonus: What if there were 8 people?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2207,19 +2241,21 @@
 <p>Circular permutation of 7 distinct objects:</p>
 <div class="arithmatex">\[(7 - 1)! = 6! = 720\]</div>
 <h2 id="2-two-particular-people-must-sit-next-to-each-other">2. Two particular people must sit next to each other</h2>
-<p>Treat the two people as a single block → <strong>6 objects</strong> around a circle:</p>
-<div class="arithmatex">\[(6 - 1)! = 5! = 120\]</div>
-<p>Within the block, the two can swap:</p>
-<div class="arithmatex">\[2! = 2\]</div>
-<p>Total:</p>
-<div class="arithmatex">\[5! \cdot 2 = 120 \cdot 2 = 240\]</div>
+<p>Treat the two people as a single block → <strong>6 objects</strong> around a circle.</p>
+<p>The block can be internally arranged in <span class="arithmatex">\(2\)</span> ways (A-B or B-A).</p>
+<div class="arithmatex">\[(6 - 1)! \cdot 2 = 5! \cdot 2 = 120 \cdot 2 = 240\]</div>
 <h2 id="3-two-particular-people-must-sit-opposite-each-other">3. Two particular people must sit opposite each other</h2>
 <p>At a round table with 7 seats, there is <strong>no seat directly opposite</strong> another seat (7 is odd — opposite seats only exist for even numbers).</p>
 <p>Therefore, <strong>this arrangement is impossible</strong> and the answer is:</p>
 <div class="arithmatex">\[0\]</div>
-<blockquote>
-<p><strong>Note:</strong> If the problem intended an even number of seats (e.g., 8), then: fix one person, the opposite person has 1 choice, and the remaining people arrange freely, giving <span class="arithmatex">\((n-2)! \cdot 1\)</span>. With 7 seats, no exact opposite exists.</p>
-</blockquote>
+<h3 id="bonus-what-if-there-were-8-people">Bonus: What if there were 8 people?</h3>
+<p>With <strong>8 seats</strong> around a round table, each seat has exactly one seat directly opposite.</p>
+<ul>
+<li>Fix person A at any seat (removes rotational symmetry) → <strong>1 way</strong></li>
+<li>Person B must sit directly opposite A → <strong>1 way</strong></li>
+<li>The remaining <strong>6 people</strong> fill the remaining 6 seats freely → <span class="arithmatex">\(6!\)</span> ways</li>
+</ul>
+<div class="arithmatex">\[1 \cdot 1 \cdot 6! = 720\]</div>
 
 
 
