@@ -1702,15 +1702,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-passwords-5-characters-from-36-symbols-digits-09-letters-az" class="md-nav__link">
+  <a href="#5-passwords-5-characters-from-36-symbols" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Passwords (5 characters from 36 symbols: digits 0–9 + letters A–Z)
+        5. Passwords (5 characters from 36 symbols)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Passwords (5 characters from 36 symbols: digits 0–9 + letters A–Z)">
+    <nav class="md-nav" aria-label="5. Passwords (5 characters from 36 symbols)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1736,10 +1736,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-counting-models-used" class="md-nav__link">
+  <a href="#c-models-used" class="md-nav__link">
     <span class="md-ellipsis">
       
-        (c) Counting models used
+        (c) Models used
       
     </span>
   </a>
@@ -2526,15 +2526,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-passwords-5-characters-from-36-symbols-digits-09-letters-az" class="md-nav__link">
+  <a href="#5-passwords-5-characters-from-36-symbols" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Passwords (5 characters from 36 symbols: digits 0–9 + letters A–Z)
+        5. Passwords (5 characters from 36 symbols)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Passwords (5 characters from 36 symbols: digits 0–9 + letters A–Z)">
+    <nav class="md-nav" aria-label="5. Passwords (5 characters from 36 symbols)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2560,10 +2560,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#c-counting-models-used" class="md-nav__link">
+  <a href="#c-models-used" class="md-nav__link">
     <span class="md-ellipsis">
       
-        (c) Counting models used
+        (c) Models used
       
     </span>
   </a>
@@ -2596,55 +2596,69 @@
 <h2 id="1-student-id-codes">1. Student ID Codes</h2>
 <p>Format: 2 letters from <span class="arithmatex">\(\{A, B, C, D, E\}\)</span> + 3 digits from <span class="arithmatex">\(\{0, \ldots, 9\}\)</span>.</p>
 <h3 id="a-letters-and-digits-may-repeat">(a) Letters and digits may repeat</h3>
-<p><strong>Model:</strong> Sequence with repetition (product rule).</p>
-<div class="arithmatex">\[5^2 \cdot 10^3 = 25 \cdot 1\,000 = 25\,000\]</div>
+<p>Sequence with repetition (product rule):</p>
+<div class="arithmatex">\[5 \cdot 5 \cdot 10 \cdot 10 \cdot 10 = 5^2 \cdot 10^3 = 25 \cdot 1\,000 = 25\,000\]</div>
 <h3 id="b-letters-may-not-repeat-digits-may-repeat">(b) Letters may not repeat, digits may repeat</h3>
-<p>Letters: k-permutation of 2 from 5. Digits: sequence with repetition.</p>
-<div class="arithmatex">\[P(5, 2) \cdot 10^3 = (5 \cdot 4) \cdot 1\,000 = 20\,000\]</div>
+<p>Letters — k-permutation:</p>
+<div class="arithmatex">\[P(5, 2) = \frac{5!}{3!} = \frac{5 \cdot 4 \cdot \cancel{3!}}{\cancel{3!}} = 5 \cdot 4 = 20\]</div>
+<p>Digits — sequence with repetition:</p>
+<div class="arithmatex">\[10^3 = 1\,000\]</div>
+<p>Total:</p>
+<div class="arithmatex">\[20 \cdot 1\,000 = 20\,000\]</div>
 <h3 id="c-neither-letters-nor-digits-may-repeat">(c) Neither letters nor digits may repeat</h3>
-<p>Letters: <span class="arithmatex">\(P(5, 2) = 20\)</span>. Digits: <span class="arithmatex">\(P(10, 3) = 720\)</span>.</p>
+<p>Letters:</p>
+<div class="arithmatex">\[P(5, 2) = \frac{5!}{3!} = \frac{5 \cdot 4 \cdot \cancel{3!}}{\cancel{3!}} = 20\]</div>
+<p>Digits:</p>
+<div class="arithmatex">\[P(10, 3) = \frac{10!}{7!} = \frac{10 \cdot 9 \cdot 8 \cdot \cancel{7!}}{\cancel{7!}} = 10 \cdot 9 \cdot 8 = 720\]</div>
+<p>Total:</p>
 <div class="arithmatex">\[20 \cdot 720 = 14\,400\]</div>
 <hr />
 <h2 id="2-medal-assignment-12-runners">2. Medal Assignment (12 runners)</h2>
 <h3 id="a-ways-to-assign-gold-silver-bronze">(a) Ways to assign gold, silver, bronze</h3>
-<p><strong>Model:</strong> k-permutation (ordered selection of 3 from 12).</p>
-<div class="arithmatex">\[P(12, 3) = 12 \cdot 11 \cdot 10 = 1\,320\]</div>
+<p>k-permutation:</p>
+<div class="arithmatex">\[P(12, 3) = \frac{12!}{9!} = \frac{12 \cdot 11 \cdot 10 \cdot \cancel{9!}}{\cancel{9!}} = 12 \cdot 11 \cdot 10 = 1\,320\]</div>
 <h3 id="b-two-particular-runners-must-both-receive-medals">(b) Two particular runners must both receive medals</h3>
-<p>Fix 2 runners among the 3 medalists. Choose which 2 of the 3 medal positions go to them: <span class="arithmatex">\(P(3, 2) = 6\)</span> ways (since order matters — gold vs silver matters).</p>
-<p>The remaining medal goes to one of the other <span class="arithmatex">\(10\)</span> runners: <span class="arithmatex">\(10\)</span> choices.</p>
-<div class="arithmatex">\[6 \cdot 10 = 60\]</div>
-<p><em>Alternative:</em> Choose which medals the 2 specific runners get: <span class="arithmatex">\(3 \cdot 2 = 6\)</span> ways. Choose who gets the remaining medal: <span class="arithmatex">\(10\)</span>.</p>
+<p>Choose which 2 of 3 medals go to them (order matters):</p>
+<div class="arithmatex">\[P(3, 2) = \frac{3!}{1!} = 3 \cdot 2 = 6\]</div>
+<p>Remaining medal → one of the other 10 runners:</p>
+<div class="arithmatex">\[10\]</div>
+<p>Total:</p>
 <div class="arithmatex">\[6 \cdot 10 = 60\]</div>
 <hr />
 <h2 id="3-committee-selection-10-students-6-men-4-women">3. Committee Selection (10 students: 6 men, 4 women)</h2>
 <h3 id="a-total-committees-of-4">(a) Total committees of 4</h3>
-<p><strong>Model:</strong> Combination.</p>
-<div class="arithmatex">\[\binom{10}{4} = \frac{10 \cdot 9 \cdot 8 \cdot 7}{4!} = 210\]</div>
+<div class="arithmatex">\[\binom{10}{4} = \frac{10!}{4! \cdot 6!} = \frac{10 \cdot 9 \cdot 8 \cdot 7 \cdot \cancel{6!}}{\cancel{6!} \cdot 4!} = \frac{10 \cdot 9 \cdot 8 \cdot 7}{4 \cdot 3 \cdot 2 \cdot 1} = \frac{5\,040}{24} = 210\]</div>
 <h3 id="b-exactly-2-women">(b) Exactly 2 women</h3>
-<div class="arithmatex">\[\binom{4}{2} \cdot \binom{6}{2} = 6 \cdot 15 = 90\]</div>
+<p>Choose 2 women from 4:</p>
+<div class="arithmatex">\[\binom{4}{2} = \frac{4!}{2! \cdot 2!} = \frac{4 \cdot 3 \cdot \cancel{2!}}{\cancel{2!} \cdot 2!} = \frac{4 \cdot 3}{2 \cdot 1} = \frac{12}{2} = 6\]</div>
+<p>Choose 2 men from 6:</p>
+<div class="arithmatex">\[\binom{6}{2} = \frac{6!}{2! \cdot 4!} = \frac{6 \cdot 5 \cdot \cancel{4!}}{\cancel{4!} \cdot 2!} = \frac{6 \cdot 5}{2 \cdot 1} = \frac{30}{2} = 15\]</div>
+<p>Multiply:</p>
+<div class="arithmatex">\[6 \cdot 15 = 90\]</div>
 <h3 id="c-at-least-one-woman">(c) At least one woman</h3>
-<p>Total minus all-men committees:</p>
-<div class="arithmatex">\[\binom{10}{4} - \binom{6}{4} = 210 - 15 = 195\]</div>
+<p>Total minus all-men:</p>
+<div class="arithmatex">\[\binom{6}{4} = \frac{6!}{4! \cdot 2!} = \frac{6 \cdot 5 \cdot \cancel{4!}}{\cancel{4!} \cdot 2!} = \frac{6 \cdot 5}{2 \cdot 1} = \frac{30}{2} = 15\]</div>
+<div class="arithmatex">\[210 - 15 = 195\]</div>
 <hr />
 <h2 id="4-circular-seating-7-people">4. Circular Seating (7 people)</h2>
 <h3 id="a-total-circular-arrangements">(a) Total circular arrangements</h3>
-<p><strong>Model:</strong> Circular permutation.</p>
-<div class="arithmatex">\[(7-1)! = 6! = 720\]</div>
+<div class="arithmatex">\[(7-1)! = 6! = 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 720\]</div>
 <h3 id="b-two-particular-people-sit-next-to-each-other">(b) Two particular people sit next to each other</h3>
-<p>Treat them as a block → 6 objects in a circle:</p>
-<div class="arithmatex">\[(6-1)! \cdot 2! = 5! \cdot 2 = 120 \cdot 2 = 240\]</div>
+<p>Block → 6 objects in a circle, block has 2 internal arrangements:</p>
+<div class="arithmatex">\[(6-1)! \cdot 2 = 5! \cdot 2 = 120 \cdot 2 = 240\]</div>
 <hr />
-<h2 id="5-passwords-5-characters-from-36-symbols-digits-09-letters-az">5. Passwords (5 characters from 36 symbols: digits 0–9 + letters A–Z)</h2>
+<h2 id="5-passwords-5-characters-from-36-symbols">5. Passwords (5 characters from 36 symbols)</h2>
+<p>36 symbols = 10 digits + 26 letters.</p>
 <h3 id="a-repetition-allowed">(a) Repetition allowed</h3>
-<p><strong>Model:</strong> Sequence with repetition.</p>
-<div class="arithmatex">\[36^5 = 60\,466\,176\]</div>
+<p>Sequence with repetition:</p>
+<div class="arithmatex">\[36^5 = 36 \cdot 36 \cdot 36 \cdot 36 \cdot 36 = 60\,466\,176\]</div>
 <h3 id="b-no-character-may-repeat">(b) No character may repeat</h3>
-<p><strong>Model:</strong> k-permutation.</p>
-<div class="arithmatex">\[P(36, 5) = 36 \cdot 35 \cdot 34 \cdot 33 \cdot 32 = 45\,239\,040\]</div>
-<h3 id="c-counting-models-used">(c) Counting models used</h3>
+<p>k-permutation:</p>
+<div class="arithmatex">\[P(36, 5) = \frac{36!}{31!} = \frac{36 \cdot 35 \cdot 34 \cdot 33 \cdot 32 \cdot \cancel{31!}}{\cancel{31!}} = 36 \cdot 35 \cdot 34 \cdot 33 \cdot 32 = 45\,239\,040\]</div>
+<h3 id="c-models-used">(c) Models used</h3>
 <ul>
-<li>Part (a): <strong>Sequence with repetition</strong> — each of 5 positions chosen independently from 36 symbols.</li>
-<li>Part (b): <strong>k-permutation</strong> — ordered selection of 5 from 36 without repetition.</li>
+<li>Part (a): <strong>Sequence with repetition</strong> — each position chosen independently, repetition allowed.</li>
+<li>Part (b): <strong>k-permutation</strong> — ordered selection without repetition.</li>
 </ul>
 
 

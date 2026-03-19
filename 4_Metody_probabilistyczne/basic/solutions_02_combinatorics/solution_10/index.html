@@ -2227,18 +2227,27 @@
 <h1 id="solution-task-10-urn-models">Solution — Task 10: Urn Models</h1>
 <p>Urn contains: 5 red, 4 blue, 3 green → <strong>12 balls total</strong> (all individually distinguishable).</p>
 <h2 id="1-draw-3-without-replacement-order-ignored">1. Draw 3 without replacement, order ignored</h2>
-<p>This is a combination:</p>
-<div class="arithmatex">\[\binom{12}{3} = \frac{12 \cdot 11 \cdot 10}{3!} = \frac{1\,320}{6} = 220\]</div>
+<div class="arithmatex">\[\binom{12}{3} = \frac{12!}{3! \cdot 9!}\]</div>
+<p>Cancel <span class="arithmatex">\(9!\)</span>:</p>
+<div class="arithmatex">\[= \frac{12 \cdot 11 \cdot 10 \cdot \cancel{9!}}{\cancel{9!} \cdot 3!} = \frac{12 \cdot 11 \cdot 10}{3 \cdot 2 \cdot 1} = \frac{1\,320}{6} = 220\]</div>
 <h2 id="2-exactly-2-red-balls-order-ignored">2. Exactly 2 red balls (order ignored)</h2>
-<p>Choose 2 red from 5, and 1 non-red from <span class="arithmatex">\(4 + 3 = 7\)</span>:</p>
-<div class="arithmatex">\[\binom{5}{2} \cdot \binom{7}{1} = 10 \cdot 7 = 70\]</div>
+<p>Choose 2 red from 5:</p>
+<div class="arithmatex">\[\binom{5}{2} = \frac{5!}{2! \cdot 3!} = \frac{5 \cdot 4 \cdot \cancel{3!}}{\cancel{3!} \cdot 2!} = \frac{5 \cdot 4}{2 \cdot 1} = \frac{20}{2} = 10\]</div>
+<p>Choose 1 non-red from <span class="arithmatex">\(4 + 3 = 7\)</span>:</p>
+<div class="arithmatex">\[\binom{7}{1} = 7\]</div>
+<p>Multiply:</p>
+<div class="arithmatex">\[10 \cdot 7 = 70\]</div>
 <h2 id="3-draw-3-order-of-colors-recorded">3. Draw 3, order of colors recorded</h2>
-<p>This is a k-permutation (ordered selection of 3 from 12 distinguishable balls):</p>
-<div class="arithmatex">\[P(12, 3) = 12 \cdot 11 \cdot 10 = 1\,320\]</div>
+<p>k-permutation (ordered selection):</p>
+<div class="arithmatex">\[P(12, 3) = \frac{12!}{9!} = \frac{12 \cdot 11 \cdot 10 \cdot \cancel{9!}}{\cancel{9!}} = 12 \cdot 11 \cdot 10 = 1\,320\]</div>
 <h2 id="4-exactly-2-red-balls-order-recorded">4. Exactly 2 red balls (order recorded)</h2>
-<p>Choose which 2 of the 3 positions are red: <span class="arithmatex">\(\binom{3}{2} = 3\)</span> ways.</p>
-<p>Choose which 2 red balls fill those positions (ordered): <span class="arithmatex">\(5 \cdot 4 = 20\)</span>.</p>
-<p>Choose which non-red ball fills the remaining position: <span class="arithmatex">\(7\)</span> choices.</p>
+<p>Choose which 2 of the 3 positions are red:</p>
+<div class="arithmatex">\[\binom{3}{2} = \frac{3!}{2! \cdot 1!} = \frac{3 \cdot \cancel{2!}}{\cancel{2!} \cdot 1} = 3\]</div>
+<p>Fill red positions (ordered, 2 from 5 red):</p>
+<div class="arithmatex">\[P(5, 2) = \frac{5!}{3!} = \frac{5 \cdot 4 \cdot \cancel{3!}}{\cancel{3!}} = 5 \cdot 4 = 20\]</div>
+<p>Fill remaining position (1 from 7 non-red):</p>
+<div class="arithmatex">\[7\]</div>
+<p>Multiply:</p>
 <div class="arithmatex">\[3 \cdot 20 \cdot 7 = 420\]</div>
 
 

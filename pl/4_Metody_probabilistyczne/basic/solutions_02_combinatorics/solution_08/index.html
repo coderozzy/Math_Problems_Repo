@@ -2204,14 +2204,16 @@
 
 <h1 id="solution-task-8-sequences-with-repetition">Solution — Task 8: Sequences with Repetition</h1>
 <h2 id="1-total-5-digit-pin-codes-digits-may-repeat">1. Total 5-digit PIN codes (digits may repeat)</h2>
-<p>Each of 5 positions can be any digit <span class="arithmatex">\(0\)</span>–<span class="arithmatex">\(9\)</span>:</p>
-<div class="arithmatex">\[10^5 = 100\,000\]</div>
+<p>Each of 5 positions: any digit <span class="arithmatex">\(0\)</span>–<span class="arithmatex">\(9\)</span> (10 choices), repetition allowed:</p>
+<div class="arithmatex">\[10^5 = 10 \cdot 10 \cdot 10 \cdot 10 \cdot 10 = 100\,000\]</div>
 <h2 id="2-at-least-one-repeated-digit">2. At least one repeated digit</h2>
 <p>Total PINs minus PINs with <strong>all digits different</strong>:</p>
 <div class="arithmatex">\[10^5 - P(10, 5) = 100\,000 - 30\,240 = 69\,760\]</div>
 <h2 id="3-all-digits-different">3. All digits different</h2>
-<p>This is a k-permutation — choose 5 from 10 digits, order matters, no repetition:</p>
-<div class="arithmatex">\[P(10, 5) = \frac{10!}{5!} = 10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 = 30\,240\]</div>
+<p>This is a k-permutation — choose 5 from 10, order matters, no repetition:</p>
+<div class="arithmatex">\[P(10, 5) = \frac{10!}{(10-5)!} = \frac{10!}{5!}\]</div>
+<p>Cancel <span class="arithmatex">\(5!\)</span>:</p>
+<div class="arithmatex">\[= \frac{10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 \cdot \cancel{5!}}{\cancel{5!}} = 10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 = 30\,240\]</div>
 
 
 

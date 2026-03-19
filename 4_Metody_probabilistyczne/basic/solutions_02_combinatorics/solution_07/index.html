@@ -2204,18 +2204,22 @@
 
 <h1 id="solution-task-7-k-permutations">Solution — Task 7: k-Permutations</h1>
 <h2 id="1-first-three-places-among-12-runners">1. First three places among 12 runners</h2>
-<p>Order matters (1st, 2nd, 3rd are different), no repetition:</p>
-<div class="arithmatex">\[P(12, 3) = \frac{12!}{(12-3)!} = \frac{12!}{9!} = 12 \cdot 11 \cdot 10 = 1\,320\]</div>
+<p>Order matters (1st ≠ 2nd ≠ 3rd), no repetition:</p>
+<div class="arithmatex">\[P(12, 3) = \frac{12!}{(12-3)!} = \frac{12!}{9!}\]</div>
+<p>Cancel <span class="arithmatex">\(9!\)</span>:</p>
+<div class="arithmatex">\[= \frac{12 \cdot 11 \cdot 10 \cdot \cancel{9!}}{\cancel{9!}} = 12 \cdot 11 \cdot 10 = 1\,320\]</div>
 <h2 id="2-4-digit-numbers-with-distinct-digits-from-19">2. 4-digit numbers with distinct digits from 1–9</h2>
 <p>Choose 4 digits from 9, order matters, no repetition:</p>
-<div class="arithmatex">\[P(9, 4) = \frac{9!}{5!} = 9 \cdot 8 \cdot 7 \cdot 6 = 3\,024\]</div>
+<div class="arithmatex">\[P(9, 4) = \frac{9!}{(9-4)!} = \frac{9!}{5!}\]</div>
+<p>Cancel <span class="arithmatex">\(5!\)</span>:</p>
+<div class="arithmatex">\[= \frac{9 \cdot 8 \cdot 7 \cdot 6 \cdot \cancel{5!}}{\cancel{5!}} = 9 \cdot 8 \cdot 7 \cdot 6 = 3\,024\]</div>
 <h2 id="3-divisible-by-5">3. Divisible by 5</h2>
-<p>From digits <span class="arithmatex">\(\{1, 2, \ldots, 9\}\)</span>, divisibility by 5 requires the last digit to be <strong>5</strong> (the only multiple of 5 available).</p>
+<p>From <span class="arithmatex">\(\{1, \ldots, 9\}\)</span>, divisibility by 5 requires last digit = <strong>5</strong> (only option).</p>
 <ul>
-<li>Last digit: 5 (1 way)</li>
-<li>Remaining 3 positions: choose from the other 8 digits, order matters, no repetition</li>
+<li>Last digit: 5 → <strong>1 way</strong></li>
+<li>Remaining 3 positions from 8 digits, ordered:</li>
 </ul>
-<div class="arithmatex">\[P(8, 3) = 8 \cdot 7 \cdot 6 = 336\]</div>
+<div class="arithmatex">\[P(8, 3) = \frac{8!}{(8-3)!} = \frac{8!}{5!} = \frac{8 \cdot 7 \cdot 6 \cdot \cancel{5!}}{\cancel{5!}} = 8 \cdot 7 \cdot 6 = 336\]</div>
 
 
 
