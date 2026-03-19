@@ -2228,7 +2228,7 @@
 <p>Urn contains: 5 red, 4 blue, 3 green → <strong>12 balls total</strong> (all individually distinguishable).</p>
 <h2 id="1-draw-3-without-replacement-order-ignored">1. Draw 3 without replacement, order ignored</h2>
 <p>This is a combination:</p>
-<div class="arithmatex">\[\binom{12}{3} = \frac{12 \cdot 11 \cdot 10}{3!} = 220\]</div>
+<div class="arithmatex">\[\binom{12}{3} = \frac{12 \cdot 11 \cdot 10}{3!} = \frac{1\,320}{6} = 220\]</div>
 <h2 id="2-exactly-2-red-balls-order-ignored">2. Exactly 2 red balls (order ignored)</h2>
 <p>Choose 2 red from 5, and 1 non-red from <span class="arithmatex">\(4 + 3 = 7\)</span>:</p>
 <div class="arithmatex">\[\binom{5}{2} \cdot \binom{7}{1} = 10 \cdot 7 = 70\]</div>
@@ -2237,20 +2237,8 @@
 <div class="arithmatex">\[P(12, 3) = 12 \cdot 11 \cdot 10 = 1\,320\]</div>
 <h2 id="4-exactly-2-red-balls-order-recorded">4. Exactly 2 red balls (order recorded)</h2>
 <p>Choose which 2 of the 3 positions are red: <span class="arithmatex">\(\binom{3}{2} = 3\)</span> ways.</p>
-<p>Choose which 2 red balls fill those positions: <span class="arithmatex">\(P(5, 2) = 5 \cdot 4 = 20\)</span>.</p>
+<p>Choose which 2 red balls fill those positions (ordered): <span class="arithmatex">\(5 \cdot 4 = 20\)</span>.</p>
 <p>Choose which non-red ball fills the remaining position: <span class="arithmatex">\(7\)</span> choices.</p>
-<div class="arithmatex">\[3 \cdot 20 \cdot 7 = 420\]</div>
-<p><em>Alternative approach:</em> Choose 2 red and 1 non-red, then arrange all 3:</p>
-<div class="arithmatex">\[\binom{5}{2} \cdot \binom{7}{1} \cdot 3! = 10 \cdot 7 \cdot 6 = 420\]</div>
-<p>Wait — but the balls are distinguishable, so we should use:</p>
-<div class="arithmatex">\[\binom{5}{2} \cdot 7 \cdot 3! = 10 \cdot 7 \cdot 6 = 420\]</div>
-<p>But this overcounts since we want ordered sequences. Let me reconsider:</p>
-<p>Since order matters, we pick 3 balls in sequence. We need exactly 2 red among 3 draws.</p>
-<ul>
-<li>Choose positions for red: <span class="arithmatex">\(\binom{3}{2} = 3\)</span></li>
-<li>Fill red positions (ordered): <span class="arithmatex">\(5 \cdot 4 = 20\)</span></li>
-<li>Fill the remaining position: <span class="arithmatex">\(7\)</span> choices</li>
-</ul>
 <div class="arithmatex">\[3 \cdot 20 \cdot 7 = 420\]</div>
 
 
