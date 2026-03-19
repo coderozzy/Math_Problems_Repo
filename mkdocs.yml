@@ -1,5 +1,5 @@
 site_name: Math Problems
-site_url: https://dchorazkiewicz.github.io/Math_Problems_Repo/
+site_url: https://coderozzy.github.io/Math_Problems_Repo/
 
 theme:
   name: material
@@ -61,7 +61,20 @@ plugins:
                 - Podstawowe:
                     - '1. Zdarzenia i prawdopodobieństwo': '4_Metody_probabilistyczne/basic/01_events_and_probability.md'
                     - '2. Kombinatoryka': '4_Metody_probabilistyczne/basic/02_combinatorics.md'
-                    - '3. Rozkłady prawdopodobieństwa': '4_Metody_probabilistyczne/basic/03_probability_distributions.md'
+                    - 'Rozwiązania Kombinatoryka':
+                      - 'Zadanie 1': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_01.md'
+                      - 'Zadanie 2': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_02.md'
+                      - 'Zadanie 3': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_03.md'
+                      - 'Zadanie 4': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_04.md'
+                      - 'Zadanie 5': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_05.md'
+                      - 'Zadanie 6': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_06.md'
+                      - 'Zadanie 7': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_07.md'
+                      - 'Zadanie 8': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_08.md'
+                      - 'Zadanie 9': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_09.md'
+                      - 'Zadanie 10': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_10.md'
+                      - 'Zadanie 11': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_11.md'
+                      - 'Zadanie 12': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_12.md'
+                    - '3. Rozkłady prawdopodobieństwa': '4_Metody_probabilistyczne/basic/04_probability_distributions.md'
                 - Zaawansowane:
                     - '1. Zdarzenia i prawdopodobieństwo': '4_Metody_probabilistyczne/advanced/01_events_and_probability.md'
                     - '2. Zmienne losowe': '4_Metody_probabilistyczne/advanced/02_random_variables.md'
@@ -107,7 +120,20 @@ plugins:
                 - Basic:
                     - '1. Events & Probability': '4_Metody_probabilistyczne/basic/01_events_and_probability.md'
                     - '2. Combinatorics': '4_Metody_probabilistyczne/basic/02_combinatorics.md'
-                    - '3. Probability Distributions': '4_Metody_probabilistyczne/basic/03_probability_distributions.md'
+                    - 'Combinatorics Solutions':
+                      - 'Task 1': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_01.md'
+                      - 'Task 2': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_02.md'
+                      - 'Task 3': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_03.md'
+                      - 'Task 4': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_04.md'
+                      - 'Task 5': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_05.md'
+                      - 'Task 6': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_06.md'
+                      - 'Task 7': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_07.md'
+                      - 'Task 8': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_08.md'
+                      - 'Task 9': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_09.md'
+                      - 'Task 10': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_10.md'
+                      - 'Task 11': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_11.md'
+                      - 'Task 12': '4_Metody_probabilistyczne/basic/solutions_02_combinatorics/solution_12.md'
+                    - '3. Probability Distributions': '4_Metody_probabilistyczne/basic/04_probability_distributions.md'
                 - Advanced:
                     - '1. Events & Probability': '4_Metody_probabilistyczne/advanced/01_events_and_probability.md'
                     - '2. Random Variables': '4_Metody_probabilistyczne/advanced/02_random_variables.md'
