@@ -2659,15 +2659,118 @@
 - <span class="arithmatex">\(X_3\)</span> = number of large outcomes</p>
 <p>The sample space consists of all non-negative integer triples that sum to <span class="arithmatex">\(n = 5\)</span>:</p>
 <div class="arithmatex">\[\Omega = \{(x_1, x_2, x_3) \in \mathbb{N}_0^3 : x_1 + x_2 + x_3 = 5\}\]</div>
+<p><strong>What does this notation mean? Let's break it down piece by piece:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((x_1, x_2, x_3)\)</span></td>
+<td>An ordered triple — how many rolls fell into each category (small, medium, large)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\in\)</span></td>
+<td>"belongs to" or "is an element of"</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mathbb{N}_0^3\)</span></td>
+<td>The set of all triples of non-negative integers (0, 1, 2, 3, …). The subscript <span class="arithmatex">\(0\)</span> means zero is included; the superscript <span class="arithmatex">\(3\)</span> means we have 3 components</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(:\)</span></td>
+<td>"such that" — a filter condition follows</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x_1 + x_2 + x_3 = 5\)</span></td>
+<td>The three counts must add up to 5, because we roll the die exactly 5 times</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>In plain language:</strong> <span class="arithmatex">\(\Omega\)</span> is the set of all possible ways to distribute 5 die rolls among 3 categories, where each category gets zero or more rolls, and the total is always 5.</p>
+</blockquote>
 <p><strong>Examples of elements:</strong></p>
-<ul>
-<li><span class="arithmatex">\((5, 0, 0)\)</span> — all 5 rolls are small</li>
-<li><span class="arithmatex">\((2, 2, 1)\)</span> — 2 small, 2 medium, 1 large</li>
-<li><span class="arithmatex">\((0, 0, 5)\)</span> — all 5 rolls are large</li>
-<li><span class="arithmatex">\((1, 3, 1)\)</span> — 1 small, 3 medium, 1 large</li>
-</ul>
-<p><strong>How many elements?</strong> The number of non-negative integer solutions to <span class="arithmatex">\(x_1 + x_2 + x_3 = 5\)</span> is:</p>
-<div class="arithmatex">\[\binom{5 + 3 - 1}{3 - 1} = \binom{7}{2} = 21\]</div>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((5, 0, 0)\)</span></td>
+<td>All 5 rolls are small, none medium, none large</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((2, 2, 1)\)</span></td>
+<td>2 small, 2 medium, 1 large</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((0, 0, 5)\)</span></td>
+<td>All 5 rolls are large</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((1, 3, 1)\)</span></td>
+<td>1 small, 3 medium, 1 large</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((0, 2, 3)\)</span></td>
+<td>No small, 2 medium, 3 large</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Not in <span class="arithmatex">\(\Omega\)</span>:</strong> <span class="arithmatex">\((3, 3, 1)\)</span> ❌ because <span class="arithmatex">\(3+3+1 = 7 \neq 5\)</span>. Also <span class="arithmatex">\((-1, 4, 2)\)</span> ❌ because <span class="arithmatex">\(-1\)</span> is not a non-negative integer.</p>
+</blockquote>
+<p><strong>How many elements does <span class="arithmatex">\(\Omega\)</span> have?</strong></p>
+<p>We need to count: in how many ways can we write <span class="arithmatex">\(5\)</span> as a sum of <span class="arithmatex">\(3\)</span> non-negative integers?</p>
+<div class="arithmatex">\[x_1 + x_2 + x_3 = 5, \quad x_i \geq 0\]</div>
+<p>This is a classic combinatorics problem called <strong>"Stars and Bars"</strong> (also known as "balls and urns").</p>
+<p><strong>The Stars and Bars idea:</strong></p>
+<p>Imagine 5 identical stars (★) representing our 5 rolls. We need to divide them into 3 groups (the 3 categories). To separate 3 groups, we need <strong>2 dividers</strong> (bars |).</p>
+<p>For example, the arrangement ★★ | ★★ | ★ represents <span class="arithmatex">\((2, 2, 1)\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th>Arrangement</th>
+<th>Meaning</th>
+<th>Triple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>★★★★★ ||</td>
+<td>5 small, 0 medium, 0 large</td>
+<td><span class="arithmatex">\((5, 0, 0)\)</span></td>
+</tr>
+<tr>
+<td>★★ | ★★ | ★</td>
+<td>2 small, 2 medium, 1 large</td>
+<td><span class="arithmatex">\((2, 2, 1)\)</span></td>
+</tr>
+<tr>
+<td>| ★★ | ★★★</td>
+<td>0 small, 2 medium, 3 large</td>
+<td><span class="arithmatex">\((0, 2, 3)\)</span></td>
+</tr>
+<tr>
+<td>★ | ★★★ | ★</td>
+<td>1 small, 3 medium, 1 large</td>
+<td><span class="arithmatex">\((1, 3, 1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>We have a total of <span class="arithmatex">\(5 + 2 = 7\)</span> symbols (5 stars + 2 bars), and we need to choose which 2 of the 7 positions are bars. This gives:</p>
+<div class="arithmatex">\[\binom{5 + 3 - 1}{3 - 1} = \binom{7}{2} = \frac{7!}{2! \cdot 5!} = \frac{7 \cdot 6}{2 \cdot 1} = 21\]</div>
+<blockquote>
+<p><strong>General formula:</strong> The number of ways to distribute <span class="arithmatex">\(n\)</span> identical items into <span class="arithmatex">\(c\)</span> categories is <span class="arithmatex">\(\binom{n + c - 1}{c - 1}\)</span>. Here <span class="arithmatex">\(n = 5\)</span> (rolls) and <span class="arithmatex">\(c = 3\)</span> (categories), so we get <span class="arithmatex">\(\binom{5+3-1}{3-1} = \binom{7}{2} = 21\)</span>.</p>
+</blockquote>
+<p>So <span class="arithmatex">\(|\Omega| = 21\)</span> — there are <strong>21 possible distributions</strong> of outcomes across the three categories.</p>
 <hr />
 <h2 id="3-specify-the-multinomial-distribution">3. Specify the multinomial distribution</h2>
 <p><strong>The multinomial formula:</strong></p>
