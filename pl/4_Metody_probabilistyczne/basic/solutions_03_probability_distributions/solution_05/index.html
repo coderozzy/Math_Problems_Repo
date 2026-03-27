@@ -2653,13 +2653,35 @@
 </blockquote>
 <hr />
 <h2 id="2-define-the-sample-space">2. Define the sample space</h2>
-<p>Let <span class="arithmatex">\((X_1, X_2, X_3)\)</span> represent the number of rolls in each category, where:
-- <span class="arithmatex">\(X_1\)</span> = number of small outcomes
-- <span class="arithmatex">\(X_2\)</span> = number of medium outcomes
-- <span class="arithmatex">\(X_3\)</span> = number of large outcomes</p>
-<p>The sample space consists of all non-negative integer triples that sum to <span class="arithmatex">\(n = 5\)</span>:</p>
+<p>We build <span class="arithmatex">\(\Omega\)</span> step by step.</p>
+<hr />
+<p><strong>Step 1 — What do we observe after the experiment?</strong></p>
+<p>After rolling the die 5 times, we don't care about the exact sequence of rolls (e.g., "1, 4, 6, 2, 3"). We only care about <strong>how many rolls</strong> fell into each of the 3 categories.</p>
+<p>So we record three numbers:</p>
+<ul>
+<li><span class="arithmatex">\(X_1\)</span> = how many of the 5 rolls gave a <strong>small</strong> result (1 or 2)</li>
+<li><span class="arithmatex">\(X_2\)</span> = how many of the 5 rolls gave a <strong>medium</strong> result (3 or 4)</li>
+<li><span class="arithmatex">\(X_3\)</span> = how many of the 5 rolls gave a <strong>large</strong> result (5 or 6)</li>
+</ul>
+<blockquote>
+<p><strong>Example:</strong> If the rolls are 1, 4, 6, 2, 3 → we get 2 small (1 and 2), 2 medium (4 and 3), 1 large (6) → we record <span class="arithmatex">\((X_1, X_2, X_3) = (2, 2, 1)\)</span>.</p>
+</blockquote>
+<hr />
+<p><strong>Step 2 — What constraints do these numbers have?</strong></p>
+<p>Two rules:</p>
+<ol>
+<li>
+<p><strong>Each <span class="arithmatex">\(X_i \geq 0\)</span></strong> — you cannot have a negative count. It is possible to get zero rolls in a category (e.g., no large numbers at all).</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(X_1 + X_2 + X_3 = 5\)</span></strong> — every roll must fall into exactly one category, and there are 5 rolls total. So the three counts must always add up to 5.</p>
+</li>
+</ol>
+<hr />
+<p><strong>Step 3 — Write <span class="arithmatex">\(\Omega\)</span> formally</strong></p>
+<p>Combining Steps 1 and 2, the sample space is:</p>
 <div class="arithmatex">\[\Omega = \{(x_1, x_2, x_3) \in \mathbb{N}_0^3 : x_1 + x_2 + x_3 = 5\}\]</div>
-<p><strong>What does this notation mean? Let's break it down piece by piece:</strong></p>
+<p><strong>What does each symbol mean?</strong></p>
 <table>
 <thead>
 <tr>
@@ -2670,15 +2692,19 @@
 <tbody>
 <tr>
 <td><span class="arithmatex">\((x_1, x_2, x_3)\)</span></td>
-<td>An ordered triple — how many rolls fell into each category (small, medium, large)</td>
+<td>An ordered triple — the counts for small, medium, large</td>
 </tr>
 <tr>
 <td><span class="arithmatex">\(\in\)</span></td>
-<td>"belongs to" or "is an element of"</td>
+<td>"belongs to" / "is an element of"</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mathbb{N}_0\)</span></td>
+<td>Non-negative integers: <span class="arithmatex">\(\{0, 1, 2, 3, \ldots\}\)</span>. The subscript <span class="arithmatex">\(0\)</span> means zero is included</td>
 </tr>
 <tr>
 <td><span class="arithmatex">\(\mathbb{N}_0^3\)</span></td>
-<td>The set of all triples of non-negative integers (0, 1, 2, 3, …). The subscript <span class="arithmatex">\(0\)</span> means zero is included; the superscript <span class="arithmatex">\(3\)</span> means we have 3 components</td>
+<td>All possible triples of non-negative integers. The superscript <span class="arithmatex">\(3\)</span> means 3 components</td>
 </tr>
 <tr>
 <td><span class="arithmatex">\(:\)</span></td>
@@ -2686,91 +2712,138 @@
 </tr>
 <tr>
 <td><span class="arithmatex">\(x_1 + x_2 + x_3 = 5\)</span></td>
-<td>The three counts must add up to 5, because we roll the die exactly 5 times</td>
+<td>The constraint: total must be 5</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p><strong>In plain language:</strong> <span class="arithmatex">\(\Omega\)</span> is the set of all possible ways to distribute 5 die rolls among 3 categories, where each category gets zero or more rolls, and the total is always 5.</p>
+<p><strong>In plain language:</strong> <span class="arithmatex">\(\Omega\)</span> is the set of all ways to split 5 rolls among 3 categories, where each category gets zero or more, and the total is always 5.</p>
 </blockquote>
-<p><strong>Examples of elements:</strong></p>
+<hr />
+<p><strong>Step 4 — Examples: which triples are in <span class="arithmatex">\(\Omega\)</span> and which are not?</strong></p>
+<p>✅ <strong>Valid elements</strong> (they satisfy both rules):</p>
 <table>
 <thead>
 <tr>
 <th>Element</th>
+<th>Check</th>
 <th>Interpretation</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><span class="arithmatex">\((5, 0, 0)\)</span></td>
-<td>All 5 rolls are small, none medium, none large</td>
+<td><span class="arithmatex">\(5+0+0=5\)</span> ✓, all <span class="arithmatex">\(\geq 0\)</span> ✓</td>
+<td>All 5 rolls are small</td>
 </tr>
 <tr>
 <td><span class="arithmatex">\((2, 2, 1)\)</span></td>
+<td><span class="arithmatex">\(2+2+1=5\)</span> ✓, all <span class="arithmatex">\(\geq 0\)</span> ✓</td>
 <td>2 small, 2 medium, 1 large</td>
 </tr>
 <tr>
 <td><span class="arithmatex">\((0, 0, 5)\)</span></td>
+<td><span class="arithmatex">\(0+0+5=5\)</span> ✓, all <span class="arithmatex">\(\geq 0\)</span> ✓</td>
 <td>All 5 rolls are large</td>
 </tr>
 <tr>
 <td><span class="arithmatex">\((1, 3, 1)\)</span></td>
+<td><span class="arithmatex">\(1+3+1=5\)</span> ✓, all <span class="arithmatex">\(\geq 0\)</span> ✓</td>
 <td>1 small, 3 medium, 1 large</td>
 </tr>
 <tr>
 <td><span class="arithmatex">\((0, 2, 3)\)</span></td>
+<td><span class="arithmatex">\(0+2+3=5\)</span> ✓, all <span class="arithmatex">\(\geq 0\)</span> ✓</td>
 <td>No small, 2 medium, 3 large</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Not in <span class="arithmatex">\(\Omega\)</span>:</strong> <span class="arithmatex">\((3, 3, 1)\)</span> ❌ because <span class="arithmatex">\(3+3+1 = 7 \neq 5\)</span>. Also <span class="arithmatex">\((-1, 4, 2)\)</span> ❌ because <span class="arithmatex">\(-1\)</span> is not a non-negative integer.</p>
-</blockquote>
-<p><strong>How many elements does <span class="arithmatex">\(\Omega\)</span> have?</strong></p>
-<p>We need to count: in how many ways can we write <span class="arithmatex">\(5\)</span> as a sum of <span class="arithmatex">\(3\)</span> non-negative integers?</p>
+<p>❌ <strong>Invalid — NOT in <span class="arithmatex">\(\Omega\)</span>:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Why not?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((3, 3, 1)\)</span></td>
+<td><span class="arithmatex">\(3+3+1 = 7 \neq 5\)</span> — sum is too large</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((4, 2, 0)\)</span></td>
+<td>Wait — <span class="arithmatex">\(4+2+0 = 6 \neq 5\)</span> — one roll too many</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((-1, 4, 2)\)</span></td>
+<td><span class="arithmatex">\(-1 &lt; 0\)</span> — negative counts are impossible</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((2, 1, 1)\)</span></td>
+<td><span class="arithmatex">\(2+1+1 = 4 \neq 5\)</span> — sum is too small, one roll missing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Step 5 — How many elements does <span class="arithmatex">\(\Omega\)</span> have?</strong></p>
+<p>We need to answer: <strong>in how many ways can we write 5 as a sum of 3 non-negative integers?</strong></p>
 <div class="arithmatex">\[x_1 + x_2 + x_3 = 5, \quad x_i \geq 0\]</div>
-<p>This is a classic combinatorics problem called <strong>"Stars and Bars"</strong> (also known as "balls and urns").</p>
-<p><strong>The Stars and Bars idea:</strong></p>
-<p>Imagine 5 identical stars (★) representing our 5 rolls. We need to divide them into 3 groups (the 3 categories). To separate 3 groups, we need <strong>2 dividers</strong> (bars |).</p>
-<p>For example, the arrangement ★★ | ★★ | ★ represents <span class="arithmatex">\((2, 2, 1)\)</span>:</p>
+<p>This is a classic counting problem called <strong>"Stars and Bars"</strong>.</p>
+<p><strong>The idea behind Stars and Bars:</strong></p>
+<p>Imagine our 5 rolls as 5 identical stars: ★ ★ ★ ★ ★</p>
+<p>We need to split them into 3 groups (one group per category). To create 3 groups from a row of stars, we insert <strong>2 dividers</strong> (bars "|") among them.</p>
+<p><strong>How it works — example:</strong></p>
+<p>The arrangement <code>★★ | ★★ | ★</code> means: 2 stars go to category 1, 2 stars to category 2, 1 star to category 3 → triple <span class="arithmatex">\((2, 2, 1)\)</span>.</p>
+<p>More examples:</p>
 <table>
 <thead>
 <tr>
 <th>Arrangement</th>
-<th>Meaning</th>
+<th>How to read it</th>
 <th>Triple</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>★★★★★ ||</td>
-<td>5 small, 0 medium, 0 large</td>
+<td><code>★★★★★ ∣∣</code></td>
+<td>All 5 left of both bars → 5 small, 0 medium, 0 large</td>
 <td><span class="arithmatex">\((5, 0, 0)\)</span></td>
 </tr>
 <tr>
-<td>★★ | ★★ | ★</td>
-<td>2 small, 2 medium, 1 large</td>
+<td><code>★★ ∣ ★★ ∣ ★</code></td>
+<td>2 left of 1st bar, 2 between bars, 1 right of 2nd bar</td>
 <td><span class="arithmatex">\((2, 2, 1)\)</span></td>
 </tr>
 <tr>
-<td>| ★★ | ★★★</td>
-<td>0 small, 2 medium, 3 large</td>
+<td><code>∣ ★★ ∣ ★★★</code></td>
+<td>0 left of 1st bar, 2 between, 3 right</td>
 <td><span class="arithmatex">\((0, 2, 3)\)</span></td>
 </tr>
 <tr>
-<td>★ | ★★★ | ★</td>
-<td>1 small, 3 medium, 1 large</td>
+<td><code>★ ∣ ★★★ ∣ ★</code></td>
+<td>1 left, 3 between, 1 right</td>
 <td><span class="arithmatex">\((1, 3, 1)\)</span></td>
+</tr>
+<tr>
+<td><code>∣∣ ★★★★★</code></td>
+<td>0 left, 0 between, 5 right → all large</td>
+<td><span class="arithmatex">\((0, 0, 5)\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>We have a total of <span class="arithmatex">\(5 + 2 = 7\)</span> symbols (5 stars + 2 bars), and we need to choose which 2 of the 7 positions are bars. This gives:</p>
-<div class="arithmatex">\[\binom{5 + 3 - 1}{3 - 1} = \binom{7}{2} = \frac{7!}{2! \cdot 5!} = \frac{7 \cdot 6}{2 \cdot 1} = 21\]</div>
 <blockquote>
-<p><strong>General formula:</strong> The number of ways to distribute <span class="arithmatex">\(n\)</span> identical items into <span class="arithmatex">\(c\)</span> categories is <span class="arithmatex">\(\binom{n + c - 1}{c - 1}\)</span>. Here <span class="arithmatex">\(n = 5\)</span> (rolls) and <span class="arithmatex">\(c = 3\)</span> (categories), so we get <span class="arithmatex">\(\binom{5+3-1}{3-1} = \binom{7}{2} = 21\)</span>.</p>
+<p><strong>Note:</strong> Bars can be adjacent (like <code>★★★★★ ||</code>) — that just means an empty group (0 rolls in that category). This is perfectly valid.</p>
 </blockquote>
-<p>So <span class="arithmatex">\(|\Omega| = 21\)</span> — there are <strong>21 possible distributions</strong> of outcomes across the three categories.</p>
+<p><strong>Counting the arrangements:</strong></p>
+<p>We have 7 symbols total: 5 stars + 2 bars. We need to choose <strong>which 2 of the 7 positions</strong> are bars (the rest are automatically stars).</p>
+<div class="arithmatex">\[\binom{7}{2} = \frac{7!}{2! \cdot 5!} = \frac{7 \cdot 6}{2 \cdot 1} = 21\]</div>
+<p><strong>Where does the general formula come from?</strong></p>
+<p>With <span class="arithmatex">\(n\)</span> stars (items to distribute) and <span class="arithmatex">\(c\)</span> categories, we need <span class="arithmatex">\(c - 1\)</span> bars. Total symbols = <span class="arithmatex">\(n + (c-1)\)</span>. Choose positions for the bars:</p>
+<div class="arithmatex">\[\binom{n + c - 1}{c - 1}\]</div>
+<p>Plugging in <span class="arithmatex">\(n = 5\)</span>, <span class="arithmatex">\(c = 3\)</span>:</p>
+<div class="arithmatex">\[\binom{5 + 3 - 1}{3 - 1} = \binom{7}{2} = 21\]</div>
+<p><strong>Conclusion:</strong> <span class="arithmatex">\(|\Omega| = 21\)</span> — there are <strong>21 possible distributions</strong> of 5 rolls across 3 categories.</p>
 <hr />
 <h2 id="3-specify-the-multinomial-distribution">3. Specify the multinomial distribution</h2>
 <p><strong>The multinomial formula:</strong></p>
