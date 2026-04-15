@@ -1869,8 +1869,26 @@
 <blockquote>
 <p><strong>Question:</strong> Mark the event: <em><span class="arithmatex">\(A\)</span>: the sum of the two results is equal to 7</em></p>
 </blockquote>
-<p>We need <span class="arithmatex">\((i,j)\)</span> with <span class="arithmatex">\(i + j = 7\)</span>, i.e., <span class="arithmatex">\(j = 7 - i\)</span>.</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+We are rolling two dice. Every outcome is a pair <span class="arithmatex">\((i, j)\)</span> where:
+- <span class="arithmatex">\(i\)</span> = result of the first die (rows)
+- <span class="arithmatex">\(j\)</span> = result of the second die (columns)
+The sample space has <span class="arithmatex">\(6 \times 6 = 36\)</span> possible outcomes.</p>
+<p><strong>What is an "event"?</strong>
+An event is a set of outcomes that satisfy a specific condition.
+Our task is to find which cells satisfy the condition and mark them with an <code>X</code>.</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i + j = 7\)</span> ?</p>
+<p>Let's find them one by one:
+- If first die <span class="arithmatex">\(i=1\)</span>, second die <span class="arithmatex">\(j\)</span> must be <span class="arithmatex">\(6 \rightarrow (1,6)\)</span>
+- If first die <span class="arithmatex">\(i=2\)</span>, second die <span class="arithmatex">\(j\)</span> must be <span class="arithmatex">\(5 \rightarrow (2,5)\)</span>
+- If first die <span class="arithmatex">\(i=3\)</span>, second die <span class="arithmatex">\(j\)</span> must be <span class="arithmatex">\(4 \rightarrow (3,4)\)</span>
+- If first die <span class="arithmatex">\(i=4\)</span>, second die <span class="arithmatex">\(j\)</span> must be <span class="arithmatex">\(3 \rightarrow (4,3)\)</span>
+- If first die <span class="arithmatex">\(i=5\)</span>, second die <span class="arithmatex">\(j\)</span> must be <span class="arithmatex">\(2 \rightarrow (5,2)\)</span>
+- If first die <span class="arithmatex">\(i=6\)</span>, second die <span class="arithmatex">\(j\)</span> must be <span class="arithmatex">\(1 \rightarrow (6,1)\)</span></p>
+<p><span class="arithmatex">\(A = \{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}\)</span>, <span class="arithmatex">\(|A| = 6\)</span>.</p>
+<p>If we mark these pairs in our 6×6 grid, it forms an <strong>anti-diagonal</strong> line running from the top-right to the bottom-left:</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . X
 2     . . . . X .
 3     . . . X . .
@@ -1878,8 +1896,6 @@
 5     . X . . . .
 6     X . . . . .
 </code></pre>
-<p><span class="arithmatex">\(A = \{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}\)</span>, <span class="arithmatex">\(|A| = 6\)</span>.</p>
-<p>The event forms an <strong>anti-diagonal</strong> from top-right to bottom-left.</p>
 <p><strong>Java — for loop to generate this grid:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -1897,8 +1913,20 @@
 <blockquote>
 <p><strong>Question:</strong> Mark the event: <em><span class="arithmatex">\(B\)</span>: the first die shows a greater number than the second</em></p>
 </blockquote>
-<p>We need <span class="arithmatex">\((i,j)\)</span> with <span class="arithmatex">\(i &gt; j\)</span> — all cells strictly below the main diagonal.</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+Just like before, we have <span class="arithmatex">\(36\)</span> outcomes in the form <span class="arithmatex">\((i,j)\)</span>.</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i &gt; j\)</span> ?</p>
+<p>Let's go row by row (checking the first die, <span class="arithmatex">\(i\)</span>):
+- If <span class="arithmatex">\(i=1\)</span>, are there any <span class="arithmatex">\(j\)</span> smaller than 1? No. (0 outcomes)
+- If <span class="arithmatex">\(i=2\)</span>, <span class="arithmatex">\(j\)</span> can be <span class="arithmatex">\(1 \rightarrow (2,1)\)</span>
+- If <span class="arithmatex">\(i=3\)</span>, <span class="arithmatex">\(j\)</span> can be <span class="arithmatex">\(1, 2 \rightarrow (3,1), (3,2)\)</span>
+- If <span class="arithmatex">\(i=4\)</span>, <span class="arithmatex">\(j\)</span> can be <span class="arithmatex">\(1, 2, 3 \rightarrow (4,1), (4,2), (4,3)\)</span>
+- If <span class="arithmatex">\(i=5\)</span>, <span class="arithmatex">\(j\)</span> can be <span class="arithmatex">\(1, 2, 3, 4 \rightarrow (5,1), (5,2), (5,3), (5,4)\)</span>
+- If <span class="arithmatex">\(i=6\)</span>, <span class="arithmatex">\(j\)</span> can be <span class="arithmatex">\(1, 2, 3, 4, 5 \rightarrow (6,1), (6,2), (6,3), (6,4), (6,5)\)</span></p>
+<p><span class="arithmatex">\(B = \{(i,j) : i &gt; j\}\)</span>, <span class="arithmatex">\(|B| = 1 + 2 + 3 + 4 + 5 = 15\)</span>.</p>
+<p>If we mark these pairs in our grid, they form a <strong>lower triangle</strong> strictly below the main diagonal:</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . .
 2     X . . . . .
 3     X X . . . .
@@ -1906,8 +1934,6 @@
 5     X X X X . .
 6     X X X X X .
 </code></pre>
-<p><span class="arithmatex">\(B = \{(i,j) : i &gt; j\}\)</span>, <span class="arithmatex">\(|B| = 15\)</span>.</p>
-<p>The event is the <strong>lower triangle</strong> below the diagonal.</p>
 <p><strong>Java — for loop to generate this grid:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
@@ -1925,8 +1951,20 @@
 <blockquote>
 <p><strong>Question:</strong> Mark the event: <em><span class="arithmatex">\(C\)</span>: at least one die shows 6</em></p>
 </blockquote>
-<p>We need <span class="arithmatex">\((i,j)\)</span> where <span class="arithmatex">\(i = 6\)</span> or <span class="arithmatex">\(j = 6\)</span>.</p>
-<pre><code>      1 2 3 4 5 6
+<p><strong>Step-by-step thinking:</strong>
+We are again looking evaluating <span class="arithmatex">\((i,j)\)</span> pairs.</p>
+<p><strong>The condition:</strong>
+Which <span class="arithmatex">\((i,j)\)</span> pairs satisfy: <span class="arithmatex">\(i = 6\)</span> OR <span class="arithmatex">\(j = 6\)</span> ?
+"At least one" means either the first die is 6, or the second die is 6, or both are 6.</p>
+<p>Let's list them:
+Checking the first die (<span class="arithmatex">\(i=6\)</span>):
+- <span class="arithmatex">\((6,1), (6,2), (6,3), (6,4), (6,5), (6,6)\)</span> (this covers the entire bottom row)</p>
+<p>Checking the second die (<span class="arithmatex">\(j=6\)</span>):
+- <span class="arithmatex">\((1,6), (2,6), (3,6), (4,6), (5,6), (6,6)\)</span> (this covers the entire rightmost column)</p>
+<p>Notice that we listed <span class="arithmatex">\((6,6)\)</span> twice because it satisfies both conditions, but in our set (and grid), it is just one unique outcome!</p>
+<p><span class="arithmatex">\(C = \{(i,j) : i = 6 \text{ or } j = 6\}\)</span>, <span class="arithmatex">\(|C| = 6 + 6 - 1 = 11\)</span>.</p>
+<p>If we mark these pairs in our grid, they form an <strong>L-shape</strong> covering row 6 and column 6:</p>
+<pre><code class="language-text">      1 2 3 4 5 6
 1     . . . . . X
 2     . . . . . X
 3     . . . . . X
@@ -1934,8 +1972,6 @@
 5     . . . . . X
 6     X X X X X X
 </code></pre>
-<p><span class="arithmatex">\(C = \{(i,j) : i = 6 \text{ or } j = 6\}\)</span>, <span class="arithmatex">\(|C| = 11\)</span>.</p>
-<p>The event is the <strong>union of row 6 and column 6</strong> (an L-shape in the bottom-right).</p>
 <p><strong>Java — for loop to generate this grid:</strong></p>
 <pre><code class="language-java">for (int i = 1; i &lt;= 6; i++) {
     for (int j = 1; j &lt;= 6; j++) {
