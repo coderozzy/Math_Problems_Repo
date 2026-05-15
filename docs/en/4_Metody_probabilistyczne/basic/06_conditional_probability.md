@@ -20,25 +20,29 @@ $$
 B=\text{the student submits homework on time}.
 $$
 
-Compute:
+1. Fill in the probabilities of the four disjoint regions:
 
-1. $P(A)$,
-2. $P(B)$,
-3. $P(A\cap B)$,
-4. $P(A\cup B)$,
-5. $P(A^c)$,
-6. $P(B^c)$,
-7. $P(A\setminus B)$,
-8. $P(B\setminus A)$,
-9. $P(A^c\cap B^c)$,
-10. $P(A\mid B)$,
-11. $P(B\mid A)$.
+$$
+A\cap B,\quad A\cap B^c,\quad A^c\cap B,\quad A^c\cap B^c.
+$$
 
-Then answer:
+2. Use these four regions to compute:
 
-12. Are $A$ and $B$ mutually exclusive?
-13. Are $A$ and $B$ independent?
-14. Interpret $P(A\mid B)$ and $P(B\mid A)$ in words.
+$$
+P(A),\quad P(B),\quad P(A\cup B).
+$$
+
+3. Compute:
+
+$$
+P(A\mid B),\quad P(B\mid A).
+$$
+
+4. Are $A$ and $B$ mutually exclusive? Explain briefly.
+
+5. Are $A$ and $B$ independent? Explain briefly.
+
+6. Interpret $P(A\mid B)$ and $P(B\mid A)$ in words.
 
 ---
 
@@ -70,54 +74,24 @@ $$
 1. Fill in the probabilities of the four disjoint regions:
 
 $$
-T\cap S,
+T\cap S,\quad T\cap S^c,\quad T^c\cap S,\quad T^c\cap S^c.
 $$
 
-$$
-T\cap S^c,
-$$
+2. Verify that these four probabilities add up to $1$.
+
+3. Use the four regions to compute:
 
 $$
-T^c\cap S,
-$$
-
-$$
-T^c\cap S^c.
-$$
-
-2. Verify that these four probabilities add up to (1).
-
-3. Use these four regions to compute:
-
-$$
-P(T\cup S),
-$$
-
-$$
-P(T^c\cup S),
-$$
-
-$$
-P(T\cap S^c),
-$$
-
-$$
-P(T^c\cap S^c).
+P(T\cup S),\quad P(T^c\cup S).
 $$
 
 4. Compute:
 
 $$
-P(S\mid T)
+P(S\mid T),\quad P(S\mid T^c).
 $$
 
-and
-
-$$
-P(S\mid T^c).
-$$
-
-5. Does being a technical ticket change the probability of being solved during the first contact?
+5. Does being a technical ticket change the probability of being solved during the first contact? Explain briefly.
 
 ---
 
@@ -141,21 +115,23 @@ $$
 Q=\text{the user passed the quiz}.
 $$
 
-Compute:
+1. Compute:
 
-1. $P(W)$,
-2. $P(Q)$,
-3. $P(W\cap Q)$,
-4. $P(Q\mid W)$,
-5. $P(W\mid Q)$,
-6. $P(Q\mid W^c)$,
-7. $P(W\mid Q^c)$.
+$$
+P(Q\mid W),\quad P(W\mid Q).
+$$
 
-Then answer:
+2. Compute:
 
-8. Why are $P(Q\mid W)$ and $P(W\mid Q)$ different questions?
-9. Which probability is more useful if we want to know whether watching the lecture helps?
-10. Which probability is more useful if we want to describe students who passed the quiz?
+$$
+P(Q\mid W^c),\quad P(W\mid Q^c).
+$$
+
+3. Explain why $P(Q\mid W)$ and $P(W\mid Q)$ answer different questions.
+
+4. Which probability is more useful if we want to know whether watching the lecture helps?
+
+5. Which probability is more useful if we want to describe users who passed the quiz?
 
 ---
 
@@ -177,27 +153,37 @@ $$
 B=\text{the employee uses Tool B}.
 $$
 
-Compute:
-
-1. $P(A)$,
-2. $P(B)$,
-3. $P(A\cap B)$,
-4. $P(A\cup B)$,
-5. $P(A\setminus B)$,
-6. $P(B\setminus A)$,
-7. $P(A^c\cap B^c)$,
-8. $P(A\mid B)$,
-9. $P(B\mid A)$.
-
-Then explain:
-
-10. Why is
+1. Compute:
 
 $$
-P(A\cup B)\neq P(A)+P(B)?
+P(A),\quad P(B),\quad P(A\cap B).
 $$
 
-11. Which group is counted twice in $P(A)+P(B)$?
+2. Use inclusion–exclusion to compute:
+
+$$
+P(A\cup B).
+$$
+
+3. Compute the probabilities of the three remaining regions:
+
+$$
+A\setminus B,\quad B\setminus A,\quad A^c\cap B^c.
+$$
+
+4. Compute:
+
+$$
+P(A\mid B),\quad P(B\mid A).
+$$
+
+5. Explain why:
+
+$$
+P(A\cup B)\neq P(A)+P(B).
+$$
+
+6. Which group is counted twice in $P(A)+P(B)$?
 
 ---
 
@@ -214,32 +200,28 @@ A streaming platform records whether users have a premium account and whether th
 Let:
 
 $$
-P=\text{the user has a premium account},
+A=\text{the user has a premium account},
 $$
 
 $$
 M=\text{the user watched a movie during the weekend}.
 $$
 
-1. Compute $P(P)$.
-2. Compute $P(M)$.
-3. Compute $P(P\cap M)$.
-4. Compute $P(M\mid P)$.
-5. Compute $P(M\mid P^c)$.
-6. Decide whether $P$ and $M$ are independent.
-7. Verify your answer using:
+1. Compute:
 
 $$
-P(P\cap M)=P(P)P(M).
+P(A),\quad P(M),\quad P(A\cap M).
 $$
 
-8. Verify your answer using:
+2. Compute:
 
 $$
-P(M\mid P)=P(M).
+P(M\mid A),\quad P(M\mid A^c).
 $$
 
-9. Explain in words what independence means in this situation.
+3. Decide whether $A$ and $M$ are independent.
+
+4. Explain in words what independence means in this situation.
 
 ---
 
@@ -263,21 +245,29 @@ $$
 D=\text{the parcel is delayed}.
 $$
 
-Compute:
+1. Compute:
 
-1. $P(I)$,
-2. $P(D)$,
-3. $P(I\cap D)$,
-4. $P(D\mid I)$,
-5. $P(D\mid I^c)$,
-6. $P(I\mid D)$,
-7. $P(I\mid D^c)$.
+$$
+P(I),\quad P(D),\quad P(I\cap D).
+$$
 
-Then answer:
+2. Compute:
 
-8. Are $I$ and $D$ independent?
-9. Does international shipping increase the probability of delay?
-10. Explain the difference between $P(D\mid I)$ and $P(I\mid D)$.
+$$
+P(D\mid I),\quad P(D\mid I^c).
+$$
+
+3. Are $I$ and $D$ independent? Explain briefly.
+
+4. Does international shipping increase the probability of delay?
+
+5. Compute:
+
+$$
+P(I\mid D).
+$$
+
+6. Explain the difference between $P(D\mid I)$ and $P(I\mid D)$.
 
 ---
 
@@ -317,6 +307,7 @@ R=\text{the customer renewed the subscription}.
 $$
 
 1. Explain why $H$, $M$, and $L$ form a partition of the sample space.
+
 2. Compute:
 
 $$
@@ -329,15 +320,19 @@ $$
 P(R\mid H),\quad P(R\mid M),\quad P(R\mid L).
 $$
 
-4. Use the law of total probability to compute $P(R)$.
-5. Verify your result directly from the table.
-6. Compute:
+4. Use the law of total probability to compute:
+
+$$
+P(R).
+$$
+
+5. Compute:
 
 $$
 P(H\mid R),\quad P(M\mid R),\quad P(L\mid R).
 $$
 
-7. Interpret the difference between $P(R\mid H)$ and $P(H\mid R)$.
+6. Interpret the difference between $P(R\mid H)$ and $P(H\mid R)$.
 
 ---
 
@@ -363,20 +358,29 @@ $$
 S=\text{the transaction is marked suspicious}.
 $$
 
-Compute:
+1. Compute:
 
-1. $P(F)$,
-2. $P(S\mid F)$,
-3. $P(S\mid F^c)$,
-4. $P(S)$,
-5. $P(F\mid S)$,
-6. $P(F^c\mid S)$.
+$$
+P(F),\quad P(S\mid F),\quad P(S\mid F^c).
+$$
 
-Then answer:
+2. Use the law of total probability to compute:
 
-7. Most suspicious transactions are fraudulent or legitimate?
-8. Why can this happen even if the system detects fraudulent transactions very well?
-9. Explain the role of the base rate $P(F)$.
+$$
+P(S).
+$$
+
+3. Use Bayes’ formula to compute:
+
+$$
+P(F\mid S).
+$$
+
+4. Among suspicious transactions, are most transactions fraudulent or legitimate?
+
+5. Why can this happen even if the system detects fraudulent transactions very well?
+
+6. Explain the role of the base rate $P(F)$.
 
 ---
 
@@ -399,7 +403,7 @@ P(A)=0.35,
 $$
 
 $$
-P(P)=0.15.
+P(H)=0.15.
 $$
 
 The probability that an order is cancelled depends on the channel:
@@ -413,47 +417,44 @@ P(C\mid A)=0.06,
 $$
 
 $$
-P(C\mid P)=0.10.
+P(C\mid H)=0.10.
 $$
 
 Here:
 
 $$
+W=\text{the order came through the website},
+$$
+
+$$
+A=\text{the order came through the mobile app},
+$$
+
+$$
+H=\text{the order came by phone},
+$$
+
+$$
 C=\text{the order is cancelled}.
 $$
 
-1. Explain why $W$, $A$, and $P$ form a partition of the sample space.
-2. Compute $P(C)$.
-3. Compute the contribution of each channel to the total cancellation probability:
+1. Explain why $W$, $A$, and $H$ form a partition of the sample space.
+
+2. Use the law of total probability to compute:
 
 $$
-P(C\cap W),
+P(C).
 $$
 
-$$
-P(C\cap A),
-$$
+3. Compute:
 
 $$
-P(C\cap P).
+P(W\mid C),\quad P(A\mid C),\quad P(H\mid C).
 $$
 
-4. Compute:
+4. Which channel is most likely among cancelled orders?
 
-$$
-P(W\mid C),
-$$
-
-$$
-P(A\mid C),
-$$
-
-$$
-P(P\mid C).
-$$
-
-5. Which channel is most likely among cancelled orders?
-6. Is this necessarily the channel with the highest cancellation rate? Explain.
+5. Is this necessarily the channel with the highest cancellation rate? Explain.
 
 ---
 
@@ -484,25 +485,35 @@ $$
 C=\text{the user completed onboarding}.
 $$
 
-Compute:
+1. Fill in the probabilities of the four disjoint regions:
 
-1. $P(T)$,
-2. $P(C)$,
-3. $P(T\cap C)$,
-4. $P(T\cup C)$,
-5. $P(T\setminus C)$,
-6. $P(C\setminus T)$,
-7. $P(T^c\cap C^c)$,
-8. $P(C\mid T)$,
-9. $P(C\mid T^c)$,
-10. $P(T\mid C)$,
-11. $P(T\mid C^c)$.
+$$
+T\cap C,\quad T\cap C^c,\quad T^c\cap C,\quad T^c\cap C^c.
+$$
 
-Then answer:
+2. Use these four regions to compute:
 
-12. Are $T$ and $C$ independent?
-13. Does receiving the tutorial appear to change the probability of completing onboarding?
-14. What is the difference between:
+$$
+P(T),\quad P(C),\quad P(T\cup C).
+$$
+
+3. Compute:
+
+$$
+P(C\mid T),\quad P(C\mid T^c).
+$$
+
+4. Compute:
+
+$$
+P(T\mid C),\quad P(T\mid C^c).
+$$
+
+5. Are $T$ and $C$ independent? Explain briefly.
+
+6. Does receiving the tutorial appear to change the probability of completing onboarding?
+
+7. What is the difference between:
 
 $$
 P(C\mid T)
@@ -514,4 +525,4 @@ $$
 P(T\mid C)?
 $$
 
-15. Write a short interpretation of the result in words.
+8. Write a short interpretation of the result in words.
