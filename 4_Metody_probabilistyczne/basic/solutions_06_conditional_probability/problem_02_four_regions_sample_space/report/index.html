@@ -3440,10 +3440,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
+  <a href="#the-setup" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Data
+        The Setup
       
     </span>
   </a>
@@ -3451,10 +3451,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#four-disjoint-regions" class="md-nav__link">
+  <a href="#step-1-probabilities-of-the-four-regions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Four disjoint regions
+        Step 1 — Probabilities of the four regions
       
     </span>
   </a>
@@ -3462,10 +3462,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#union-probabilities" class="md-nav__link">
+  <a href="#step-2-verify-they-sum-to-1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Union probabilities
+        Step 2 — Verify they sum to 1
       
     </span>
   </a>
@@ -3473,21 +3473,88 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#conditional-probabilities" class="md-nav__link">
+  <a href="#step-3-union-probabilities" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conditional probabilities
+        Step 3 — Union probabilities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3 — Union probabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pt-cup-s-technical-or-solved-or-both" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        \(P(T \cup S)\) — "technical or solved (or both)"
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#interpretation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ptc-cup-s-non-technical-or-solved-or-both" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Interpretation
+        \(P(T^c \cup S)\) — "non-technical or solved (or both)"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-conditional-probabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Conditional probabilities
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4 — Conditional probabilities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ps-mid-t-given-that-the-ticket-is-technical-what-is-the-probability-it-was-solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        \(P(S \mid T)\) — "given that the ticket is technical, what is the probability it was solved?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ps-mid-tc-given-that-the-ticket-is-non-technical-what-is-the-probability-it-was-solved" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        \(P(S \mid T^c)\) — "given that the ticket is non-technical, what is the probability it was solved?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5 — Interpretation
       
     </span>
   </a>
@@ -3517,115 +3584,90 @@
 <li>Four regions: <a href="../four_regions.csv"><code>four_regions.csv</code></a></li>
 <li>Probability summary: <a href="../probability_summary.csv"><code>probability_summary.csv</code></a></li>
 </ul>
-<h2 id="data">Data</h2>
-<p>The total number of support tickets is 350.</p>
-<p>Let:</p>
-<div class="arithmatex">\[
-T=\text{the ticket is technical},
-\]</div>
-<div class="arithmatex">\[
-S=\text{the ticket was solved during the first contact}.
-\]</div>
-<h2 id="four-disjoint-regions">Four disjoint regions</h2>
+<h2 id="the-setup">The Setup</h2>
+<p>There are 350 support tickets, each labeled with two properties:</p>
+<ul>
+<li><strong>Is it technical?</strong> → <span class="arithmatex">\(T\)</span> (yes) or <span class="arithmatex">\(T^c\)</span> (no)</li>
+<li><strong>Was it solved during first contact?</strong> → <span class="arithmatex">\(S\)</span> (yes) or <span class="arithmatex">\(S^c\)</span> (no)</li>
+</ul>
+<p>The data:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Region</th>
-<th style="text-align: left;">Description</th>
-<th style="text-align: right;">Count</th>
-<th style="text-align: right;">Probability</th>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Solved (<span class="arithmatex">\(S\)</span>)</th>
+<th style="text-align: right;">Not solved (<span class="arithmatex">\(S^c\)</span>)</th>
+<th style="text-align: right;">Total</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><span class="arithmatex">\(T\cap S\)</span></td>
-<td style="text-align: left;">technical and solved during first contact</td>
+<td style="text-align: left;">Technical (<span class="arithmatex">\(T\)</span>)</td>
 <td style="text-align: right;">90</td>
-<td style="text-align: right;">0.2571</td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(T\cap S^c\)</span></td>
-<td style="text-align: left;">technical and not solved during first contact</td>
 <td style="text-align: right;">60</td>
-<td style="text-align: right;">0.1714</td>
+<td style="text-align: right;">150</td>
 </tr>
 <tr>
-<td style="text-align: left;"><span class="arithmatex">\(T^c\cap S\)</span></td>
-<td style="text-align: left;">non-technical and solved during first contact</td>
+<td style="text-align: left;">Non-technical (<span class="arithmatex">\(T^c\)</span>)</td>
 <td style="text-align: right;">160</td>
-<td style="text-align: right;">0.4571</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">200</td>
 </tr>
 <tr>
-<td style="text-align: left;"><span class="arithmatex">\(T^c\cap S^c\)</span></td>
-<td style="text-align: left;">non-technical and not solved during first contact</td>
-<td style="text-align: right;">40</td>
-<td style="text-align: right;">0.1143</td>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>250</strong></td>
+<td style="text-align: right;"><strong>100</strong></td>
+<td style="text-align: right;"><strong>350</strong></td>
 </tr>
 </tbody>
 </table>
-<p>These probabilities add up to:</p>
+<h2 id="step-1-probabilities-of-the-four-regions">Step 1 — Probabilities of the four regions</h2>
+<p>Divide each cell by 350. The logic: "out of 350 tickets, how many fall into this group?"</p>
 <div class="arithmatex">\[
-0.2571+0.1714+0.4571+0.1143=1.
+P(T \cap S) = \frac{90}{350} \approx 0.2571
 \]</div>
-<p>Using exact fractions:</p>
 <div class="arithmatex">\[
-\frac{90+60+160+40}{350}=\frac{350}{350}=1.
+P(T \cap S^c) = \frac{60}{350} \approx 0.1714
 \]</div>
-<h2 id="union-probabilities">Union probabilities</h2>
-<p>First:</p>
 <div class="arithmatex">\[
-P(T)=\frac{150}{350}\approx 0.4286,
+P(T^c \cap S) = \frac{160}{350} \approx 0.4571
 \]</div>
-<p>and:</p>
 <div class="arithmatex">\[
-P(S)=\frac{250}{350}\approx 0.7143.
+P(T^c \cap S^c) = \frac{40}{350} \approx 0.1143
 \]</div>
-<p>Also:</p>
+<h2 id="step-2-verify-they-sum-to-1">Step 2 — Verify they sum to 1</h2>
 <div class="arithmatex">\[
-P(T\cap S)=\frac{90}{350}\approx 0.2571.
+\frac{90 + 60 + 160 + 40}{350} = \frac{350}{350} = 1 \checkmark
 \]</div>
-<p>Therefore:</p>
+<p>These four regions cover the entire sample space with no overlap, so their probabilities must sum to exactly 1.</p>
+<h2 id="step-3-union-probabilities">Step 3 — Union probabilities</h2>
+<h3 id="pt-cup-s-technical-or-solved-or-both"><span class="arithmatex">\(P(T \cup S)\)</span> — "technical or solved (or both)"</h3>
 <div class="arithmatex">\[
-P(T\cup S)=P(T)+P(S)-P(T\cap S).
+P(T \cup S) = P(T) + P(S) - P(T \cap S) = \frac{150}{350} + \frac{250}{350} - \frac{90}{350} = \frac{310}{350} \approx 0.8857
 \]</div>
-<p>So:</p>
+<p>We subtract <span class="arithmatex">\(P(T \cap S)\)</span> because the 90 tickets in that region were counted twice — once in <span class="arithmatex">\(P(T)\)</span> and once in <span class="arithmatex">\(P(S)\)</span>.</p>
+<p><strong>Alternative</strong> using the four regions directly — everything except <span class="arithmatex">\(T^c \cap S^c\)</span>:</p>
 <div class="arithmatex">\[
-P(T\cup S)=0.4286+0.7143-0.2571=0.8857.
+P(T \cup S) = 1 - P(T^c \cap S^c) = 1 - \frac{40}{350} \approx 0.8857
 \]</div>
-<p>Now:</p>
+<h3 id="ptc-cup-s-non-technical-or-solved-or-both"><span class="arithmatex">\(P(T^c \cup S)\)</span> — "non-technical or solved (or both)"</h3>
 <div class="arithmatex">\[
-P(T^c)=\frac{200}{350}\approx 0.5714,
+P(T^c \cup S) = P(T^c) + P(S) - P(T^c \cap S) = \frac{200}{350} + \frac{250}{350} - \frac{160}{350} = \frac{290}{350} \approx 0.8286
 \]</div>
-<p>and:</p>
+<h2 id="step-4-conditional-probabilities">Step 4 — Conditional probabilities</h2>
+<h3 id="ps-mid-t-given-that-the-ticket-is-technical-what-is-the-probability-it-was-solved"><span class="arithmatex">\(P(S \mid T)\)</span> — "given that the ticket is technical, what is the probability it was solved?"</h3>
+<p>We no longer look at all 350 tickets — we restrict to the 150 technical ones:</p>
 <div class="arithmatex">\[
-P(T^c\cap S)=\frac{160}{350}\approx 0.4571.
+P(S \mid T) = \frac{90}{150} = 0.60
 \]</div>
-<p>Thus:</p>
+<h3 id="ps-mid-tc-given-that-the-ticket-is-non-technical-what-is-the-probability-it-was-solved"><span class="arithmatex">\(P(S \mid T^c)\)</span> — "given that the ticket is non-technical, what is the probability it was solved?"</h3>
+<p>We restrict to the 200 non-technical tickets:</p>
 <div class="arithmatex">\[
-P(T^c\cup S)=P(T^c)+P(S)-P(T^c\cap S).
+P(S \mid T^c) = \frac{160}{200} = 0.80
 \]</div>
-<p>So:</p>
-<div class="arithmatex">\[
-P(T^c\cup S)=0.5714+0.7143-0.4571=0.8286.
-\]</div>
-<h2 id="conditional-probabilities">Conditional probabilities</h2>
-<p>The probability that a technical ticket was solved during the first contact is:</p>
-<div class="arithmatex">\[
-P(S\mid T)=\frac{P(T\cap S)}{P(T)}
-=\frac{90/350}{150/350}
-=\frac{90}{150}
-=0.60.
-\]</div>
-<p>The probability that a non-technical ticket was solved during the first contact is:</p>
-<div class="arithmatex">\[
-P(S\mid T^c)=\frac{P(T^c\cap S)}{P(T^c)}
-=\frac{160/350}{200/350}
-=\frac{160}{200}
-=0.80.
-\]</div>
-<h2 id="interpretation">Interpretation</h2>
-<p>Being a technical ticket changes the probability of being solved during the first contact.</p>
-<p>For technical tickets, the first-contact resolution probability is 0.60. For non-technical tickets, it is 0.80. In this dataset, technical tickets are less likely to be solved during the first contact.</p>
+<h2 id="step-5-interpretation">Step 5 — Interpretation</h2>
+<p>60% of technical tickets are solved during first contact, compared to 80% of non-technical ones. The gap shows that <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(S\)</span> are not independent — being a technical ticket lowers the probability of first-contact resolution.</p>
+<p>If they were independent, we would have <span class="arithmatex">\(P(S \mid T) = P(S \mid T^c) = P(S)\)</span>. Since <span class="arithmatex">\(0.60 \neq 0.80\)</span>, the ticket type clearly affects the outcome.</p>
 
 
 
