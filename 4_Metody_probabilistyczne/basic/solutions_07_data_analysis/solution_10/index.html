@@ -1,0 +1,4845 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_10/">
+      
+      
+        <link rel="prev" href="../solution_09/">
+      
+      
+        <link rel="next" href="../../../advanced/01_events_and_probability/">
+      
+      
+        
+          <link rel="alternate" href="../../../../pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_10/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Solution 10 — Correlation Traps - Math Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-10-correlation-traps" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Math Problems" class="md-header__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solution 10 — Correlation Traps
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_10/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Math Problems" class="md-nav__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture: Mathematics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture: Mathematics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algebra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/01_matrices_and_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Matrices & Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/02_determinants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Determinants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/03_matrix_inversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Matrix Inversion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/04_systems_of_equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Systems of Equations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometry
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geometry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/01_vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Vectors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/02_lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Lines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/03_planes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Planes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/04_line_and_plane/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Line and Plane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/01_sequence_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Sequence Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/02_function_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Function Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/03_derivatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Derivatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/04_function_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Function Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/05_integrals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/06_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Calculus Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture: Probabilistic Methods
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture: Probabilistic Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Probabilistic Methods
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Probabilistic Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basic
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_2" id="__nav_3_1_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Events & Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_combinatorics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Combinatorics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_4" id="__nav_3_1_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Combinatorics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Combinatorics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_probability_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Probability Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_6" id="__nav_3_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Probability Distributions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Probability Distributions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_discovery_formalism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Discovering Formalism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_8" id="__nav_3_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Discovering Formalism
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Discovering Formalism
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_pmf_pdf_cdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. PMF, PDF, and CDF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_conditional_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Conditional Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_11" id="__nav_3_1_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Conditional Probability
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Conditional Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07_data_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Data Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_13" id="__nav_3_1_1_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Data Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Data Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1 — Die Rolls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2 — Coin Tosses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3 — Exam Scores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4 — Delivery Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5 — Customer Survey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6 — Factory Measurements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7 — Call Center
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8 — Waiting Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9 — Warehouse Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10 — Correlation Traps
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10 — Correlation Traps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-describe-what-one-row-of-the-dataset-represents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Describe what one row of the dataset represents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-draw-a-scatter-plot-of-x-and-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Draw a scatter plot of x and y
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-compute-the-correlation-coefficient-between-x-and-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Compute the correlation coefficient between x and y
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-remove-the-observations-from-the-outlier-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Remove the observations from the outlier group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-compute-the-correlation-coefficient-again-without-outliers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: Compute the correlation coefficient again (without outliers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-compare-the-two-correlation-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 6: Compare the two correlation values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-explain-why-correlation-may-fail-to-describe-a-nonlinear-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 7: Explain why correlation may fail to describe a nonlinear relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-explain-why-low-correlation-doesnt-mean-no-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8: Explain why low correlation doesn't mean no relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-9-explain-how-outliers-can-distort-correlation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 9: Explain how outliers can distort correlation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-describe-what-can-be-seen-in-the-scatter-plot-but-not-from-correlation-alone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 10: Describe what can be seen in the scatter plot but not from correlation alone
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 10: Describe what can be seen in the scatter plot but not from correlation alone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-nonlinear-u-shaped-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Nonlinear (U-shaped) Relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-the-two-branch-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Two-Branch Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-the-symmetry-of-the-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The Symmetry of the Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-the-outlier-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The Outlier Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-the-range-and-spread-of-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The Range and Spread of the Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-fundamental-lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Fundamental Lesson
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary and Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/02_random_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Random Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/03_distribution_parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Distribution Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/04_selected_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Selected Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/05_limit_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Limit Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/06_basic_statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Basic Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/07_estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Estimation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/08_hypothesis_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Hypothesis Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/09_correlation_and_regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Correlation & Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/10_advanced_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Advanced Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/11_decision_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Decision Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-describe-what-one-row-of-the-dataset-represents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Describe what one row of the dataset represents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-draw-a-scatter-plot-of-x-and-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Draw a scatter plot of x and y
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-compute-the-correlation-coefficient-between-x-and-y" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Compute the correlation coefficient between x and y
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-remove-the-observations-from-the-outlier-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Remove the observations from the outlier group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-compute-the-correlation-coefficient-again-without-outliers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: Compute the correlation coefficient again (without outliers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-compare-the-two-correlation-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 6: Compare the two correlation values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-explain-why-correlation-may-fail-to-describe-a-nonlinear-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 7: Explain why correlation may fail to describe a nonlinear relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-explain-why-low-correlation-doesnt-mean-no-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8: Explain why low correlation doesn't mean no relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-9-explain-how-outliers-can-distort-correlation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 9: Explain how outliers can distort correlation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-describe-what-can-be-seen-in-the-scatter-plot-but-not-from-correlation-alone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 10: Describe what can be seen in the scatter plot but not from correlation alone
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 10: Describe what can be seen in the scatter plot but not from correlation alone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-nonlinear-u-shaped-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Nonlinear (U-shaped) Relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-the-two-branch-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Two-Branch Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-the-symmetry-of-the-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The Symmetry of the Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-the-outlier-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The Outlier Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-the-range-and-spread-of-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The Range and Spread of the Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-fundamental-lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Fundamental Lesson
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary and Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-10-correlation-traps">Problem 10 — Correlation Traps</h1>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>We are given a dataset of 264 observations with two numerical variables <span class="arithmatex">\( x \)</span> and <span class="arithmatex">\( y \)</span>, along with a group label. The data is designed to illustrate a critical lesson in statistics: a correlation coefficient near zero does <strong>not</strong> mean there is no relationship. Our tasks involve computing correlations, removing outliers, comparing results, and providing deep conceptual explanations of when and why correlation fails as a summary statistic.</p>
+<h2 id="generated-files">Generated Files</h2>
+<ul>
+<li>Dataset: <a href="../problem_10_correlation_traps/problem_10_correlation_traps.csv"><code>problem_10_correlation_traps.csv</code></a></li>
+<li>Dataset without outlier group: <a href="../problem_10_correlation_traps/problem_10_without_outlier_group.csv"><code>problem_10_without_outlier_group.csv</code></a></li>
+<li>Outlier observations: <a href="../problem_10_correlation_traps/outlier_group_observations.csv"><code>outlier_group_observations.csv</code></a></li>
+<li>Correlation summary: <a href="../problem_10_correlation_traps/correlation_summary.csv"><code>correlation_summary.csv</code></a></li>
+<li>Group summary: <a href="../problem_10_correlation_traps/summary_by_group.csv"><code>summary_by_group.csv</code></a></li>
+<li>Plots:</li>
+<li><a href="../problem_10_correlation_traps/scatter_with_outliers.png"><code>scatter_with_outliers.png</code></a></li>
+<li><a href="../problem_10_correlation_traps/scatter_without_outliers.png"><code>scatter_without_outliers.png</code></a></li>
+<li><a href="../problem_10_correlation_traps/correlation_by_scope.png"><code>correlation_by_scope.png</code></a></li>
+</ul>
+<hr />
+<h2 id="solution">Solution</h2>
+<h3 id="task-1-describe-what-one-row-of-the-dataset-represents">Task 1: Describe what one row of the dataset represents</h3>
+<p><strong>Answer:</strong></p>
+<p>Each row in <code>problem_10_correlation_traps.csv</code> represents a <strong>single observation</strong> consisting of a pair of numerical measurements <span class="arithmatex">\( (x, y) \)</span> and a group label. The columns are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Column</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>observation_id</code></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">A unique identifier (e.g., <code>N0001</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>x</code></td>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;">The first numerical variable</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>y</code></td>
+<td style="text-align: left;">float</td>
+<td style="text-align: left;">The second numerical variable</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>group</code></td>
+<td style="text-align: left;">categorical</td>
+<td style="text-align: left;">The group to which the observation belongs: <code>left_branch</code>, <code>right_branch</code>, or <code>outlier_group</code></td>
+</tr>
+</tbody>
+</table>
+<p>For example, the row <code>N0001, -2.157, 5.015, left_branch</code> represents an observation with <span class="arithmatex">\( x = -2.157 \)</span> and <span class="arithmatex">\( y = 5.015 \)</span>, belonging to the left branch of the data.</p>
+<p>The dataset contains <strong>264 observations</strong> in total:
+- <strong>125</strong> in the <code>left_branch</code> (negative <span class="arithmatex">\( x \)</span> values)
+- <strong>135</strong> in the <code>right_branch</code> (positive <span class="arithmatex">\( x \)</span> values)
+- <strong>4</strong> in the <code>outlier_group</code> (high <span class="arithmatex">\( x \)</span> values, low <span class="arithmatex">\( y \)</span> values)</p>
+<p>The group structure is critical to understanding the data: the left and right branches together form a <strong>U-shaped (parabolic) pattern</strong>, while the outlier group consists of 4 points far from the main pattern.</p>
+<hr />
+<h3 id="task-2-draw-a-scatter-plot-of-x-and-y">Task 2: Draw a scatter plot of x and y</h3>
+<p><strong>Answer:</strong></p>
+<p>The scatter plot of all 264 observations reveals the hidden structure of the data:</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+colors = df['group'].map({
+    'left_branch': 'blue',
+    'right_branch': 'green',
+    'outlier_group': 'red'
+})
+plt.scatter(df['x'], df['y'], c=colors, alpha=0.6, edgecolors='black', linewidths=0.5)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Scatter Plot: x vs y (All Observations)')
+plt.savefig('scatter_with_outliers.png', dpi=150)
+</code></pre>
+<p><img alt="Scatter plot of x vs y with all observations including outliers" src="../problem_10_correlation_traps/scatter_with_outliers.png" /></p>
+<p><strong>What we see in the scatter plot:</strong></p>
+<ol>
+<li>
+<p><strong>A clear U-shaped (parabolic) pattern:</strong> The main body of the data follows a relationship resembling <span class="arithmatex">\( y \approx x^2 \)</span>. For negative values of <span class="arithmatex">\( x \)</span>, <span class="arithmatex">\( y \)</span> increases as <span class="arithmatex">\( x \)</span> becomes more negative. For positive values of <span class="arithmatex">\( x \)</span>, <span class="arithmatex">\( y \)</span> increases as <span class="arithmatex">\( x \)</span> becomes more positive.</p>
+</li>
+<li>
+<p><strong>Two symmetric branches:</strong> The left branch (<span class="arithmatex">\( x &lt; 0 \)</span>) shows a strong <strong>negative linear trend</strong> — as <span class="arithmatex">\( x \)</span> decreases (becomes more negative), <span class="arithmatex">\( y \)</span> increases. The right branch (<span class="arithmatex">\( x &gt; 0 \)</span>) shows a strong <strong>positive linear trend</strong> — as <span class="arithmatex">\( x \)</span> increases, <span class="arithmatex">\( y \)</span> increases.</p>
+</li>
+<li>
+<p><strong>Four outlier points:</strong> At approximately <span class="arithmatex">\( x \in [7.5, 9.0] \)</span> and <span class="arithmatex">\( y \in [1.0, 3.0] \)</span>, there are 4 observations far from the main parabolic pattern.</p>
+</li>
+</ol>
+<p>After removing the outlier group, the structure is even clearer:</p>
+<p><img alt="Scatter plot without outlier group" src="../problem_10_correlation_traps/scatter_without_outliers.png" /></p>
+<hr />
+<h3 id="task-3-compute-the-correlation-coefficient-between-x-and-y">Task 3: Compute the correlation coefficient between x and y</h3>
+<p><strong>Answer:</strong></p>
+<p>The <strong>Pearson correlation coefficient</strong> between <span class="arithmatex">\( x \)</span> and <span class="arithmatex">\( y \)</span> is defined as:</p>
+<div class="arithmatex">\[
+r_{xy} = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2 \cdot \sum_{i=1}^{n}(y_i - \bar{y})^2}}
+\]</div>
+<p>This measures the strength and direction of the <strong>linear</strong> relationship between the two variables. It takes values in <span class="arithmatex">\( [-1, +1] \)</span>:
+- <span class="arithmatex">\( r = +1 \)</span>: perfect positive linear relationship
+- <span class="arithmatex">\( r = -1 \)</span>: perfect negative linear relationship
+- <span class="arithmatex">\( r = 0 \)</span>: no linear relationship</p>
+<p>Computing for <strong>all 264 observations</strong>:</p>
+<pre><code class="language-python">r_all = df['x'].corr(df['y'])
+# r_all = 0.0179
+</code></pre>
+<div class="arithmatex">\[
+r_{xy}^{(\text{all})} = 0.0179
+\]</div>
+<p><strong>This is essentially zero.</strong> A naïve interpretation would be: "There is no relationship between <span class="arithmatex">\( x \)</span> and <span class="arithmatex">\( y \)</span>." As we will see, this interpretation is profoundly wrong.</p>
+<p>The near-zero correlation arises because the dataset has a <strong>symmetric nonlinear structure</strong>. The negative correlation in the left branch and the positive correlation in the right branch <strong>cancel each other out</strong> when all data are pooled together:</p>
+<div class="arithmatex">\[
+r_{xy}^{(\text{all})} \approx 0 \quad \text{because} \quad r_{xy}^{(\text{left})} \approx -0.94 \quad \text{and} \quad r_{xy}^{(\text{right})} \approx +0.94
+\]</div>
+<hr />
+<h3 id="task-4-remove-the-observations-from-the-outlier-group">Task 4: Remove the observations from the outlier group</h3>
+<p><strong>Answer:</strong></p>
+<p>The outlier group contains exactly <strong>4 observations</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Observation ID</th>
+<th style="text-align: right;"><span class="arithmatex">\( x \)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\( y \)</span></th>
+<th style="text-align: left;">Group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">N0261</td>
+<td style="text-align: right;">7.5</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: left;">outlier_group</td>
+</tr>
+<tr>
+<td style="text-align: left;">N0262</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: left;">outlier_group</td>
+</tr>
+<tr>
+<td style="text-align: left;">N0263</td>
+<td style="text-align: right;">8.5</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: left;">outlier_group</td>
+</tr>
+<tr>
+<td style="text-align: left;">N0264</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: left;">outlier_group</td>
+</tr>
+</tbody>
+</table>
+<p>These points have <strong>unusually high</strong> <span class="arithmatex">\( x \)</span> values (ranging from 7.5 to 9.0, while the regular data spans roughly <span class="arithmatex">\( [-4, +4] \)</span>) and <strong>unusually low</strong> <span class="arithmatex">\( y \)</span> values (ranging from 1.0 to 3.0, while for <span class="arithmatex">\( |x| \approx 4 \)</span> the regular data has <span class="arithmatex">\( y \approx 16 \)</span>).</p>
+<pre><code class="language-python">df_clean = df[df['group'] != 'outlier_group']
+# 264 - 4 = 260 observations remain
+</code></pre>
+<p>The outlier group summary statistics are:
+- Mean <span class="arithmatex">\( x \)</span>: 8.25
+- Mean <span class="arithmatex">\( y \)</span>: 2.125
+- These points are dramatically distant from the main data pattern</p>
+<p>If the data follows <span class="arithmatex">\( y \approx x^2 \)</span>, then at <span class="arithmatex">\( x = 8.25 \)</span> we would expect <span class="arithmatex">\( y \approx 68 \)</span>, not <span class="arithmatex">\( y \approx 2 \)</span>. These are extreme outliers by any measure.</p>
+<p>After removal, we have <strong>260 observations</strong> consisting of the left branch (125) and right branch (135).</p>
+<hr />
+<h3 id="task-5-compute-the-correlation-coefficient-again-without-outliers">Task 5: Compute the correlation coefficient again (without outliers)</h3>
+<p><strong>Answer:</strong></p>
+<p>After removing the 4 outlier observations, we recompute the Pearson correlation:</p>
+<pre><code class="language-python">r_clean = df_clean['x'].corr(df_clean['y'])
+# r_clean = 0.0572
+</code></pre>
+<div class="arithmatex">\[
+r_{xy}^{(\text{no outliers})} = 0.0572
+\]</div>
+<p>This is still very close to zero. Removing the outliers changed the correlation from 0.0179 to 0.0572 — a small shift.</p>
+<p>Additionally, we can compute correlations <strong>within each branch</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Data Scope</th>
+<th style="text-align: right;">Observation Count</th>
+<th style="text-align: right;">Correlation <span class="arithmatex">\( r_{xy} \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">All observations</td>
+<td style="text-align: right;">264</td>
+<td style="text-align: right;">0.0179</td>
+</tr>
+<tr>
+<td style="text-align: left;">Without outlier group</td>
+<td style="text-align: right;">260</td>
+<td style="text-align: right;">0.0572</td>
+</tr>
+<tr>
+<td style="text-align: left;">Left branch only</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">−0.9428</td>
+</tr>
+<tr>
+<td style="text-align: left;">Right branch only</td>
+<td style="text-align: right;">135</td>
+<td style="text-align: right;">0.9405</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Correlation by data scope" src="../problem_10_correlation_traps/correlation_by_scope.png" /></p>
+<p>The within-branch correlations are stunning: <strong>−0.9428</strong> for the left branch and <strong>+0.9405</strong> for the right branch. These are among the strongest correlations one can observe in real-world-like data. Yet when combined, they produce a correlation of essentially zero.</p>
+<hr />
+<h3 id="task-6-compare-the-two-correlation-values">Task 6: Compare the two correlation values</h3>
+<p><strong>Answer:</strong></p>
+<p>Let us place the two overall correlations side by side:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: right;">With Outliers</th>
+<th style="text-align: right;">Without Outliers</th>
+<th style="text-align: right;">Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Correlation <span class="arithmatex">\( r_{xy} \)</span></td>
+<td style="text-align: right;">0.0179</td>
+<td style="text-align: right;">0.0572</td>
+<td style="text-align: right;">+0.0393</td>
+</tr>
+<tr>
+<td style="text-align: left;">Observation count</td>
+<td style="text-align: right;">264</td>
+<td style="text-align: right;">260</td>
+<td style="text-align: right;">−4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quantitative comparison:</strong></p>
+<p>The absolute change is:</p>
+<div class="arithmatex">\[
+\Delta r = r_{xy}^{(\text{no outliers})} - r_{xy}^{(\text{all})} = 0.0572 - 0.0179 = 0.0393
+\]</div>
+<p>The relative change is:</p>
+<div class="arithmatex">\[
+\frac{\Delta r}{r_{xy}^{(\text{all})}} = \frac{0.0393}{0.0179} \approx 2.20
+\]</div>
+<p>So the correlation more than <strong>tripled</strong> (from 0.0179 to 0.0572) by removing just 4 out of 264 observations — that is, removing only <span class="arithmatex">\( \frac{4}{264} \approx 1.5\% \)</span> of the data.</p>
+<p><strong>Why the change occurred:</strong></p>
+<p>The 4 outlier points have very high <span class="arithmatex">\( x \)</span> values (mean = 8.25) combined with very low <span class="arithmatex">\( y \)</span> values (mean = 2.125). In the context of the regular data (where high <span class="arithmatex">\( |x| \)</span> corresponds to high <span class="arithmatex">\( y \)</span>), these outlier points create a slight <strong>negative pull</strong> on the overall correlation. When they are removed, the correlation shifts slightly upward.</p>
+<p><strong>However, the deeper lesson is not about the magnitude of this shift.</strong> Both 0.0179 and 0.0572 are essentially zero. The real story is that neither value captures the true structure of the data — a <strong>strong nonlinear relationship</strong> with within-branch correlations of ±0.94. The single correlation coefficient is simply the wrong tool for this data.</p>
+<hr />
+<h3 id="task-7-explain-why-correlation-may-fail-to-describe-a-nonlinear-relationship">Task 7: Explain why correlation may fail to describe a nonlinear relationship</h3>
+<p><strong>Answer:</strong></p>
+<p>The <strong>Pearson correlation coefficient</strong> is designed to measure <strong>linear</strong> association — it quantifies how well the data can be described by a straight line <span class="arithmatex">\( y = a + bx \)</span>. Mathematically:</p>
+<div class="arithmatex">\[
+r_{xy} = \frac{\text{Cov}(X,Y)}{\sigma_X \sigma_Y} = \frac{E[(X - \mu_X)(Y - \mu_Y)]}{\sigma_X \sigma_Y}
+\]</div>
+<p>The covariance in the numerator sums terms <span class="arithmatex">\( (x_i - \bar{x})(y_i - \bar{y}) \)</span>. For a <strong>linear</strong> relationship, these terms consistently have the same sign (positive for positive slope, negative for negative slope), producing a large <span class="arithmatex">\( |r| \)</span>.</p>
+<p>For a <strong>nonlinear relationship</strong> like the U-shape <span class="arithmatex">\( y \approx x^2 \)</span>, the terms systematically cancel:</p>
+<ul>
+<li>When <span class="arithmatex">\( x &lt; 0 \)</span>: increasing <span class="arithmatex">\( x \)</span> toward 0 decreases <span class="arithmatex">\( y \)</span>, so <span class="arithmatex">\( (x_i - \bar{x}) \)</span> and <span class="arithmatex">\( (y_i - \bar{y}) \)</span> often have opposite signs → <strong>negative</strong> contributions to the covariance.</li>
+<li>When <span class="arithmatex">\( x &gt; 0 \)</span>: increasing <span class="arithmatex">\( x \)</span> away from 0 increases <span class="arithmatex">\( y \)</span>, so <span class="arithmatex">\( (x_i - \bar{x}) \)</span> and <span class="arithmatex">\( (y_i - \bar{y}) \)</span> often have the same sign → <strong>positive</strong> contributions.</li>
+</ul>
+<p>These positive and negative contributions approximately cancel, resulting in:</p>
+<div class="arithmatex">\[
+\text{Cov}(X, Y) \approx 0 \quad \Rightarrow \quad r_{xy} \approx 0
+\]</div>
+<p>In our dataset, this is exactly what happens:
+- Left branch: <span class="arithmatex">\( r = -0.9428 \)</span> (strong negative linear trend)
+- Right branch: <span class="arithmatex">\( r = +0.9405 \)</span> (strong positive linear trend)
+- Combined: <span class="arithmatex">\( r = 0.0572 \)</span> (cancellation)</p>
+<p><strong>Other examples of nonlinear relationships where correlation fails:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Relationship</th>
+<th style="text-align: left;">Equation</th>
+<th style="text-align: center;">Expected <span class="arithmatex">\( r \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Parabola</td>
+<td style="text-align: left;"><span class="arithmatex">\( y = x^2 \)</span></td>
+<td style="text-align: center;">≈ 0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Circle</td>
+<td style="text-align: left;"><span class="arithmatex">\( x^2 + y^2 = 1 \)</span></td>
+<td style="text-align: center;">= 0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sine wave</td>
+<td style="text-align: left;"><span class="arithmatex">\( y = \sin(x) \)</span></td>
+<td style="text-align: center;">≈ 0</td>
+</tr>
+<tr>
+<td style="text-align: left;">Exponential (symmetric domain)</td>
+<td style="text-align: left;"><span class="arithmatex">\( y = e^{-x^2} \)</span></td>
+<td style="text-align: center;">≈ 0</td>
+</tr>
+</tbody>
+</table>
+<p>In all these cases, a strong deterministic relationship exists, but the correlation coefficient is unable to detect it because it only "sees" the linear component.</p>
+<p><strong>What to use instead:</strong> For nonlinear relationships, consider:
+- <strong>Rank-based correlations</strong> (Spearman's <span class="arithmatex">\( \rho \)</span>, Kendall's <span class="arithmatex">\( \tau \)</span>) — these capture monotonic (but not necessarily linear) relationships
+- <strong>Mutual information</strong> — a measure from information theory that captures any form of dependence
+- <strong>Distance correlation</strong> — guarantees zero if and only if the variables are truly independent
+- Most importantly, <strong>scatter plots</strong> — the visual inspection that reveals what no single number can</p>
+<hr />
+<h3 id="task-8-explain-why-low-correlation-doesnt-mean-no-relationship">Task 8: Explain why low correlation doesn't mean no relationship</h3>
+<p><strong>Answer:</strong></p>
+<p>This is perhaps the most important statistical misconception to correct. The statement <strong>"correlation equals zero implies no relationship"</strong> is <strong>false</strong>. More precisely:</p>
+<blockquote>
+<p><strong>Independence implies zero correlation, but zero correlation does NOT imply independence.</strong></p>
+</blockquote>
+<p>The correct logical relationship is:</p>
+<div class="arithmatex">\[
+X \perp Y \quad \Rightarrow \quad r_{XY} = 0
+\]</div>
+<p>but the converse:</p>
+<div class="arithmatex">\[
+r_{XY} = 0 \quad \not\Rightarrow \quad X \perp Y
+\]</div>
+<p><strong>Why?</strong> Because the Pearson correlation only measures <strong>linear</strong> dependence. Two variables can be strongly related through a nonlinear function and still have zero correlation. Our dataset provides a perfect example:</p>
+<ul>
+<li><span class="arithmatex">\( r_{xy} = 0.0572 \)</span> (without outliers) — essentially zero</li>
+<li>Yet the scatter plot shows an <strong>unmistakable U-shaped pattern</strong> with <span class="arithmatex">\( R^2 \)</span> close to 1 when fitting a quadratic model <span class="arithmatex">\( y = ax^2 + bx + c \)</span></li>
+</ul>
+<p><strong>Another way to see this:</strong> If we know <span class="arithmatex">\( x \)</span>, we can predict <span class="arithmatex">\( y \)</span> with high accuracy (using <span class="arithmatex">\( y \approx x^2 \)</span>). The variables are far from independent. Yet the correlation coefficient claims there is "no relationship."</p>
+<p><strong>Concrete scenario:</strong> Imagine you are a manager looking at this data. If you only computed the correlation and saw <span class="arithmatex">\( r = 0.06 \)</span>, you might conclude that <span class="arithmatex">\( x \)</span> is useless for predicting <span class="arithmatex">\( y \)</span>. But if you looked at the scatter plot, you would immediately see that <span class="arithmatex">\( x \)</span> is an <strong>excellent</strong> predictor of <span class="arithmatex">\( y \)</span> — you just need a nonlinear model.</p>
+<p><strong>The lesson:</strong> Always plot your data. Summary statistics can hide crucial patterns. As Anscombe's Quartet famously demonstrated (Anscombe, 1973), very different datasets can produce identical summary statistics — including identical correlations.</p>
+<hr />
+<h3 id="task-9-explain-how-outliers-can-distort-correlation">Task 9: Explain how outliers can distort correlation</h3>
+<p><strong>Answer:</strong></p>
+<p>Outliers can have a disproportionate effect on the Pearson correlation because the formula involves <strong>squared deviations</strong> from the mean. A single extreme point can pull the correlation substantially toward +1 or −1 (or push it toward 0).</p>
+<p><strong>Mechanism of distortion:</strong></p>
+<p>The Pearson correlation can be written as:</p>
+<div class="arithmatex">\[
+r_{xy} = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i - \bar{x})^2} \cdot \sqrt{\sum_{i=1}^{n}(y_i - \bar{y})^2}}
+\]</div>
+<p>An outlier with extreme values of both <span class="arithmatex">\( x \)</span> and <span class="arithmatex">\( y \)</span> contributes a large term <span class="arithmatex">\( (x_{\text{out}} - \bar{x})(y_{\text{out}} - \bar{y}) \)</span> to the numerator. Depending on the <strong>sign</strong> of this term relative to the rest of the data, it can either inflate or deflate the correlation.</p>
+<p><strong>In our dataset:</strong></p>
+<p>The 4 outlier points have:
+- High <span class="arithmatex">\( x \)</span>: mean = 8.25 (far above the overall mean)
+- Low <span class="arithmatex">\( y \)</span>: mean = 2.125 (below the overall mean of about 6)</p>
+<p>This creates <strong>negative cross-products</strong> <span class="arithmatex">\( (x_i - \bar{x})(y_i - \bar{y}) &lt; 0 \)</span>, which <strong>push the correlation downward</strong>. That is why:</p>
+<div class="arithmatex">\[
+r_{\text{all}} = 0.0179 &lt; r_{\text{no outliers}} = 0.0572
+\]</div>
+<p>The outliers introduced a negative bias. Removing just 4 points (1.5% of the data) changed the correlation by:</p>
+<div class="arithmatex">\[
+\Delta r = +0.0393
+\]</div>
+<p><strong>Classic examples of outlier distortion:</strong></p>
+<ol>
+<li>
+<p><strong>A single outlier creating a false correlation:</strong> Imagine 100 points with <span class="arithmatex">\( r \approx 0 \)</span>. Adding one point at <span class="arithmatex">\( (100, 100) \)</span> can make <span class="arithmatex">\( r \)</span> jump to 0.5 or higher.</p>
+</li>
+<li>
+<p><strong>A single outlier destroying a real correlation:</strong> Imagine 100 points with <span class="arithmatex">\( r \approx 0.9 \)</span>. Adding one point at <span class="arithmatex">\( (100, -100) \)</span> can drag <span class="arithmatex">\( r \)</span> down toward 0.</p>
+</li>
+<li>
+<p><strong>Our dataset:</strong> The outliers slightly pull the already-near-zero correlation even closer to zero.</p>
+</li>
+</ol>
+<p><strong>Robustness alternatives:</strong></p>
+<p>Because Pearson correlation is sensitive to outliers, robust alternatives include:
+- <strong>Spearman's rank correlation</strong> — uses ranks instead of raw values, making it resistant to outliers
+- <strong>Winsorized correlation</strong> — replaces extreme values with less extreme ones before computing
+- <strong>Median-based measures</strong> — such as the median absolute deviation for spread</p>
+<p><strong>The bottom line:</strong> Before interpreting a correlation coefficient, always check for outliers. A few extreme points can make the number unreliable.</p>
+<hr />
+<h3 id="task-10-describe-what-can-be-seen-in-the-scatter-plot-but-not-from-correlation-alone">Task 10: Describe what can be seen in the scatter plot but not from correlation alone</h3>
+<p><strong>Answer:</strong></p>
+<p>The scatter plot reveals at least <strong>five important features</strong> that the correlation coefficient alone completely hides:</p>
+<h4 id="1-the-nonlinear-u-shaped-relationship">1. The Nonlinear (U-shaped) Relationship</h4>
+<p>The most striking feature is the clear <strong>parabolic pattern</strong> <span class="arithmatex">\( y \approx x^2 \)</span>. This is a strong, deterministic-looking relationship. The correlation coefficient of 0.0572 gives zero indication that this relationship exists.</p>
+<h4 id="2-the-two-branch-structure">2. The Two-Branch Structure</h4>
+<p>The data naturally separates into two branches:
+- <strong>Left branch</strong> (<span class="arithmatex">\( x &lt; 0 \)</span>, 125 observations): strong negative linear trend (<span class="arithmatex">\( r = -0.9428 \)</span>)
+- <strong>Right branch</strong> (<span class="arithmatex">\( x &gt; 0 \)</span>, 135 observations): strong positive linear trend (<span class="arithmatex">\( r = +0.9405 \)</span>)</p>
+<p>The correlation for the combined data washes out both of these strong within-branch relationships.</p>
+<h4 id="3-the-symmetry-of-the-pattern">3. The Symmetry of the Pattern</h4>
+<p>The scatter plot shows an approximately <strong>symmetric</strong> pattern around <span class="arithmatex">\( x = 0 \)</span>. The left and right branches are near-mirror images. This symmetry is precisely what causes the cancellation in the correlation formula. No summary statistic captures this symmetry as clearly as the plot.</p>
+<h4 id="4-the-outlier-group">4. The Outlier Group</h4>
+<p>The 4 outlier points at <span class="arithmatex">\( x \in [7.5, 9.0] \)</span>, <span class="arithmatex">\( y \in [1.0, 3.0] \)</span> are immediately visible in the scatter plot as <strong>isolated points</strong> far from the main pattern. They stand out both because of their unusual <span class="arithmatex">\( x \)</span> range and because they break the expected <span class="arithmatex">\( y \approx x^2 \)</span> relationship. From the correlation coefficient alone, you would never know these outliers exist.</p>
+<h4 id="5-the-range-and-spread-of-the-data">5. The Range and Spread of the Data</h4>
+<p>The scatter plot shows us that:
+- <span class="arithmatex">\( x \)</span> ranges from about −4 to +4 for regular data (and up to 9 for outliers)
+- <span class="arithmatex">\( y \)</span> ranges from about −3 to +18 for regular data
+- The spread of <span class="arithmatex">\( y \)</span> increases with <span class="arithmatex">\( |x| \)</span> — this is <strong>heteroscedasticity</strong> (non-constant variance)</p>
+<p>The group summary confirms this quantitatively:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Group</th>
+<th style="text-align: right;">Observation Count</th>
+<th style="text-align: right;">Mean <span class="arithmatex">\( x \)</span></th>
+<th style="text-align: right;">Mean <span class="arithmatex">\( y \)</span></th>
+<th style="text-align: right;">Min <span class="arithmatex">\( x \)</span></th>
+<th style="text-align: right;">Max <span class="arithmatex">\( x \)</span></th>
+<th style="text-align: right;">Min <span class="arithmatex">\( y \)</span></th>
+<th style="text-align: right;">Max <span class="arithmatex">\( y \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">left_branch</td>
+<td style="text-align: right;">125</td>
+<td style="text-align: right;">−2.1482</td>
+<td style="text-align: right;">5.9510</td>
+<td style="text-align: right;">−3.995</td>
+<td style="text-align: right;">−0.063</td>
+<td style="text-align: right;">−2.163</td>
+<td style="text-align: right;">16.804</td>
+</tr>
+<tr>
+<td style="text-align: left;">right_branch</td>
+<td style="text-align: right;">135</td>
+<td style="text-align: right;">2.1446</td>
+<td style="text-align: right;">6.0978</td>
+<td style="text-align: right;">0.069</td>
+<td style="text-align: right;">3.998</td>
+<td style="text-align: right;">−2.595</td>
+<td style="text-align: right;">17.557</td>
+</tr>
+<tr>
+<td style="text-align: left;">outlier_group</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8.2500</td>
+<td style="text-align: right;">2.1250</td>
+<td style="text-align: right;">7.500</td>
+<td style="text-align: right;">9.000</td>
+<td style="text-align: right;">1.000</td>
+<td style="text-align: right;">3.000</td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-fundamental-lesson">The Fundamental Lesson</h4>
+<p>A scatter plot is an <strong>information-rich</strong> visualization — it shows every data point and lets the human eye detect patterns, clusters, outliers, nonlinearities, and heteroscedasticity simultaneously. The correlation coefficient, by contrast, is an <strong>information-poor</strong> summary — it compresses all of this into a single number between −1 and +1.</p>
+<p>This is why best practice in data analysis always prescribes:</p>
+<blockquote>
+<p><strong>Plot first. Compute second. Interpret with both.</strong></p>
+</blockquote>
+<p>The correlation coefficient is useful when the relationship is known to be approximately linear, with no extreme outliers, and from a single homogeneous population. When any of these assumptions are violated — as they are spectacularly in this problem — the correlation can be dangerously misleading.</p>
+<hr />
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<p>This problem demonstrates one of the most important lessons in statistics: <strong>summary statistics can hide critical structure in data</strong>. The Pearson correlation coefficient between <span class="arithmatex">\( x \)</span> and <span class="arithmatex">\( y \)</span> is 0.0179 (or 0.0572 without outliers) — values that suggest "no relationship." Yet the scatter plot reveals a powerful U-shaped relationship with within-branch correlations exceeding ±0.94.</p>
+<p>Three key traps were illustrated: <strong>(1) Nonlinear relationships</strong> produce near-zero correlations despite strong functional dependence. <strong>(2) Simpson's paradox in correlation</strong> — subgroup correlations (−0.94 and +0.94) can cancel to produce a near-zero aggregate correlation. <strong>(3) Outliers</strong> can distort correlation, even when they comprise only 1.5% of the data.</p>
+<p>The overarching takeaway is that <strong>visualization is not optional</strong> in data analysis. No single number can substitute for looking at your data. As the great statistician John Tukey wrote: <em>"The greatest value of a picture is when it forces us to notice what we never expected to see."</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

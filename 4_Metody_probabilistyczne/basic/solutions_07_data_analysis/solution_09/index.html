@@ -1,0 +1,4894 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_09/">
+      
+      
+        <link rel="prev" href="../solution_08/">
+      
+      
+        <link rel="next" href="../solution_10/">
+      
+      
+        
+          <link rel="alternate" href="../../../../pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_09/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Solution 9 — Warehouse Orders - Math Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-9-warehouse-orders-demand-and-returns" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Math Problems" class="md-header__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solution 9 — Warehouse Orders
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_09/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Math Problems" class="md-nav__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture: Mathematics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture: Mathematics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algebra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/01_matrices_and_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Matrices & Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/02_determinants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Determinants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/03_matrix_inversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Matrix Inversion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/04_systems_of_equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Systems of Equations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometry
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geometry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/01_vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Vectors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/02_lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Lines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/03_planes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Planes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/04_line_and_plane/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Line and Plane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/01_sequence_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Sequence Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/02_function_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Function Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/03_derivatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Derivatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/04_function_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Function Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/05_integrals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/06_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Calculus Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture: Probabilistic Methods
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture: Probabilistic Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Probabilistic Methods
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Probabilistic Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basic
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_2" id="__nav_3_1_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Events & Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_combinatorics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Combinatorics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_4" id="__nav_3_1_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Combinatorics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Combinatorics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_probability_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Probability Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_6" id="__nav_3_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Probability Distributions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Probability Distributions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_discovery_formalism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Discovering Formalism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_8" id="__nav_3_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Discovering Formalism
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Discovering Formalism
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_pmf_pdf_cdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. PMF, PDF, and CDF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_conditional_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Conditional Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_11" id="__nav_3_1_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Conditional Probability
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Conditional Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07_data_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Data Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_13" id="__nav_3_1_1_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Data Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Data Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1 — Die Rolls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2 — Coin Tosses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3 — Exam Scores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4 — Delivery Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5 — Customer Survey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6 — Factory Measurements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7 — Call Center
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8 — Waiting Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9 — Warehouse Orders
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9 — Warehouse Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-describe-what-one-row-of-the-dataset-represents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Describe what one row of the dataset represents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-compute-total-quantity-ordered-by-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Compute total quantity ordered by warehouse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-compute-total-quantity-ordered-by-product-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Compute total quantity ordered by product group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-compute-average-order-quantity-by-product-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Compute average order quantity by product group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-compute-the-return-rate-overall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: Compute the return rate overall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-compute-the-return-rate-by-product-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 6: Compute the return rate by product group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-compute-the-return-rate-by-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 7: Compute the return rate by warehouse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-draw-a-bar-chart-of-total-quantity-by-product-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8: Draw a bar chart of total quantity by product group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-9-identify-which-product-groups-generate-the-highest-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 9: Identify which product groups generate the highest demand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-explain-how-empirical-summaries-differ-from-a-theoretical-probability-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 10: Explain how empirical summaries differ from a theoretical probability model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 10: Explain how empirical summaries differ from a theoretical probability model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#empirical-summaries-what-we-did-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empirical Summaries (What We Did Here)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theoretical-probability-models-what-we-did-not-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theoretical Probability Models (What We Did NOT Do)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Differences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why It Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary and Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10 — Correlation Traps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/02_random_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Random Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/03_distribution_parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Distribution Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/04_selected_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Selected Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/05_limit_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Limit Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/06_basic_statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Basic Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/07_estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Estimation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/08_hypothesis_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Hypothesis Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/09_correlation_and_regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Correlation & Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/10_advanced_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Advanced Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/11_decision_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Decision Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-describe-what-one-row-of-the-dataset-represents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Describe what one row of the dataset represents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-compute-total-quantity-ordered-by-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Compute total quantity ordered by warehouse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-compute-total-quantity-ordered-by-product-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Compute total quantity ordered by product group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-compute-average-order-quantity-by-product-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Compute average order quantity by product group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-compute-the-return-rate-overall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: Compute the return rate overall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-compute-the-return-rate-by-product-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 6: Compute the return rate by product group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-compute-the-return-rate-by-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 7: Compute the return rate by warehouse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-draw-a-bar-chart-of-total-quantity-by-product-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8: Draw a bar chart of total quantity by product group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-9-identify-which-product-groups-generate-the-highest-demand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 9: Identify which product groups generate the highest demand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-explain-how-empirical-summaries-differ-from-a-theoretical-probability-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 10: Explain how empirical summaries differ from a theoretical probability model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 10: Explain how empirical summaries differ from a theoretical probability model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#empirical-summaries-what-we-did-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empirical Summaries (What We Did Here)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theoretical-probability-models-what-we-did-not-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theoretical Probability Models (What We Did NOT Do)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-differences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Differences
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why It Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary and Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-9-warehouse-orders-demand-and-returns">Problem 9 — Warehouse Orders, Demand, and Returns</h1>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>We are given a dataset of warehouse order lines for automotive parts. Each record captures a single order event at one of five warehouses, for one of five product groups, and indicates the quantity ordered and whether the item was returned. Our goal is to summarize demand patterns, compute return rates at various levels of aggregation, visualize the results, and discuss the difference between empirical summaries and theoretical probability models.</p>
+<h2 id="generated-files">Generated Files</h2>
+<ul>
+<li>Dataset: <a href="../problem_09_warehouse_orders/problem_09_warehouse_orders.csv"><code>problem_09_warehouse_orders.csv</code></a></li>
+<li>Overall summary: <a href="../problem_09_warehouse_orders/warehouse_orders_overall_summary.csv"><code>warehouse_orders_overall_summary.csv</code></a></li>
+<li>Warehouse summary: <a href="../problem_09_warehouse_orders/summary_by_warehouse.csv"><code>summary_by_warehouse.csv</code></a></li>
+<li>Product-group summary: <a href="../problem_09_warehouse_orders/summary_by_product_group.csv"><code>summary_by_product_group.csv</code></a></li>
+<li>Return rate by product group: <a href="../problem_09_warehouse_orders/return_rate_by_product_group.csv"><code>return_rate_by_product_group.csv</code></a></li>
+<li>Return rate by warehouse: <a href="../problem_09_warehouse_orders/return_rate_by_warehouse.csv"><code>return_rate_by_warehouse.csv</code></a></li>
+<li>Daily total quantity: <a href="../problem_09_warehouse_orders/daily_total_quantity.csv"><code>daily_total_quantity.csv</code></a></li>
+<li>Plots:</li>
+<li><a href="../problem_09_warehouse_orders/total_quantity_by_product_group.png"><code>total_quantity_by_product_group.png</code></a></li>
+<li><a href="../problem_09_warehouse_orders/return_rate_by_product_group.png"><code>return_rate_by_product_group.png</code></a></li>
+</ul>
+<hr />
+<h2 id="solution">Solution</h2>
+<h3 id="task-1-describe-what-one-row-of-the-dataset-represents">Task 1: Describe what one row of the dataset represents</h3>
+<p><strong>Answer:</strong></p>
+<p>Each row in <code>problem_09_warehouse_orders.csv</code> represents <strong>one warehouse order line</strong> — that is, a single line item within an order placed at one of the company's warehouses. The columns are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Column</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>order_id</code></td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">A unique identifier for the order (e.g., <code>O00001</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>date</code></td>
+<td style="text-align: left;">date</td>
+<td style="text-align: left;">The date on which the order was placed (e.g., <code>2026-04-14</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>warehouse</code></td>
+<td style="text-align: left;">categorical</td>
+<td style="text-align: left;">The warehouse that processed the order (<code>central</code>, <code>south</code>, <code>west</code>, <code>north</code>, or <code>east</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>product_group</code></td>
+<td style="text-align: left;">categorical</td>
+<td style="text-align: left;">The product category (<code>filters</code>, <code>brakes</code>, <code>suspension</code>, <code>electrical</code>, or <code>engine</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>quantity</code></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">The number of units ordered in this line</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>returned</code></td>
+<td style="text-align: left;">boolean</td>
+<td style="text-align: left;">Whether this order line was subsequently returned (<code>True</code> or <code>False</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>For example, the first row <code>O00001, 2026-04-14, west, filters, 2, True</code> tells us that order O00001 was placed on April 14, 2026 at the west warehouse, for 2 units of filters, and this order line was later returned.</p>
+<p>The dataset contains <strong>1,200 order lines</strong> spanning 30 days (April 1–30, 2026) across 5 warehouses and 5 product groups.</p>
+<hr />
+<h3 id="task-2-compute-total-quantity-ordered-by-warehouse">Task 2: Compute total quantity ordered by warehouse</h3>
+<p><strong>Answer:</strong></p>
+<p>To compute the total quantity by warehouse, we group the data by the <code>warehouse</code> column and sum the <code>quantity</code> field:</p>
+<pre><code class="language-python">total_by_warehouse = df.groupby('warehouse')['quantity'].sum().sort_values(ascending=False)
+</code></pre>
+<p>The results are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Warehouse</th>
+<th style="text-align: right;">Order Lines</th>
+<th style="text-align: right;">Total Quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">central</td>
+<td style="text-align: right;">336</td>
+<td style="text-align: right;">1,029</td>
+</tr>
+<tr>
+<td style="text-align: left;">south</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">739</td>
+</tr>
+<tr>
+<td style="text-align: left;">west</td>
+<td style="text-align: right;">233</td>
+<td style="text-align: right;">737</td>
+</tr>
+<tr>
+<td style="text-align: left;">north</td>
+<td style="text-align: right;">197</td>
+<td style="text-align: right;">574</td>
+</tr>
+<tr>
+<td style="text-align: left;">east</td>
+<td style="text-align: right;">194</td>
+<td style="text-align: right;">567</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>central warehouse</strong> dominates with a total ordered quantity of <strong>1,029 units</strong>, accounting for approximately:</p>
+<div class="arithmatex">\[
+\frac{1{,}029}{3{,}646} \approx 0.2822 = 28.22\%
+\]</div>
+<p>of all ordered quantity. This is partly because the central warehouse also has the largest number of order lines (336 out of 1,200). The south and west warehouses are roughly comparable (739 vs. 737 units), while north and east have the lowest total quantities.</p>
+<p>We can verify that the totals add up correctly:</p>
+<div class="arithmatex">\[
+1{,}029 + 739 + 737 + 574 + 567 = 3{,}646
+\]</div>
+<p>which matches the overall total.</p>
+<hr />
+<h3 id="task-3-compute-total-quantity-ordered-by-product-group">Task 3: Compute total quantity ordered by product group</h3>
+<p><strong>Answer:</strong></p>
+<p>Grouping by <code>product_group</code> and summing <code>quantity</code>:</p>
+<pre><code class="language-python">total_by_product = df.groupby('product_group')['quantity'].sum().sort_values(ascending=False)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Product Group</th>
+<th style="text-align: right;">Order Lines</th>
+<th style="text-align: right;">Total Quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">filters</td>
+<td style="text-align: right;">353</td>
+<td style="text-align: right;">1,405</td>
+</tr>
+<tr>
+<td style="text-align: left;">brakes</td>
+<td style="text-align: right;">263</td>
+<td style="text-align: right;">825</td>
+</tr>
+<tr>
+<td style="text-align: left;">suspension</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">501</td>
+</tr>
+<tr>
+<td style="text-align: left;">electrical</td>
+<td style="text-align: right;">205</td>
+<td style="text-align: right;">488</td>
+</tr>
+<tr>
+<td style="text-align: left;">engine</td>
+<td style="text-align: right;">188</td>
+<td style="text-align: right;">427</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Filters</strong> are the clear leader with <strong>1,405 units</strong> — more than three times the quantity of the engine group and representing:</p>
+<div class="arithmatex">\[
+\frac{1{,}405}{3{,}646} \approx 0.3854 = 38.54\%
+\]</div>
+<p>of total demand. The high demand for filters is driven both by a higher number of order lines (353) and by a larger average quantity per line (as we will see in Task 4).</p>
+<p>Verification:</p>
+<div class="arithmatex">\[
+1{,}405 + 825 + 501 + 488 + 427 = 3{,}646 \checkmark
+\]</div>
+<hr />
+<h3 id="task-4-compute-average-order-quantity-by-product-group">Task 4: Compute average order quantity by product group</h3>
+<p><strong>Answer:</strong></p>
+<p>The average (mean) quantity per order line for each product group is computed as:</p>
+<div class="arithmatex">\[
+\bar{q}_g = \frac{\text{Total quantity for group } g}{\text{Number of order lines in group } g}
+\]</div>
+<pre><code class="language-python">avg_by_product = df.groupby('product_group')['quantity'].mean()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Product Group</th>
+<th style="text-align: right;">Order Lines</th>
+<th style="text-align: right;">Total Quantity</th>
+<th style="text-align: right;">Average Quantity <span class="arithmatex">\( \bar{q}_g \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">filters</td>
+<td style="text-align: right;">353</td>
+<td style="text-align: right;">1,405</td>
+<td style="text-align: right;">3.9802</td>
+</tr>
+<tr>
+<td style="text-align: left;">brakes</td>
+<td style="text-align: right;">263</td>
+<td style="text-align: right;">825</td>
+<td style="text-align: right;">3.1369</td>
+</tr>
+<tr>
+<td style="text-align: left;">suspension</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">501</td>
+<td style="text-align: right;">2.6230</td>
+</tr>
+<tr>
+<td style="text-align: left;">electrical</td>
+<td style="text-align: right;">205</td>
+<td style="text-align: right;">488</td>
+<td style="text-align: right;">2.3805</td>
+</tr>
+<tr>
+<td style="text-align: left;">engine</td>
+<td style="text-align: right;">188</td>
+<td style="text-align: right;">427</td>
+<td style="text-align: right;">2.2713</td>
+</tr>
+</tbody>
+</table>
+<p>Let us verify the calculation for <em>filters</em>:</p>
+<div class="arithmatex">\[
+\bar{q}_{\text{filters}} = \frac{1{,}405}{353} \approx 3.9802
+\]</div>
+<p>And for <em>engine</em>:</p>
+<div class="arithmatex">\[
+\bar{q}_{\text{engine}} = \frac{427}{188} \approx 2.2713
+\]</div>
+<p>The overall mean across all order lines is:</p>
+<div class="arithmatex">\[
+\bar{q}_{\text{overall}} = \frac{3{,}646}{1{,}200} \approx 3.0383
+\]</div>
+<p><strong>Interpretation:</strong> Filters not only have the most order lines but also the highest average quantity per order line (<span class="arithmatex">\( \approx 4.0 \)</span> units), suggesting that when customers order filters, they tend to order in larger quantities. Engine parts have the lowest average (<span class="arithmatex">\( \approx 2.3 \)</span> units), likely because engine components are higher-value items ordered in smaller quantities.</p>
+<hr />
+<h3 id="task-5-compute-the-return-rate-overall">Task 5: Compute the return rate overall</h3>
+<p><strong>Answer:</strong></p>
+<p>The <strong>return rate</strong> is the proportion of order lines that were marked as returned. Formally:</p>
+<div class="arithmatex">\[
+\hat{p}_{\text{return}} = \frac{\text{Number of returned order lines}}{\text{Total number of order lines}} = \frac{74}{1{,}200} \approx 0.0617
+\]</div>
+<p>This means that approximately <strong>6.17%</strong> of all order lines were returned.</p>
+<pre><code class="language-python">return_rate = df['returned'].sum() / len(df)
+# return_rate ≈ 0.0617
+</code></pre>
+<p>From a probabilistic perspective, this is the <strong>empirical probability</strong> (relative frequency) of a return. If we model returns as a Bernoulli process with parameter <span class="arithmatex">\( p \)</span>, then <span class="arithmatex">\( \hat{p} = 0.0617 \)</span> serves as a point estimate of the true return probability.</p>
+<p>A <strong>95% confidence interval</strong> for the true return rate (using the normal approximation to the binomial) would be:</p>
+<div class="arithmatex">\[
+\hat{p} \pm z_{0.025} \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = 0.0617 \pm 1.96 \sqrt{\frac{0.0617 \times 0.9383}{1200}} \approx 0.0617 \pm 0.0136
+\]</div>
+<p>giving the interval <span class="arithmatex">\( [0.0481,\; 0.0753] \)</span>. This tells us that with 95% confidence, the true return rate lies roughly between 4.8% and 7.5%.</p>
+<hr />
+<h3 id="task-6-compute-the-return-rate-by-product-group">Task 6: Compute the return rate by product group</h3>
+<p><strong>Answer:</strong></p>
+<p>The return rate for each product group is:</p>
+<div class="arithmatex">\[
+\hat{p}_g = \frac{\text{Returned lines in group } g}{\text{Total lines in group } g}
+\]</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Product Group</th>
+<th style="text-align: right;">Returned Lines</th>
+<th style="text-align: right;">Order Lines</th>
+<th style="text-align: right;">Return Rate <span class="arithmatex">\( \hat{p}_g \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">suspension</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">191</td>
+<td style="text-align: right;">0.0995</td>
+</tr>
+<tr>
+<td style="text-align: left;">electrical</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">205</td>
+<td style="text-align: right;">0.0732</td>
+</tr>
+<tr>
+<td style="text-align: left;">filters</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">353</td>
+<td style="text-align: right;">0.0538</td>
+</tr>
+<tr>
+<td style="text-align: left;">engine</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">188</td>
+<td style="text-align: right;">0.0479</td>
+</tr>
+<tr>
+<td style="text-align: left;">brakes</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">263</td>
+<td style="text-align: right;">0.0456</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">return_rate_by_group = df.groupby('product_group')['returned'].mean()
+</code></pre>
+<p><strong>Key observations:</strong></p>
+<ol>
+<li><strong>Suspension</strong> has the highest return rate at <strong>9.95%</strong> — nearly double the overall average. This is noteworthy: even though suspension has only 191 order lines, 19 of them were returned. Let us verify:</li>
+</ol>
+<div class="arithmatex">\[
+\hat{p}_{\text{suspension}} = \frac{19}{191} \approx 0.0995
+\]</div>
+<ol>
+<li>
+<p><strong>Brakes</strong> have the lowest return rate at <strong>4.56%</strong>, well below the overall average of 6.17%.</p>
+</li>
+<li>
+<p>Although <em>filters</em> and <em>suspension</em> both have 19 returned lines, their return rates are very different because filters have nearly twice as many total order lines (353 vs. 191). This demonstrates why raw counts alone are misleading — <strong>rates</strong> (proportions) provide a fairer comparison.</p>
+</li>
+<li>
+<p>The total number of returned lines sums correctly: <span class="arithmatex">\( 19 + 15 + 19 + 9 + 12 = 74 \)</span>.</p>
+</li>
+</ol>
+<hr />
+<h3 id="task-7-compute-the-return-rate-by-warehouse">Task 7: Compute the return rate by warehouse</h3>
+<p><strong>Answer:</strong></p>
+<p>Similarly, we compute the return rate for each warehouse:</p>
+<div class="arithmatex">\[
+\hat{p}_w = \frac{\text{Returned lines at warehouse } w}{\text{Total lines at warehouse } w}
+\]</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Warehouse</th>
+<th style="text-align: right;">Returned Lines</th>
+<th style="text-align: right;">Order Lines</th>
+<th style="text-align: right;">Return Rate <span class="arithmatex">\( \hat{p}_w \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">west</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">233</td>
+<td style="text-align: right;">0.0730</td>
+</tr>
+<tr>
+<td style="text-align: left;">east</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">194</td>
+<td style="text-align: right;">0.0722</td>
+</tr>
+<tr>
+<td style="text-align: left;">north</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">197</td>
+<td style="text-align: right;">0.0660</td>
+</tr>
+<tr>
+<td style="text-align: left;">south</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">0.0542</td>
+</tr>
+<tr>
+<td style="text-align: left;">central</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">336</td>
+<td style="text-align: right;">0.0506</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">return_rate_by_wh = df.groupby('warehouse')['returned'].mean()
+</code></pre>
+<p><strong>Key observations:</strong></p>
+<ol>
+<li>
+<p>The <strong>west</strong> and <strong>east</strong> warehouses have the highest return rates (7.30% and 7.22% respectively), exceeding the overall average of 6.17%.</p>
+</li>
+<li>
+<p>The <strong>central</strong> warehouse has the lowest return rate (5.06%) despite processing the most order lines. This could suggest that the central warehouse has better quality control or more experienced staff, or it may simply be a statistical fluctuation in this sample.</p>
+</li>
+<li>
+<p>Notice that both <em>central</em> and <em>west</em> have 17 returned lines each, but their return rates differ considerably (5.06% vs. 7.30%) because central processes many more order lines (336 vs. 233). This again illustrates the importance of computing <strong>relative frequencies</strong> rather than relying on absolute counts.</p>
+</li>
+<li>
+<p>Verification: <span class="arithmatex">\( 17 + 13 + 17 + 13 + 14 = 74 \)</span> returned lines total. ✓</p>
+</li>
+</ol>
+<hr />
+<h3 id="task-8-draw-a-bar-chart-of-total-quantity-by-product-group">Task 8: Draw a bar chart of total quantity by product group</h3>
+<p><strong>Answer:</strong></p>
+<p>The bar chart visualizes the total ordered quantity for each product group:</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+product_totals = df.groupby('product_group')['quantity'].sum().sort_values(ascending=False)
+product_totals.plot(kind='bar', color='steelblue', edgecolor='black')
+plt.title('Total Quantity by Product Group')
+plt.ylabel('Total Quantity')
+plt.xlabel('Product Group')
+plt.tight_layout()
+plt.savefig('total_quantity_by_product_group.png', dpi=150)
+</code></pre>
+<p><img alt="Total quantity ordered by product group" src="../problem_09_warehouse_orders/total_quantity_by_product_group.png" /></p>
+<p><strong>Interpretation of the chart:</strong></p>
+<p>The bar chart clearly shows that <strong>filters</strong> dominate demand with 1,405 units — a bar that is substantially taller than all others. <strong>Brakes</strong> are a distant second at 825 units. The remaining three product groups (suspension, electrical, engine) are all relatively close to one another, ranging from 427 to 501 units.</p>
+<p>This visualization makes the relative differences immediately apparent. In percentage terms:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Product Group</th>
+<th style="text-align: right;">Total Quantity</th>
+<th style="text-align: right;">Share of Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">filters</td>
+<td style="text-align: right;">1,405</td>
+<td style="text-align: right;">38.54%</td>
+</tr>
+<tr>
+<td style="text-align: left;">brakes</td>
+<td style="text-align: right;">825</td>
+<td style="text-align: right;">22.63%</td>
+</tr>
+<tr>
+<td style="text-align: left;">suspension</td>
+<td style="text-align: right;">501</td>
+<td style="text-align: right;">13.74%</td>
+</tr>
+<tr>
+<td style="text-align: left;">electrical</td>
+<td style="text-align: right;">488</td>
+<td style="text-align: right;">13.38%</td>
+</tr>
+<tr>
+<td style="text-align: left;">engine</td>
+<td style="text-align: right;">427</td>
+<td style="text-align: right;">11.71%</td>
+</tr>
+</tbody>
+</table>
+<p>Additionally, we can view the return rate by product group:</p>
+<p><img alt="Return rate by product group" src="../problem_09_warehouse_orders/return_rate_by_product_group.png" /></p>
+<p>This chart complements the previous one by showing that while filters have the highest demand, suspension has the highest return rate — an important distinction for inventory management.</p>
+<hr />
+<h3 id="task-9-identify-which-product-groups-generate-the-highest-demand">Task 9: Identify which product groups generate the highest demand</h3>
+<p><strong>Answer:</strong></p>
+<p>Based on the analysis in Tasks 3, 4, and 8, the product groups generating the <strong>highest demand</strong> are:</p>
+<p><strong>1. Filters</strong> — The undisputed leader across every demand metric:
+- <strong>Total quantity:</strong> 1,405 units (38.54% of all demand)
+- <strong>Order lines:</strong> 353 (29.42% of all lines)
+- <strong>Average quantity per line:</strong> 3.98 units (highest among all groups)</p>
+<p><strong>2. Brakes</strong> — The second-highest demand group:
+- <strong>Total quantity:</strong> 825 units (22.63% of all demand)
+- <strong>Order lines:</strong> 263 (21.92% of all lines)
+- <strong>Average quantity per line:</strong> 3.14 units</p>
+<p>Together, filters and brakes account for:</p>
+<div class="arithmatex">\[
+\frac{1{,}405 + 825}{3{,}646} = \frac{2{,}230}{3{,}646} \approx 0.6116 = 61.16\%
+\]</div>
+<p>of total ordered quantity. This means that just <strong>two out of five product groups</strong> generate more than <strong>61%</strong> of total demand. This is a manifestation of the <strong>Pareto principle</strong> (80/20 rule) in a milder form.</p>
+<p><strong>Supply chain implications:</strong> Warehouse managers should ensure that filters and brakes are always well-stocked, as stockouts in these categories would disproportionately affect overall fulfillment rates. Meanwhile, engine parts — with the lowest demand (427 units) and the lowest average quantity per line (2.27) — could potentially be managed with lower safety stock levels.</p>
+<hr />
+<h3 id="task-10-explain-how-empirical-summaries-differ-from-a-theoretical-probability-model">Task 10: Explain how empirical summaries differ from a theoretical probability model</h3>
+<p><strong>Answer:</strong></p>
+<p>This is a fundamental conceptual distinction in probability and statistics:</p>
+<h4 id="empirical-summaries-what-we-did-here">Empirical Summaries (What We Did Here)</h4>
+<p>All the statistics computed in this problem — totals, averages, return rates, bar charts — are <strong>empirical summaries</strong>. They describe <strong>what was observed</strong> in this particular dataset of 1,200 order lines. Key characteristics:</p>
+<ul>
+<li>They are computed <strong>directly from data</strong> using formulas like:</li>
+</ul>
+<div class="arithmatex">\[
+\hat{p} = \frac{\sum_{i=1}^{n} \mathbf{1}[\text{returned}_i = \text{True}]}{n}, \qquad \bar{q} = \frac{\sum_{i=1}^{n} q_i}{n}
+\]</div>
+<ul>
+<li>They are <strong>sample statistics</strong> — they can change if we collect a different sample.</li>
+<li>They do not make assumptions about the underlying data-generating process.</li>
+<li>They answer: <em>"What happened in this particular sample?"</em></li>
+</ul>
+<h4 id="theoretical-probability-models-what-we-did-not-do">Theoretical Probability Models (What We Did NOT Do)</h4>
+<p>A <strong>theoretical probability model</strong> would specify the data-generating mechanism <em>before</em> observing the data. For example:</p>
+<ol>
+<li><strong>Return model:</strong> "Each order line has a probability <span class="arithmatex">\( p = 0.06 \)</span> of being returned, independently of other orders." This would be a <strong>Bernoulli model</strong> with parameter <span class="arithmatex">\( p \)</span>:</li>
+</ol>
+<div class="arithmatex">\[
+X_i \sim \text{Bernoulli}(p), \qquad P(X_i = 1) = p
+\]</div>
+<ol>
+<li><strong>Quantity model:</strong> "The ordered quantity follows a Poisson distribution with mean <span class="arithmatex">\( \lambda = 3 \)</span>":</li>
+</ol>
+<div class="arithmatex">\[
+Q \sim \text{Poisson}(\lambda), \qquad P(Q = k) = \frac{e^{-\lambda}\lambda^k}{k!}
+\]</div>
+<ol>
+<li><strong>Warehouse assignment model:</strong> "Each order is assigned to a warehouse according to a categorical distribution with probabilities <span class="arithmatex">\( (p_{\text{central}}, p_{\text{south}}, p_{\text{west}}, p_{\text{north}}, p_{\text{east}}) \)</span>."</li>
+</ol>
+<h4 id="key-differences">Key Differences</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Aspect</th>
+<th style="text-align: left;">Empirical Summary</th>
+<th style="text-align: left;">Theoretical Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Basis</td>
+<td style="text-align: left;">Observed data</td>
+<td style="text-align: left;">Mathematical assumptions</td>
+</tr>
+<tr>
+<td style="text-align: left;">Goal</td>
+<td style="text-align: left;">Describe what happened</td>
+<td style="text-align: left;">Predict / explain the process</td>
+</tr>
+<tr>
+<td style="text-align: left;">Parameters</td>
+<td style="text-align: left;">Computed from data (<span class="arithmatex">\( \hat{p} \)</span>)</td>
+<td style="text-align: left;">Assumed or estimated (<span class="arithmatex">\( p \)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Variability</td>
+<td style="text-align: left;">One fixed result per sample</td>
+<td style="text-align: left;">Accounts for randomness across samples</td>
+</tr>
+<tr>
+<td style="text-align: left;">Generalization</td>
+<td style="text-align: left;">Limited to this sample</td>
+<td style="text-align: left;">Extends to future data</td>
+</tr>
+</tbody>
+</table>
+<h4 id="why-it-matters">Why It Matters</h4>
+<p>Our empirical return rate of <span class="arithmatex">\( \hat{p} = 0.0617 \)</span> is a single number from one sample. A theoretical model would allow us to:
+- Compute <strong>confidence intervals</strong> for the true return rate
+- Perform <strong>hypothesis tests</strong> (e.g., "Is the suspension return rate significantly higher than the overall rate?")
+- Make <strong>predictions</strong> about future returns
+- Quantify <strong>uncertainty</strong> in our estimates</p>
+<p>Without a theoretical model, we can only describe; with one, we can <strong>infer</strong> and <strong>predict</strong>.</p>
+<hr />
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<p>This problem provided a comprehensive exercise in descriptive data analysis of warehouse order data. We analyzed 1,200 order lines across 5 warehouses and 5 product groups, computing totals, averages, and return rates at multiple levels of aggregation.</p>
+<p>The main findings are: <strong>(1)</strong> Filters and brakes generate the majority of demand (61.16% combined), with filters alone accounting for nearly 39% of total quantity. <strong>(2)</strong> The overall return rate is 6.17%, but this masks significant variation — suspension has a return rate of 9.95% while brakes are at just 4.56%. <strong>(3)</strong> Among warehouses, west and east have the highest return rates (&gt;7%), while central has the lowest (5.06%) despite processing the most orders.</p>
+<p>Critically, all of these results are <strong>empirical summaries</strong> — they describe what was observed in this specific sample. Transitioning from description to inference would require specifying a <strong>theoretical probability model</strong>, which would enable hypothesis testing, confidence intervals, and predictive capabilities. The gap between "what the data shows" and "what the data means" is bridged by probabilistic modeling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

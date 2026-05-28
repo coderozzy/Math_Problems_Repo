@@ -1,0 +1,2397 @@
+
+<!doctype html>
+<html lang="pl" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_02/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="pl">
+        
+          <link rel="alternate" href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_02/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Problem 2 — Coin Tosses and Relative Frequencies - Math Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-2-coin-tosses-and-relative-frequencies" class="md-skip">
+          Przejdź do treści
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Nagłówek">
+    <a href="../../../../" title="Math Problems" class="md-header__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Problem 2 — Coin Tosses and Relative Frequencies
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Wybierz język">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_02/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Szukaj" placeholder="Szukaj" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Szukaj">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Wyczyść" aria-label="Wyczyść" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicjowanie wyszukiwania
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Nawigacja" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../" title="Math Problems" class="md-nav__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wykład: Matematyka
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wykład: Matematyka
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algebra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/01_matrices_and_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Macierze i operacje
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/02_determinants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Wyznaczniki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/03_matrix_inversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Odwracanie macierzy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/04_systems_of_equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Układy równań
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometria
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geometria
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/01_vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Wektory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/02_lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Proste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/03_planes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Płaszczyzny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/04_line_and_plane/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Prosta i płaszczyzna
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analiza
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analiza
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/01_sequence_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Granice ciągów
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/02_function_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Granice funkcji
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/03_derivatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Pochodne funkcji
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/04_function_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Badanie funkcji
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/05_integrals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Całki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/06_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Zastosowania rachunku
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wykład: Metody probabilistyczne
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wykład: Metody probabilistyczne
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metody probabilistyczne
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Metody probabilistyczne
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Podstawowe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Podstawowe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Zdarzenia i prawdopodobieństwo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_combinatorics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Kombinatoryka
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_probability_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Rozkłady prawdopodobieństwa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zaawansowane
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Zaawansowane
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Zdarzenia i prawdopodobieństwo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/02_random_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Zmienne losowe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/03_distribution_parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Parametry rozkładu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/04_selected_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Wybrane rozkłady
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/05_limit_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Twierdzenia graniczne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/06_basic_statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Podstawowe statystyki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/07_estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Estymacja
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/08_hypothesis_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Weryfikacja hipotez
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/09_correlation_and_regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Korelacja i regresja
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/10_advanced_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Zaawansowane metody
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/11_decision_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Teoria decyzji
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animacje
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animacje
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Spis treści">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Spis treści
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-describe-the-random-experiment-represented-by-the-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Describe the random experiment represented by the dataset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-construct-a-frequency-table-for-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Construct a frequency table for result
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-compute-the-relative-frequency-of-heads-and-tails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Compute the relative frequency of heads and tails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-draw-a-line-plot-of-relative_frequency_heads-against-trial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Draw a line plot of relative_frequency_heads against trial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-explain-what-happens-to-the-relative-frequency-as-trials-increase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: Explain what happens to the relative frequency as trials increase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-compare-the-final-relative-frequency-of-heads-with-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 6: Compare the final relative frequency of heads with 0.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-does-the-generated-coin-appear-to-be-fair-explain-carefully" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 7: Does the generated coin appear to be fair? Explain carefully
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-explain-the-difference-between-theoretical-probability-and-empirical-relative-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8: Explain the difference between theoretical probability and empirical relative frequency
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 8: Explain the difference between theoretical probability and empirical relative frequency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theoretical-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theoretical Probability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empirical-relative-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empirical Relative Frequency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-relationship-law-of-large-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Relationship: Law of Large Numbers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-helpful-analogy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Helpful Analogy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary and Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-2-coin-tosses-and-relative-frequencies">Problem 2 — Coin Tosses and Relative Frequencies</h1>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>We are given a dataset of 2000 simulated coin tosses (generated with seed 702). Each toss results in either heads (H) or tails (T). The dataset tracks cumulative heads counts and running relative frequencies. Our tasks are to describe the experiment, build frequency tables, plot the evolution of the relative frequency over time, relate our observations to the Law of Large Numbers, and assess whether the coin appears to be fair.</p>
+<h2 id="generated-files">Generated Files</h2>
+<ul>
+<li>Dataset: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_02_coin_tosses/problem_02_coin_tosses.csv">problem_02_coin_tosses.csv</a></li>
+<li>Frequency table: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_02_coin_tosses/frequency_table.csv">frequency_table.csv</a></li>
+<li>Relative frequency checkpoints: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_02_coin_tosses/relative_frequency_checkpoints.csv">relative_frequency_checkpoints.csv</a></li>
+<li>Relative frequency plot: <a href="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_02_coin_tosses/relative_frequency_heads.png">relative_frequency_heads.png</a></li>
+</ul>
+<hr />
+<h2 id="solution">Solution</h2>
+<h3 id="task-1-describe-the-random-experiment-represented-by-the-dataset">Task 1: Describe the random experiment represented by the dataset</h3>
+<p><strong>Answer:</strong></p>
+<p>The dataset represents a <strong>Bernoulli experiment</strong> repeated 2000 times. Each trial consists of tossing a coin once. The outcome space for a single toss is:</p>
+<div class="arithmatex">\[
+\Omega = \{H, T\},
+\]</div>
+<p>where <span class="arithmatex">\( H \)</span> denotes heads and <span class="arithmatex">\( T \)</span> denotes tails. We can define a random variable <span class="arithmatex">\( X_i \)</span> for the <span class="arithmatex">\( i \)</span>-th toss:</p>
+<div class="arithmatex">\[
+X_i = \begin{cases} 1 &amp; \text{if the } i\text{-th toss is heads,} \\ 0 &amp; \text{if the } i\text{-th toss is tails.} \end{cases}
+\]</div>
+<p>Each <span class="arithmatex">\( X_i \)</span> follows a <strong>Bernoulli distribution</strong> <span class="arithmatex">\( X_i \sim \text{Bernoulli}(p) \)</span>, where <span class="arithmatex">\( p \)</span> is the probability of heads. For a fair coin, <span class="arithmatex">\( p = 0.5 \)</span>.</p>
+<p>The dataset has the following columns:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>trial</code></td>
+<td>The sequential number of the toss (1 through 2000)</td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td>The observed outcome: <code>H</code> (heads) or <code>T</code> (tails)</td>
+</tr>
+<tr>
+<td><code>is_head</code></td>
+<td>Boolean flag: <code>True</code> if the result is heads</td>
+</tr>
+<tr>
+<td><code>cumulative_heads</code></td>
+<td>Running total of heads observed up to and including this trial</td>
+</tr>
+<tr>
+<td><code>relative_frequency_heads</code></td>
+<td>Proportion of heads out of all trials so far: <span class="arithmatex">\( \frac{\text{cumulative\_heads}}{\text{trial}} \)</span></td>
+</tr>
+</tbody>
+</table>
+<p>For instance, the first row shows <code>trial=1, result=H, is_head=True, cumulative_heads=1, relative_frequency_heads=1.0</code> — the first toss was heads, so after one trial the relative frequency of heads is <span class="arithmatex">\( 1/1 = 1.0 \)</span> (100%).</p>
+<p>The key feature of this dataset is that it tracks the <strong>evolution of the relative frequency</strong> over time, which allows us to observe the empirical manifestation of the <strong>Law of Large Numbers</strong>.</p>
+<hr />
+<h3 id="task-2-construct-a-frequency-table-for-result">Task 2: Construct a frequency table for <code>result</code></h3>
+<p><strong>Answer:</strong></p>
+<p>The <strong>absolute frequency</strong> counts how many times each outcome occurred across all 2000 tosses:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Result</th>
+<th style="text-align: center;">Absolute frequency <span class="arithmatex">\( n_k \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">H (Heads)</td>
+<td style="text-align: center;">1038</td>
+</tr>
+<tr>
+<td style="text-align: center;">T (Tails)</td>
+<td style="text-align: center;">962</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Total</strong></td>
+<td style="text-align: center;"><strong>2000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>We can verify: <span class="arithmatex">\( 1038 + 962 = 2000 \)</span>. ✓</p>
+<p>Out of 2000 tosses, heads appeared 1038 times — 76 more times than tails. This means heads has a <strong>surplus</strong> of:</p>
+<div class="arithmatex">\[
+\Delta n = n_H - n_T = 1038 - 962 = 76.
+\]</div>
+<p>While this may seem like a noticeable imbalance, we need to consider it relative to the total sample size. The proportional surplus is <span class="arithmatex">\( 76/2000 = 0.038 = 3.8\% \)</span>, which is moderate.</p>
+<p>In Python:</p>
+<pre><code class="language-python">import pandas as pd
+
+df = pd.read_csv(&quot;problem_02_coin_tosses.csv&quot;)
+freq = df[&quot;result&quot;].value_counts()
+print(freq)
+# H    1038
+# T     962
+</code></pre>
+<hr />
+<h3 id="task-3-compute-the-relative-frequency-of-heads-and-tails">Task 3: Compute the relative frequency of heads and tails</h3>
+<p><strong>Answer:</strong></p>
+<p>The <strong>relative frequency</strong> is the absolute frequency divided by the total number of trials:</p>
+<div class="arithmatex">\[
+f_H = \frac{n_H}{n} = \frac{1038}{2000} = 0.519,
+\]</div>
+<div class="arithmatex">\[
+f_T = \frac{n_T}{n} = \frac{962}{2000} = 0.481.
+\]</div>
+<p>As always, the relative frequencies sum to 1:</p>
+<div class="arithmatex">\[
+f_H + f_T = 0.519 + 0.481 = 1.000. \quad \checkmark
+\]</div>
+<p><strong>Comparison with a fair coin:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Result</th>
+<th style="text-align: center;">Empirical <span class="arithmatex">\( f_k \)</span></th>
+<th style="text-align: center;">Fair coin <span class="arithmatex">\( P \)</span></th>
+<th style="text-align: center;">Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">H</td>
+<td style="text-align: center;">0.519</td>
+<td style="text-align: center;">0.500</td>
+<td style="text-align: center;">+0.019</td>
+</tr>
+<tr>
+<td style="text-align: center;">T</td>
+<td style="text-align: center;">0.481</td>
+<td style="text-align: center;">0.500</td>
+<td style="text-align: center;">−0.019</td>
+</tr>
+</tbody>
+</table>
+<p>The relative frequency of heads exceeds the fair-coin probability by <span class="arithmatex">\( 0.019 \)</span> — less than two percentage points. For a fair coin with <span class="arithmatex">\( n = 2000 \)</span> tosses, the standard deviation of the sample proportion is:</p>
+<div class="arithmatex">\[
+\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.5 \times 0.5}{2000}} = \sqrt{\frac{0.25}{2000}} = \sqrt{0.000125} \approx 0.01118.
+\]</div>
+<p>The observed deviation from 0.5 in standardised units (the z-score) is:</p>
+<div class="arithmatex">\[
+z = \frac{0.519 - 0.500}{0.01118} \approx \frac{0.019}{0.01118} \approx 1.70.
+\]</div>
+<p>A z-score of 1.70 corresponds to a two-tailed p-value of approximately 0.089 — not statistically significant at the conventional <span class="arithmatex">\( \alpha = 0.05 \)</span> level, but close. This tells us the data is on the boundary: mildly suspicious but not conclusive.</p>
+<hr />
+<h3 id="task-4-draw-a-line-plot-of-relative_frequency_heads-against-trial">Task 4: Draw a line plot of <code>relative_frequency_heads</code> against <code>trial</code></h3>
+<p><strong>Answer:</strong></p>
+<p>The plot below shows how the relative frequency of heads evolves as we accumulate more and more tosses. The x-axis is the trial number (1 to 2000), and the y-axis is the running proportion of heads. The dashed red line marks the fair-coin reference of <span class="arithmatex">\( p = 0.5 \)</span>.</p>
+<p><img alt="Relative frequency of heads over 2000 coin tosses" src="../../../../../4_Metody_probabilistyczne/basic/solutions_07_data_analysis/problem_02_coin_tosses/relative_frequency_heads.png" /></p>
+<p>A Python snippet to produce such a plot:</p>
+<pre><code class="language-python">import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv(&quot;problem_02_coin_tosses.csv&quot;)
+
+plt.figure(figsize=(10, 5))
+plt.plot(df[&quot;trial&quot;], df[&quot;relative_frequency_heads&quot;], 
+         color=&quot;steelblue&quot;, linewidth=0.5)
+plt.axhline(y=0.5, color=&quot;red&quot;, linestyle=&quot;--&quot;, label=&quot;p = 0.5&quot;)
+plt.xlabel(&quot;Trial number&quot;)
+plt.ylabel(&quot;Relative frequency of heads&quot;)
+plt.title(&quot;Convergence of Relative Frequency of Heads&quot;)
+plt.legend()
+plt.show()
+</code></pre>
+<p>The plot beautifully illustrates the <strong>stabilisation</strong> phenomenon: early in the experiment, the relative frequency swings wildly (reaching as high as 0.65 after just 20 tosses), but as more data accumulates, the fluctuations dampen and the curve settles near its long-run value.</p>
+<hr />
+<h3 id="task-5-explain-what-happens-to-the-relative-frequency-as-trials-increase">Task 5: Explain what happens to the relative frequency as trials increase</h3>
+<p><strong>Answer:</strong></p>
+<p>The behaviour visible in the plot and the checkpoint table is a textbook illustration of the <strong>Law of Large Numbers (LLN)</strong>. Let us examine the checkpoints:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Trial <span class="arithmatex">\( n \)</span></th>
+<th style="text-align: right;">Cumulative heads <span class="arithmatex">\( S_n \)</span></th>
+<th style="text-align: right;">Relative frequency <span class="arithmatex">\( f_n = S_n/n \)</span></th>
+<th style="text-align: right;">Distance from 0.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.600</td>
+<td style="text-align: right;">0.100</td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">0.650</td>
+<td style="text-align: right;">0.150</td>
+</tr>
+<tr>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">0.540</td>
+<td style="text-align: right;">0.040</td>
+</tr>
+<tr>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">0.550</td>
+<td style="text-align: right;">0.050</td>
+</tr>
+<tr>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">0.525</td>
+<td style="text-align: right;">0.025</td>
+</tr>
+<tr>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">262</td>
+<td style="text-align: right;">0.524</td>
+<td style="text-align: right;">0.024</td>
+</tr>
+<tr>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">521</td>
+<td style="text-align: right;">0.521</td>
+<td style="text-align: right;">0.021</td>
+</tr>
+<tr>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">1038</td>
+<td style="text-align: right;">0.519</td>
+<td style="text-align: right;">0.019</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key observations:</strong></p>
+<ol>
+<li>
+<p><strong>Early instability.</strong> After just 10 tosses, the relative frequency is 0.60 — 10 percentage points away from 0.5. After 20 tosses, it peaks at 0.65. This is because when <span class="arithmatex">\( n \)</span> is small, each individual toss has a large impact on the running proportion. A single head changes the proportion by roughly <span class="arithmatex">\( 1/n \)</span>.</p>
+</li>
+<li>
+<p><strong>Gradual stabilisation.</strong> As <span class="arithmatex">\( n \)</span> grows, the amplitude of the fluctuations shrinks. The distance from 0.5 decreases:</p>
+</li>
+<li>At <span class="arithmatex">\( n = 10 \)</span>: distance = 0.100</li>
+<li>At <span class="arithmatex">\( n = 100 \)</span>: distance = 0.050</li>
+<li>At <span class="arithmatex">\( n = 1000 \)</span>: distance = 0.021</li>
+<li>
+<p>At <span class="arithmatex">\( n = 2000 \)</span>: distance = 0.019</p>
+</li>
+<li>
+<p><strong>Convergence, not equality.</strong> The relative frequency <em>approaches</em> the true probability but does not reach it exactly. Even at <span class="arithmatex">\( n = 2000 \)</span>, we have 0.519 rather than 0.500 (or the true generating probability of 0.520).</p>
+</li>
+<li>
+<p><strong>Mathematical explanation.</strong> The variance of the running proportion is:</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+\text{Var}\left(\frac{S_n}{n}\right) = \frac{p(1-p)}{n}.
+\]</div>
+<p>As <span class="arithmatex">\( n \)</span> increases, this variance shrinks to zero, which is why the fluctuations dampen. More precisely, the standard deviation of the proportion is:</p>
+<div class="arithmatex">\[
+\sigma_n = \sqrt{\frac{p(1-p)}{n}} \propto \frac{1}{\sqrt{n}}.
+\]</div>
+<p>So doubling the sample size reduces the standard deviation by a factor of <span class="arithmatex">\( \sqrt{2} \approx 1.41 \)</span>, not by 2. This is why convergence is gradual.</p>
+<ol>
+<li><strong>The Law of Large Numbers</strong> (formal statement): If <span class="arithmatex">\( X_1, X_2, \ldots \)</span> are independent and identically distributed random variables with <span class="arithmatex">\( E[X_i] = \mu \)</span>, then:</li>
+</ol>
+<div class="arithmatex">\[
+\frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{P} \mu \quad \text{as } n \to \infty.
+\]</div>
+<p>In our context, <span class="arithmatex">\( \mu = p \)</span> (the true probability of heads), and the sample mean is the relative frequency of heads.</p>
+<hr />
+<h3 id="task-6-compare-the-final-relative-frequency-of-heads-with-05">Task 6: Compare the final relative frequency of heads with 0.5</h3>
+<p><strong>Answer:</strong></p>
+<p>The final relative frequency of heads after 2000 tosses is:</p>
+<div class="arithmatex">\[
+f_{2000} = \frac{1038}{2000} = 0.519.
+\]</div>
+<p>Compared with the fair-coin probability of 0.5:</p>
+<div class="arithmatex">\[
+f_{2000} - 0.5 = 0.519 - 0.500 = 0.019.
+\]</div>
+<p>This is a positive deviation of 1.9 percentage points, meaning heads appeared slightly more often than tails.</p>
+<p><strong>Is this deviation meaningful?</strong> Let us consider it from several perspectives:</p>
+<ol>
+<li>
+<p><strong>Absolute perspective:</strong> A difference of 0.019 is small in everyday terms — the coin lands on heads roughly 52 times out of every 100 instead of 50.</p>
+</li>
+<li>
+<p><strong>Statistical perspective:</strong> The standard error of the proportion for a fair coin with <span class="arithmatex">\( n = 2000 \)</span> is:</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+\text{SE} = \sqrt{\frac{0.5 \times 0.5}{2000}} \approx 0.01118.
+\]</div>
+<p>The observed deviation of 0.019 is about <span class="arithmatex">\( 1.70 \)</span> standard errors away from 0.5:</p>
+<div class="arithmatex">\[
+z = \frac{0.019}{0.01118} \approx 1.70.
+\]</div>
+<p>The two-tailed p-value for <span class="arithmatex">\( z = 1.70 \)</span> is approximately 0.089. At the conventional <span class="arithmatex">\( \alpha = 0.05 \)</span> significance level, this is <strong>not</strong> statistically significant. However, at the <span class="arithmatex">\( \alpha = 0.10 \)</span> level, it would be marginally significant.</p>
+<ol>
+<li><strong>Confidence interval:</strong> A 95% confidence interval for <span class="arithmatex">\( p \)</span> based on the observed data is:</li>
+</ol>
+<div class="arithmatex">\[
+\hat{p} \pm 1.96 \times \text{SE} = 0.519 \pm 1.96 \times 0.01118 = 0.519 \pm 0.0219 = (0.497, 0.541).
+\]</div>
+<p>The value <span class="arithmatex">\( p = 0.5 \)</span> is just barely inside this interval, which is consistent with the p-value being slightly above 0.05.</p>
+<ol>
+<li><strong>True generating probability:</strong> The data were actually generated with <span class="arithmatex">\( p = 0.52 \)</span> for heads. The observed relative frequency of 0.519 is remarkably close to this true value, differing by only <span class="arithmatex">\( |0.519 - 0.52| = 0.001 \)</span>. This confirms that the Law of Large Numbers is working: with 2000 observations, the empirical frequency closely approximates the true probability.</li>
+</ol>
+<hr />
+<h3 id="task-7-does-the-generated-coin-appear-to-be-fair-explain-carefully">Task 7: Does the generated coin appear to be fair? Explain carefully</h3>
+<p><strong>Answer:</strong></p>
+<p>The question of whether the coin is fair requires careful, nuanced reasoning. Let us weigh the evidence:</p>
+<p><strong>Evidence suggesting the coin may not be fair:</strong></p>
+<ul>
+<li>Heads appeared 1038 times out of 2000, giving a relative frequency of 0.519 — consistently above 0.500.</li>
+<li>The relative frequency plot shows that after the initial volatile period, the curve stabilises <em>above</em> the 0.5 line, not oscillating symmetrically around it. From approximately trial 500 onward, the curve remains persistently in the range 0.51–0.53.</li>
+<li>Looking at checkpoints: at trials 50, 100, 200, 500, 1000, and 2000, the relative frequency is <em>always</em> above 0.5. If the coin were truly fair, we would expect the relative frequency to spend roughly equal time above and below 0.5.</li>
+</ul>
+<p><strong>Evidence suggesting the data is compatible with a fair coin:</strong></p>
+<ul>
+<li>The deviation from 0.5 is only 0.019, which is less than 2 standard errors (<span class="arithmatex">\( z \approx 1.70 \)</span>).</li>
+<li>The two-tailed p-value of ~0.089 is above the conventional significance threshold of 0.05.</li>
+<li>The 95% confidence interval (0.497, 0.541) includes 0.5.</li>
+</ul>
+<p><strong>Balanced conclusion:</strong></p>
+<p>The coin does <strong>not appear perfectly fair</strong> — there is a persistent, though modest, tilt toward heads. The relative frequency consistently exceeds 0.5, which is a qualitative signal of bias. However, in a <strong>formal statistical framework</strong> at the 5% significance level, we would fail to reject the null hypothesis <span class="arithmatex">\( H_0: p = 0.5 \)</span>. The evidence is suggestive but not conclusive.</p>
+<p>This is actually a common scenario in statistics: the data hint at an effect (a slight bias toward heads), but the sample is not large enough to establish it beyond reasonable doubt. A larger experiment (e.g., 10,000 or 50,000 tosses) would provide more definitive evidence.</p>
+<blockquote>
+<p><strong>Ground truth:</strong> The coin was generated with <span class="arithmatex">\( p_H = 0.52 \)</span> and <span class="arithmatex">\( p_T = 0.48 \)</span>. So the coin is indeed slightly biased, but the bias is small enough that 2000 observations do not provide overwhelming statistical evidence against fairness.</p>
+</blockquote>
+<hr />
+<h3 id="task-8-explain-the-difference-between-theoretical-probability-and-empirical-relative-frequency">Task 8: Explain the difference between theoretical probability and empirical relative frequency</h3>
+<p><strong>Answer:</strong></p>
+<p>This is a foundational distinction in probability and statistics. Let us clarify it carefully.</p>
+<h4 id="theoretical-probability">Theoretical Probability</h4>
+<p>The <strong>theoretical probability</strong> <span class="arithmatex">\( P(A) \)</span> is a number assigned to an event <span class="arithmatex">\( A \)</span> by a <strong>mathematical model</strong> (the probability measure). It describes the long-run behaviour of a random experiment <strong>before</strong> any data is observed. For example:</p>
+<ul>
+<li>For a fair coin: <span class="arithmatex">\( P(H) = 0.5 \)</span>, <span class="arithmatex">\( P(T) = 0.5 \)</span>.</li>
+<li>For a loaded coin with <span class="arithmatex">\( p = 0.52 \)</span>: <span class="arithmatex">\( P(H) = 0.52 \)</span>, <span class="arithmatex">\( P(T) = 0.48 \)</span>.</li>
+</ul>
+<p>Key properties:
+- It is a <strong>fixed, deterministic number</strong> — not random.
+- It is a property of the <strong>model</strong>, not of any particular dataset.
+- It satisfies the <strong>Kolmogorov axioms</strong>: <span class="arithmatex">\( 0 \leq P(A) \leq 1 \)</span>, <span class="arithmatex">\( P(\Omega) = 1 \)</span>, and countable additivity.
+- In many practical situations, the true probability is <strong>unknown</strong> and must be estimated from data.</p>
+<h4 id="empirical-relative-frequency">Empirical Relative Frequency</h4>
+<p>The <strong>empirical relative frequency</strong> <span class="arithmatex">\( f_n(A) \)</span> is the proportion of times event <span class="arithmatex">\( A \)</span> occurs in <span class="arithmatex">\( n \)</span> observed trials:</p>
+<div class="arithmatex">\[
+f_n(A) = \frac{\text{number of trials where } A \text{ occurred}}{n}.
+\]</div>
+<p>Key properties:
+- It is a <strong>random quantity</strong> — different datasets of the same experiment will yield different relative frequencies.
+- It is computed <strong>after</strong> observing data. It is a <strong>statistic</strong>, i.e., a function of the observed sample.
+- It always lies in the interval <span class="arithmatex">\( [0, 1] \)</span> and the relative frequencies of all outcomes sum to 1.
+- It depends on the <strong>sample size</strong> <span class="arithmatex">\( n \)</span>: for small <span class="arithmatex">\( n \)</span>, it can deviate substantially from the theoretical probability; for large <span class="arithmatex">\( n \)</span>, it tends to be close.</p>
+<h4 id="the-relationship-law-of-large-numbers">The Relationship: Law of Large Numbers</h4>
+<p>The bridge between theoretical probability and empirical relative frequency is the <strong>Law of Large Numbers</strong>:</p>
+<div class="arithmatex">\[
+f_n(A) \xrightarrow{n \to \infty} P(A).
+\]</div>
+<p>In words: as the number of trials grows without bound, the relative frequency <strong>converges</strong> to the theoretical probability. This is what we observed in our data:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><span class="arithmatex">\( n \)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\( f_n(H) \)</span></th>
+<th style="text-align: right;">Distance from <span class="arithmatex">\( P(H) = 0.52 \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.600</td>
+<td style="text-align: right;">0.080</td>
+</tr>
+<tr>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">0.550</td>
+<td style="text-align: right;">0.030</td>
+</tr>
+<tr>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">0.521</td>
+<td style="text-align: right;">0.001</td>
+</tr>
+<tr>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">0.519</td>
+<td style="text-align: right;">0.001</td>
+</tr>
+</tbody>
+</table>
+<p>The convergence is clear: the empirical frequency gets closer and closer to the true probability as <span class="arithmatex">\( n \)</span> increases.</p>
+<h4 id="a-helpful-analogy">A Helpful Analogy</h4>
+<p>Think of theoretical probability as the <strong>speed limit</strong> on a road, and empirical relative frequency as the <strong>average speed</strong> measured from a GPS over a trip. The speed limit is a fixed rule; the measured average speed depends on the specific trip — traffic, stops, acceleration. Over a very long trip on a single stretch of road, the measured average speed will approach the speed limit, but for any finite trip, they may differ.</p>
+<h4 id="summary-table">Summary Table</h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th style="text-align: center;">Theoretical Probability</th>
+<th style="text-align: center;">Empirical Relative Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nature</td>
+<td style="text-align: center;">Model parameter (fixed)</td>
+<td style="text-align: center;">Data statistic (random)</td>
+</tr>
+<tr>
+<td>Computed from</td>
+<td style="text-align: center;">Mathematical assumptions</td>
+<td style="text-align: center;">Observed outcomes</td>
+</tr>
+<tr>
+<td>Depends on <span class="arithmatex">\( n \)</span>?</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Exact value known?</td>
+<td style="text-align: center;">Only if model is fully specified</td>
+<td style="text-align: center;">Always computable from data</td>
+</tr>
+<tr>
+<td>Notation</td>
+<td style="text-align: center;"><span class="arithmatex">\( P(A) \)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\( f_n(A) \)</span> or <span class="arithmatex">\( \hat{P}(A) \)</span></td>
+</tr>
+<tr>
+<td>Relationship</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><span class="arithmatex">\( f_n(A) \to P(A) \)</span> as <span class="arithmatex">\( n \to \infty \)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<p>In this problem we explored the fundamental relationship between probability and data through the lens of a simple coin-tossing experiment:</p>
+<ol>
+<li><strong>The random experiment</strong> consists of 2000 independent Bernoulli trials (coin tosses), each producing H or T.</li>
+<li>We built a <strong>frequency table</strong> showing H = 1038 (51.9%) and T = 962 (48.1%), revealing a mild surplus of heads.</li>
+<li>The <strong>relative frequency plot</strong> vividly demonstrates the Law of Large Numbers: early on, the proportion fluctuates dramatically (0.40 to 0.67), but as <span class="arithmatex">\( n \)</span> increases, the oscillations dampen and the curve stabilises near its long-run value.</li>
+<li>The final relative frequency of 0.519 is close to 0.5 but consistently above it. A z-test gives <span class="arithmatex">\( z \approx 1.70 \)</span> with a p-value of ~0.089 — marginally non-significant at the 5% level.</li>
+<li>The coin <strong>does not appear perfectly fair</strong> — there is a subtle, persistent lean toward heads — but <strong>a definitive conclusion requires either more data or a formal hypothesis test at a relaxed significance level</strong>.</li>
+<li>The critical conceptual distinction between <strong>theoretical probability</strong> (a fixed model quantity) and <strong>empirical relative frequency</strong> (a random, data-dependent estimate) underpins all of statistical inference. The Law of Large Numbers guarantees convergence, but <strong>never exact equality in finite samples</strong>.</li>
+<li>The true generating probability was <span class="arithmatex">\( p = 0.52 \)</span>, confirming that the empirical frequency (0.519) is an excellent estimate of the truth — a testament to the power of 2000 observations.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Skopiowano do schowka", "clipboard.copy": "Kopiuj do schowka", "search.result.more.one": "1 wi\u0119cej na tej stronie", "search.result.more.other": "# wi\u0119cej na tej stronie", "search.result.none": "Brak wynik\u00f3w wyszukiwania", "search.result.one": "Wyniki wyszukiwania: 1", "search.result.other": "Wyniki wyszukiwania: #", "search.result.placeholder": "Zacznij pisa\u0107, aby szuka\u0107", "search.result.term.missing": "Brak", "select.version": "Wybierz wersj\u0119"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

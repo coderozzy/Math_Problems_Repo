@@ -1,0 +1,5084 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_08/">
+      
+      
+        <link rel="prev" href="../solution_07/">
+      
+      
+        <link rel="next" href="../solution_09/">
+      
+      
+        
+          <link rel="alternate" href="../../../../pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_08/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Solution 8 — Waiting Times - Math Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-8-waiting-times-and-empirical-cdf" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Math Problems" class="md-header__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solution 8 — Waiting Times
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_08/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Math Problems" class="md-nav__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture: Mathematics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture: Mathematics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algebra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/01_matrices_and_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Matrices & Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/02_determinants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Determinants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/03_matrix_inversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Matrix Inversion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/04_systems_of_equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Systems of Equations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometry
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geometry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/01_vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Vectors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/02_lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Lines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/03_planes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Planes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/04_line_and_plane/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Line and Plane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/01_sequence_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Sequence Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/02_function_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Function Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/03_derivatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Derivatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/04_function_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Function Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/05_integrals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/06_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Calculus Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture: Probabilistic Methods
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture: Probabilistic Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Probabilistic Methods
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Probabilistic Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basic
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_2" id="__nav_3_1_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Events & Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_combinatorics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Combinatorics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_4" id="__nav_3_1_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Combinatorics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Combinatorics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_probability_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Probability Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_6" id="__nav_3_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Probability Distributions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Probability Distributions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_discovery_formalism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Discovering Formalism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_8" id="__nav_3_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Discovering Formalism
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Discovering Formalism
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_pmf_pdf_cdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. PMF, PDF, and CDF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_conditional_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Conditional Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_11" id="__nav_3_1_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Conditional Probability
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Conditional Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07_data_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Data Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_13" id="__nav_3_1_1_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Data Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Data Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1 — Die Rolls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2 — Coin Tosses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3 — Exam Scores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4 — Delivery Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5 — Customer Survey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6 — Factory Measurements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7 — Call Center
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8 — Waiting Times
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8 — Waiting Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-describe-what-one-row-of-the-dataset-represents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Describe what one row of the dataset represents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-compute-mean-median-quartiles-and-standard-deviation-of-waiting_time_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Compute mean, median, quartiles, and standard deviation of waiting_time_min
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-compute-same-summaries-separately-for-each-service_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Compute same summaries separately for each service_type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-draw-histograms-for-standard-and-priority-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Draw histograms for standard and priority service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-construct-an-empirical-cdf-for-waiting_time_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: Construct an empirical CDF for waiting_time_min
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-use-the-ecdf-to-estimate-p5-p10-p20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 6: Use the ECDF to estimate P(≤5), P(≤10), P(&gt;20)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-compare-standard-and-priority-service-using-quantiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 7: Compare standard and priority service using quantiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-explain-why-waiting-time-data-are-often-right-skewed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8: Explain why waiting-time data are often right-skewed
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 8: Explain why waiting-time data are often right-skewed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-lower-bound-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The lower bound constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-multiplicative-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Multiplicative effects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-the-exponential-distribution-as-a-natural-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The exponential distribution as a natural model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-empirical-evidence-in-our-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Empirical evidence in our data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-9-explain-the-difference-between-a-histogram-and-an-empirical-cdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 9: Explain the difference between a histogram and an empirical CDF
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 9: Explain the difference between a histogram and an empirical CDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-histogram-shows-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The histogram shows density
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ecdf-shows-cumulative-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The ECDF shows cumulative probability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to use each
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-explain-how-this-connects-to-the-concept-of-a-theoretical-cdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 10: Explain how this connects to the concept of a theoretical CDF
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 10: Explain how this connects to the concept of a theoretical CDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-theoretical-cdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The theoretical CDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-empirical-cdf-as-an-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The empirical CDF as an approximation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-this-connects-to-our-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How this connects to our problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-the-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of the connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary and Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9 — Warehouse Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10 — Correlation Traps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/02_random_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Random Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/03_distribution_parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Distribution Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/04_selected_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Selected Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/05_limit_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Limit Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/06_basic_statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Basic Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/07_estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Estimation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/08_hypothesis_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Hypothesis Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/09_correlation_and_regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Correlation & Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/10_advanced_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Advanced Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/11_decision_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Decision Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-describe-what-one-row-of-the-dataset-represents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Describe what one row of the dataset represents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-compute-mean-median-quartiles-and-standard-deviation-of-waiting_time_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Compute mean, median, quartiles, and standard deviation of waiting_time_min
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-compute-same-summaries-separately-for-each-service_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Compute same summaries separately for each service_type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-draw-histograms-for-standard-and-priority-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Draw histograms for standard and priority service
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-construct-an-empirical-cdf-for-waiting_time_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: Construct an empirical CDF for waiting_time_min
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-use-the-ecdf-to-estimate-p5-p10-p20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 6: Use the ECDF to estimate P(≤5), P(≤10), P(&gt;20)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-compare-standard-and-priority-service-using-quantiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 7: Compare standard and priority service using quantiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-explain-why-waiting-time-data-are-often-right-skewed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8: Explain why waiting-time data are often right-skewed
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 8: Explain why waiting-time data are often right-skewed">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-lower-bound-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The lower bound constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-multiplicative-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Multiplicative effects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-the-exponential-distribution-as-a-natural-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The exponential distribution as a natural model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-empirical-evidence-in-our-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Empirical evidence in our data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-9-explain-the-difference-between-a-histogram-and-an-empirical-cdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 9: Explain the difference between a histogram and an empirical CDF
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 9: Explain the difference between a histogram and an empirical CDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-histogram-shows-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The histogram shows density
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ecdf-shows-cumulative-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The ECDF shows cumulative probability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to use each
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-explain-how-this-connects-to-the-concept-of-a-theoretical-cdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 10: Explain how this connects to the concept of a theoretical CDF
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Task 10: Explain how this connects to the concept of a theoretical CDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-theoretical-cdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The theoretical CDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-empirical-cdf-as-an-approximation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The empirical CDF as an approximation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-this-connects-to-our-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How this connects to our problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-the-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of the connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary and Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-8-waiting-times-and-empirical-cdf">Problem 8 — Waiting Times and Empirical CDF</h1>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>A service desk collects data on customer waiting times (in minutes) for 500 tickets. Each ticket is classified as either <strong>standard</strong> or <strong>priority</strong> service. We are asked to summarise the distribution of waiting times, construct empirical CDFs, compare the two service types using quantiles, and connect the analysis to theoretical concepts in probability — particularly the <strong>cumulative distribution function (CDF)</strong> and the nature of <strong>right-skewed distributions</strong>.</p>
+<h2 id="generated-files">Generated Files</h2>
+<ul>
+<li>Dataset: <a href="../problem_08_waiting_times/problem_08_waiting_times.csv">problem_08_waiting_times.csv</a></li>
+<li>Overall summary: <a href="../problem_08_waiting_times/waiting_time_summary_overall.csv">waiting_time_summary_overall.csv</a></li>
+<li>Service-type summary: <a href="../problem_08_waiting_times/waiting_time_summary_by_service_type.csv">waiting_time_summary_by_service_type.csv</a></li>
+<li>ECDF probability estimates: <a href="../problem_08_waiting_times/ecdf_probability_estimates.csv">ecdf_probability_estimates.csv</a></li>
+<li>Quantiles by service type: <a href="../problem_08_waiting_times/waiting_time_quantiles_by_service_type.csv">waiting_time_quantiles_by_service_type.csv</a></li>
+<li>Plots:</li>
+<li><a href="../problem_08_waiting_times/waiting_time_histograms_by_service_type.png">waiting_time_histograms_by_service_type.png</a></li>
+<li><a href="../problem_08_waiting_times/waiting_time_ecdf_by_service_type.png">waiting_time_ecdf_by_service_type.png</a></li>
+<li><a href="../problem_08_waiting_times/waiting_time_boxplot_by_service_type.png">waiting_time_boxplot_by_service_type.png</a></li>
+</ul>
+<hr />
+<h2 id="solution">Solution</h2>
+<h3 id="task-1-describe-what-one-row-of-the-dataset-represents">Task 1: Describe what one row of the dataset represents</h3>
+<p><strong>Answer:</strong></p>
+<p>Each row of the dataset represents <strong>one service ticket</strong> — a single customer interaction with the service desk. The columns are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Column</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ticket_id</code></td>
+<td style="text-align: left;">Unique identifier (e.g., <code>T0001</code>, <code>T0002</code>, …)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>service_type</code></td>
+<td style="text-align: left;">Either <code>standard</code> or <code>priority</code>, indicating the level of service</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>waiting_time_min</code></td>
+<td style="text-align: left;">The waiting time in minutes — a continuous, positive real number</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>resolved_under_10_min</code></td>
+<td style="text-align: left;">Boolean flag: <code>True</code> if <span class="arithmatex">\( T \leq 10 \)</span> minutes, <code>False</code> otherwise</td>
+</tr>
+</tbody>
+</table>
+<p>For example, ticket T0001 is a standard-service ticket with a waiting time of 20.41 minutes that was <em>not</em> resolved within 10 minutes.</p>
+<p>The dataset contains <strong>500 tickets</strong> in total:
+- <strong>160 priority</strong> tickets (32%)
+- <strong>340 standard</strong> tickets (68%)</p>
+<p>Note the crucial difference from Problem 7: here the variable of interest (<code>waiting_time_min</code>) is <strong>continuous</strong>, not a discrete count. This means we work with continuous distributions (like the exponential or gamma) rather than discrete ones (like the Poisson).</p>
+<hr />
+<h3 id="task-2-compute-mean-median-quartiles-and-standard-deviation-of-waiting_time_min">Task 2: Compute mean, median, quartiles, and standard deviation of waiting_time_min</h3>
+<p><strong>Answer:</strong></p>
+<p>We compute the standard descriptive statistics across all 500 tickets:</p>
+<pre><code class="language-python">import pandas as pd
+
+df = pd.read_csv(&quot;problem_08_waiting_times.csv&quot;)
+summary = df[&quot;waiting_time_min&quot;].describe()
+q1 = df[&quot;waiting_time_min&quot;].quantile(0.25)
+q3 = df[&quot;waiting_time_min&quot;].quantile(0.75)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Statistic</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Number of tickets <span class="arithmatex">\( n \)</span></td>
+<td style="text-align: right;">500</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mean <span class="arithmatex">\( \bar{x} \)</span></td>
+<td style="text-align: right;"><strong>11.5661</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Median <span class="arithmatex">\( \tilde{x} \)</span> (Q2)</td>
+<td style="text-align: right;"><strong>9.2000</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">First quartile <span class="arithmatex">\( Q_1 \)</span></td>
+<td style="text-align: right;"><strong>5.0825</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Third quartile <span class="arithmatex">\( Q_3 \)</span></td>
+<td style="text-align: right;"><strong>16.7275</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Standard deviation <span class="arithmatex">\( s \)</span></td>
+<td style="text-align: right;"><strong>8.7133</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Minimum</td>
+<td style="text-align: right;">0.4600</td>
+</tr>
+<tr>
+<td style="text-align: left;">Maximum</td>
+<td style="text-align: right;">55.3400</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resolved under 10 min</td>
+<td style="text-align: right;">53.8%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>
+<p>The <strong>mean</strong> (11.57 min) is considerably larger than the <strong>median</strong> (9.20 min). This is a hallmark of a <strong>right-skewed distribution</strong>: a few very long waiting times pull the mean upward while the median remains closer to the bulk of the data.</p>
+</li>
+<li>
+<p>The <strong>interquartile range (IQR)</strong> is:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\text{IQR} = Q_3 - Q_1 = 16.7275 - 5.0825 = 11.6450 \text{ minutes}
+\]</div>
+<p>This means the middle 50% of all tickets had waiting times between about 5 and 17 minutes.</p>
+<ul>
+<li>The <strong>coefficient of variation</strong> (CV) measures relative variability:</li>
+</ul>
+<div class="arithmatex">\[
+\text{CV} = \frac{s}{\bar{x}} = \frac{8.7133}{11.5661} \approx 0.753
+\]</div>
+<p>A CV of 0.75 indicates high variability — the standard deviation is about 75% of the mean. This level of relative variability is typical for exponentially-distributed or gamma-distributed waiting times.</p>
+<ul>
+<li><strong>53.8% of tickets</strong> were resolved within 10 minutes, which is slightly above half. This is consistent with the median being 9.2 minutes — just below the 10-minute threshold.</li>
+</ul>
+<hr />
+<h3 id="task-3-compute-same-summaries-separately-for-each-service_type">Task 3: Compute same summaries separately for each service_type</h3>
+<p><strong>Answer:</strong></p>
+<pre><code class="language-python">grouped = df.groupby(&quot;service_type&quot;)[&quot;waiting_time_min&quot;]
+summary_by_type = grouped.agg([&quot;count&quot;, &quot;mean&quot;, &quot;median&quot;, &quot;std&quot;, &quot;min&quot;, &quot;max&quot;])
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Service type</th>
+<th style="text-align: right;">Tickets</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;"><span class="arithmatex">\( Q_1 \)</span></th>
+<th style="text-align: right;"><span class="arithmatex">\( Q_3 \)</span></th>
+<th style="text-align: right;">Std. dev.</th>
+<th style="text-align: right;">Min</th>
+<th style="text-align: right;">Max</th>
+<th style="text-align: right;">Resolved ≤ 10 min</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Priority</strong></td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;"><strong>5.8512</strong></td>
+<td style="text-align: right;"><strong>5.1250</strong></td>
+<td style="text-align: right;">2.6475</td>
+<td style="text-align: right;">7.9425</td>
+<td style="text-align: right;">3.9044</td>
+<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">26.49</td>
+<td style="text-align: right;"><strong>85.62%</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Standard</strong></td>
+<td style="text-align: right;">340</td>
+<td style="text-align: right;"><strong>14.2555</strong></td>
+<td style="text-align: right;"><strong>12.2400</strong></td>
+<td style="text-align: right;">7.1850</td>
+<td style="text-align: right;">19.9025</td>
+<td style="text-align: right;">9.0519</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">55.34</td>
+<td style="text-align: right;"><strong>38.82%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<p>The two service types have dramatically different distributions:</p>
+<ol>
+<li>
+<p><strong>Priority service is much faster.</strong> The mean waiting time for priority tickets (5.85 min) is less than half that of standard tickets (14.26 min). The median tells a similar story: 5.13 vs. 12.24 minutes.</p>
+</li>
+<li>
+<p><strong>Priority service has less variability.</strong> The standard deviation for priority (3.90) is less than half that of standard (9.05). The IQR is also much narrower:</p>
+</li>
+<li>Priority IQR: <span class="arithmatex">\( 7.94 - 2.65 = 5.30 \)</span> min</li>
+<li>
+<p>Standard IQR: <span class="arithmatex">\( 19.90 - 7.19 = 12.72 \)</span> min</p>
+</li>
+<li>
+<p><strong>Resolution rates differ dramatically.</strong> About <strong>85.6%</strong> of priority tickets are resolved within 10 minutes, compared to only <strong>38.8%</strong> of standard tickets. This is a massive gap that justifies the existence of the priority tier.</p>
+</li>
+<li>
+<p><strong>Both are right-skewed.</strong> In both groups, the mean exceeds the median:</p>
+</li>
+<li>Priority: <span class="arithmatex">\( \bar{x} / \tilde{x} = 5.85 / 5.13 = 1.14 \)</span></li>
+<li>Standard: <span class="arithmatex">\( \bar{x} / \tilde{x} = 14.26 / 12.24 = 1.16 \)</span></li>
+</ol>
+<p>Right-skewness is inherent in waiting-time data (as we discuss in Task 8).</p>
+<ol>
+<li><strong>The maximum standard waiting time (55.34 min) is extreme.</strong> This is about 4.3 standard deviations above the standard mean — a genuine outlier that illustrates the heavy right tail.</li>
+</ol>
+<hr />
+<h3 id="task-4-draw-histograms-for-standard-and-priority-service">Task 4: Draw histograms for standard and priority service</h3>
+<p><strong>Answer:</strong></p>
+<p><img alt="Waiting time histograms by service type" src="../problem_08_waiting_times/waiting_time_histograms_by_service_type.png" /></p>
+<p>The side-by-side histograms reveal the distributional shapes clearly:</p>
+<p><strong>Priority service (left panel):</strong>
+- The distribution is concentrated in the range 0–10 minutes.
+- The mode appears near 2–4 minutes.
+- The right tail extends to about 26.5 minutes, but this is rare.
+- The shape resembles an <strong>exponential</strong> or <strong>gamma</strong> distribution with a relatively small shape parameter.</p>
+<p><strong>Standard service (right panel):</strong>
+- The distribution is much more spread out, covering 0–55 minutes.
+- The mode appears near 5–10 minutes.
+- There is a long right tail with observations extending well beyond 30 minutes.
+- The shape is again right-skewed, consistent with exponential-family distributions.</p>
+<p><strong>Why histograms are useful here:</strong> Histograms allow us to see the <em>shape</em> of the distribution at a glance — whether it is symmetric, skewed, unimodal, bimodal, etc. They reveal information that summary statistics alone cannot convey, such as the heavy tail of the standard service distribution.</p>
+<hr />
+<h3 id="task-5-construct-an-empirical-cdf-for-waiting_time_min">Task 5: Construct an empirical CDF for waiting_time_min</h3>
+<p><strong>Answer:</strong></p>
+<p>The <strong>empirical cumulative distribution function (ECDF)</strong> is defined as:</p>
+<div class="arithmatex">\[
+\hat{F}_n(t) = \frac{1}{n} \sum_{i=1}^{n} \mathbf{1}(x_i \leq t) = \frac{\text{number of observations} \leq t}{n}
+\]</div>
+<p>where <span class="arithmatex">\( \mathbf{1}(\cdot) \)</span> is the indicator function. In words, <span class="arithmatex">\( \hat{F}_n(t) \)</span> is the <strong>proportion of data points</strong> that are less than or equal to <span class="arithmatex">\( t \)</span>.</p>
+<pre><code class="language-python">import numpy as np
+
+def ecdf(data):
+    &quot;&quot;&quot;Compute the empirical CDF.&quot;&quot;&quot;
+    x_sorted = np.sort(data)
+    y = np.arange(1, len(x_sorted) + 1) / len(x_sorted)
+    return x_sorted, y
+
+x, y = ecdf(df[&quot;waiting_time_min&quot;].values)
+</code></pre>
+<p>The ECDF is a <strong>step function</strong> that jumps by <span class="arithmatex">\( 1/n = 1/500 = 0.002 \)</span> at each observed data point. It starts at 0 for values below the minimum observation and reaches 1 at the maximum observation.</p>
+<p><img alt="Empirical CDF of waiting times by service type" src="../problem_08_waiting_times/waiting_time_ecdf_by_service_type.png" /></p>
+<p><strong>Reading the ECDF plot:</strong></p>
+<ul>
+<li>The <strong>priority ECDF</strong> (one curve) rises steeply and reaches values near 0.85 by <span class="arithmatex">\( t = 10 \)</span> minutes. This means about 85% of priority tickets have waiting times ≤ 10 minutes.</li>
+<li>The <strong>standard ECDF</strong> (other curve) rises more slowly. At <span class="arithmatex">\( t = 10 \)</span>, it is only at about 0.39.</li>
+<li>The priority curve is <strong>always to the left</strong> of (or above) the standard curve, meaning priority service <strong>stochastically dominates</strong> standard service: for any threshold <span class="arithmatex">\( t \)</span>, a larger fraction of priority tickets meets that threshold.</li>
+</ul>
+<p>This visual dominance is a concept known as <strong>first-order stochastic dominance</strong>: <span class="arithmatex">\( F_{\text{priority}}(t) \geq F_{\text{standard}}(t) \)</span> for all <span class="arithmatex">\( t \geq 0 \)</span>.</p>
+<hr />
+<h3 id="task-6-use-the-ecdf-to-estimate-p5-p10-p20">Task 6: Use the ECDF to estimate P(≤5), P(≤10), P(&gt;20)</h3>
+<p><strong>Answer:</strong></p>
+<p>We use the ECDF to estimate empirical probabilities. These are computed by counting the proportion of observations satisfying each condition:</p>
+<div class="arithmatex">\[
+\hat{P}(T \leq t_0) = \hat{F}_n(t_0) = \frac{\#\{i : x_i \leq t_0\}}{n}
+\]</div>
+<pre><code class="language-python">p_le_5  = (df[&quot;waiting_time_min&quot;] &lt;= 5).mean()
+p_le_10 = (df[&quot;waiting_time_min&quot;] &lt;= 10).mean()
+p_gt_20 = (df[&quot;waiting_time_min&quot;] &gt; 20).mean()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Event</th>
+<th style="text-align: right;">Empirical probability</th>
+<th style="text-align: left;">Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\( P(T \leq 5) \)</span></td>
+<td style="text-align: right;"><strong>0.244</strong></td>
+<td style="text-align: left;">About 24.4% of all tickets are resolved within 5 minutes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\( P(T \leq 10) \)</span></td>
+<td style="text-align: right;"><strong>0.538</strong></td>
+<td style="text-align: left;">About 53.8% of all tickets are resolved within 10 minutes</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\( P(T &gt; 20) \)</span></td>
+<td style="text-align: right;"><strong>0.170</strong></td>
+<td style="text-align: left;">About 17.0% of all tickets require more than 20 minutes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Detailed interpretation:</strong></p>
+<ol>
+<li>
+<p><strong><span class="arithmatex">\( \hat{P}(T \leq 5) = 0.244 \)</span>:</strong> Nearly a quarter of tickets are handled very quickly. These are likely dominated by priority tickets (which have a median of 5.13 min — so roughly half of priority tickets alone would fall under 5 min).</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\( \hat{P}(T \leq 10) = 0.538 \)</span>:</strong> A slim majority of tickets meet a 10-minute target. This could be used as a <strong>service level agreement (SLA)</strong> metric. If the SLA requires 80% of tickets under 10 minutes, the current performance (53.8%) would be far from meeting it.</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\( \hat{P}(T &gt; 20) = 0.170 \)</span>:</strong> One in six tickets takes over 20 minutes. Note that this is the complement:</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+\hat{P}(T &gt; 20) = 1 - \hat{F}_n(20) = 1 - 0.830 = 0.170
+\]</div>
+<p>These empirical probabilities are <strong>point estimates</strong> of the true (population) probabilities. By the <strong>Glivenko–Cantelli theorem</strong>, the ECDF converges uniformly to the true CDF as <span class="arithmatex">\( n \to \infty \)</span>:</p>
+<div class="arithmatex">\[
+\sup_t |\hat{F}_n(t) - F(t)| \xrightarrow{a.s.} 0
+\]</div>
+<p>With <span class="arithmatex">\( n = 500 \)</span>, our estimates should be reasonably precise. The <strong>Dvoretzky–Kiefer–Wolfowitz (DKW) inequality</strong> gives us a confidence band of approximately <span class="arithmatex">\( \pm 1.36 / \sqrt{n} \approx \pm 0.061 \)</span> at the 95% level.</p>
+<hr />
+<h3 id="task-7-compare-standard-and-priority-service-using-quantiles">Task 7: Compare standard and priority service using quantiles</h3>
+<p><strong>Answer:</strong></p>
+<p>Quantiles provide a comprehensive comparison of two distributions. The <span class="arithmatex">\( p \)</span>-th quantile <span class="arithmatex">\( Q_p \)</span> is the value below which a proportion <span class="arithmatex">\( p \)</span> of the data falls:</p>
+<div class="arithmatex">\[
+Q_p = \inf\{t : \hat{F}_n(t) \geq p\}
+\]</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Quantile</th>
+<th style="text-align: right;">Priority (min)</th>
+<th style="text-align: right;">Standard (min)</th>
+<th style="text-align: right;">Ratio (Standard / Priority)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\( Q_{10} \)</span> (10th percentile)</td>
+<td style="text-align: right;">1.767</td>
+<td style="text-align: right;">4.394</td>
+<td style="text-align: right;">2.49</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\( Q_{25} \)</span> (25th percentile)</td>
+<td style="text-align: right;">2.648</td>
+<td style="text-align: right;">7.185</td>
+<td style="text-align: right;">2.71</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\( Q_{50} \)</span> (median)</td>
+<td style="text-align: right;">5.125</td>
+<td style="text-align: right;">12.240</td>
+<td style="text-align: right;">2.39</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\( Q_{75} \)</span> (75th percentile)</td>
+<td style="text-align: right;">7.943</td>
+<td style="text-align: right;">19.903</td>
+<td style="text-align: right;">2.51</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="arithmatex">\( Q_{90} \)</span> (90th percentile)</td>
+<td style="text-align: right;">10.841</td>
+<td style="text-align: right;">26.206</td>
+<td style="text-align: right;">2.42</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python">quantiles = [0.10, 0.25, 0.50, 0.75, 0.90]
+for st in [&quot;priority&quot;, &quot;standard&quot;]:
+    subset = df[df[&quot;service_type&quot;] == st][&quot;waiting_time_min&quot;]
+    print(subset.quantile(quantiles))
+</code></pre>
+<p><strong>Key findings:</strong></p>
+<ol>
+<li>
+<p><strong>Priority service is consistently faster at every quantile.</strong> The standard service quantiles are roughly <strong>2.4 to 2.7 times larger</strong> than the corresponding priority quantiles. This means that <strong>no matter which part of the distribution we look at</strong> — fast tickets, slow tickets, or the middle — standard service takes about 2.5× longer.</p>
+</li>
+<li>
+<p><strong>The ratio is fairly stable.</strong> The fact that the Standard/Priority ratio hovers around 2.4–2.7 across all quantiles suggests that the two distributions may have a <strong>scale relationship</strong>: they might follow the same distributional family but with different rate (or scale) parameters.</p>
+</li>
+<li>
+<p><strong>Practical implications:</strong></p>
+</li>
+<li>The <strong>fastest 10%</strong> of priority tickets are resolved in under 1.77 min; the fastest 10% of standard tickets take up to 4.39 min.</li>
+<li>The <strong>slowest 10%</strong> of priority tickets wait over 10.84 min; the slowest 10% of standard tickets wait over 26.21 min.</li>
+<li>If a customer needs their issue resolved within 10 minutes, they should strongly prefer priority service: <span class="arithmatex">\( Q_{90} \)</span> for priority (10.84 min) is just above 10, meaning about 90% of priority tickets meet this target. For standard service, only the bottom half (<span class="arithmatex">\( Q_{50} = 12.24 \)</span> min) is close.</li>
+</ol>
+<p><img alt="Waiting time boxplot by service type" src="../problem_08_waiting_times/waiting_time_boxplot_by_service_type.png" /></p>
+<p>The box plot visualisation above confirms the quantile comparison: the priority box is much more compact and shifted toward lower values, while the standard box is wider with many upper outliers.</p>
+<hr />
+<h3 id="task-8-explain-why-waiting-time-data-are-often-right-skewed">Task 8: Explain why waiting-time data are often right-skewed</h3>
+<p><strong>Answer:</strong></p>
+<p>Waiting-time data are almost always <strong>right-skewed</strong> (positively skewed). This is not a coincidence but a consequence of fundamental mathematical and physical constraints:</p>
+<h4 id="1-the-lower-bound-constraint">1. The lower bound constraint</h4>
+<p>Waiting times have a <strong>hard lower bound at zero</strong> — nobody can wait a negative amount of time. This means the distribution is truncated on the left. However, there is <strong>no natural upper bound</strong>: a small fraction of tickets may experience exceptionally long waits due to complex problems, system failures, or backlogs. This asymmetry — bounded below, unbounded above — inherently produces right skew.</p>
+<div class="arithmatex">\[
+T \geq 0, \quad \text{but } T \text{ can be very large in rare cases}
+\]</div>
+<h4 id="2-multiplicative-effects">2. Multiplicative effects</h4>
+<p>In queuing systems, delays often accumulate through <strong>multiplicative processes</strong>. For example, if a server is busy, your wait depends on how many people are ahead of you × how long each of their issues takes. Multiplicative random processes tend to produce <strong>log-normal</strong> or <strong>exponential-type</strong> distributions, both of which are right-skewed.</p>
+<h4 id="3-the-exponential-distribution-as-a-natural-model">3. The exponential distribution as a natural model</h4>
+<p>The simplest model for waiting times is the <strong>exponential distribution</strong>, where:</p>
+<div class="arithmatex">\[
+f(t) = \lambda e^{-\lambda t}, \quad t \geq 0
+\]</div>
+<p>This distribution is <em>always</em> right-skewed, with skewness equal to 2 regardless of the rate <span class="arithmatex">\( \lambda \)</span>. It arises naturally from the memoryless property of Poisson arrival processes.</p>
+<h4 id="4-empirical-evidence-in-our-data">4. Empirical evidence in our data</h4>
+<p>In our dataset:
+- Overall: mean = 11.57, median = 9.20. Since <span class="arithmatex">\( \bar{x} &gt; \tilde{x} \)</span>, the distribution is right-skewed.
+- Standard: mean = 14.26, median = 12.24 (skewed right).
+- Priority: mean = 5.85, median = 5.13 (skewed right).
+- The maximum value (55.34 min) is about 6× the median but only 1× the minimum above zero.</p>
+<p>The practical consequence of right-skewness is that the <strong>mean is not a representative "typical" value</strong>. The median is a better measure of central tendency for waiting-time data, and service targets should be defined using <strong>percentiles</strong> (e.g., "90% of tickets resolved within X minutes") rather than averages.</p>
+<hr />
+<h3 id="task-9-explain-the-difference-between-a-histogram-and-an-empirical-cdf">Task 9: Explain the difference between a histogram and an empirical CDF</h3>
+<p><strong>Answer:</strong></p>
+<p>Both the histogram and the ECDF are tools for visualising the distribution of data, but they emphasise different aspects:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Histogram</th>
+<th style="text-align: left;">Empirical CDF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Y-axis</strong></td>
+<td style="text-align: left;">Frequency or density (how many observations fall in each bin)</td>
+<td style="text-align: left;">Cumulative proportion (what fraction of data is ≤ a given value)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Shape</strong></td>
+<td style="text-align: left;">Bar chart with bins</td>
+<td style="text-align: left;">Step function (or smooth curve)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Reading probabilities</strong></td>
+<td style="text-align: left;">Area under the curve between two values gives <span class="arithmatex">\( P(a &lt; X \leq b) \)</span></td>
+<td style="text-align: left;">Direct reading: <span class="arithmatex">\( \hat{F}(t) = \hat{P}(X \leq t) \)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sensitivity to bins</strong></td>
+<td style="text-align: left;">Yes — the appearance changes with the number and width of bins</td>
+<td style="text-align: left;">No — the ECDF is uniquely determined by the data</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Best for</strong></td>
+<td style="text-align: left;">Seeing the <em>shape</em> (mode, skewness, multimodality)</td>
+<td style="text-align: left;">Comparing distributions, reading quantiles and probabilities</td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-histogram-shows-density">The histogram shows density</h4>
+<p>A histogram divides the range of the data into intervals (bins) and counts the number of observations in each bin. It is essentially an estimate of the <strong>probability density function (PDF)</strong> <span class="arithmatex">\( f(x) \)</span>. The key relationship is:</p>
+<div class="arithmatex">\[
+P(a &lt; X \leq b) \approx \int_a^b f(x)\,dx \approx \sum_{\text{bins in } [a,b]} \text{(bin height)} \times \text{(bin width)}
+\]</div>
+<p>The histogram is excellent for detecting the <strong>shape</strong> of the distribution: is it unimodal? bimodal? symmetric? skewed? However, its appearance depends on the <strong>choice of bin width</strong>, which introduces subjectivity.</p>
+<h4 id="the-ecdf-shows-cumulative-probability">The ECDF shows cumulative probability</h4>
+<p>The ECDF plots <span class="arithmatex">\( \hat{F}_n(t) \)</span> versus <span class="arithmatex">\( t \)</span>. It is a non-decreasing step function from 0 to 1. The key advantage is that it requires <strong>no binning decisions</strong> and directly answers questions like "what proportion of observations are below this threshold?"</p>
+<p>The relationship between the two is:</p>
+<div class="arithmatex">\[
+\hat{F}_n(t) = \int_{-\infty}^{t} \hat{f}(x)\,dx
+\]</div>
+<p>where <span class="arithmatex">\( \hat{f} \)</span> is the density estimated by the histogram. Conversely, the histogram can be thought of as the <strong>derivative</strong> of the ECDF.</p>
+<h4 id="when-to-use-each">When to use each</h4>
+<ul>
+<li>Use a <strong>histogram</strong> when you want to understand the <em>shape</em> and <em>mode</em> of the distribution at a glance.</li>
+<li>Use an <strong>ECDF</strong> when you need to read off specific probabilities or quantiles, or when comparing two or more distributions (stacking ECDFs on the same plot is cleaner than overlapping histograms).</li>
+</ul>
+<p>In our analysis, the histogram (Task 4) showed us that both distributions are right-skewed and unimodal, while the ECDF (Task 5) let us directly estimate probabilities like <span class="arithmatex">\( P(T \leq 10) \)</span> and clearly showed that priority service stochastically dominates standard service.</p>
+<hr />
+<h3 id="task-10-explain-how-this-connects-to-the-concept-of-a-theoretical-cdf">Task 10: Explain how this connects to the concept of a theoretical CDF</h3>
+<p><strong>Answer:</strong></p>
+<h4 id="the-theoretical-cdf">The theoretical CDF</h4>
+<p>In probability theory, a <strong>cumulative distribution function (CDF)</strong> for a random variable <span class="arithmatex">\( X \)</span> is defined as:</p>
+<div class="arithmatex">\[
+F(t) = P(X \leq t), \quad t \in \mathbb{R}
+\]</div>
+<p>It is a deterministic function that completely characterises the probability distribution of <span class="arithmatex">\( X \)</span>. For a continuous random variable with density <span class="arithmatex">\( f \)</span>:</p>
+<div class="arithmatex">\[
+F(t) = \int_{-\infty}^{t} f(x)\,dx
+\]</div>
+<p>For example, the <strong>exponential distribution</strong> with rate <span class="arithmatex">\( \lambda \)</span> has CDF:</p>
+<div class="arithmatex">\[
+F(t) = 1 - e^{-\lambda t}, \quad t \geq 0
+\]</div>
+<h4 id="the-empirical-cdf-as-an-approximation">The empirical CDF as an approximation</h4>
+<p>The empirical CDF <span class="arithmatex">\( \hat{F}_n(t) \)</span> is a <strong>data-based estimate</strong> of the unknown true CDF <span class="arithmatex">\( F(t) \)</span>. It is constructed purely from observed data, without assuming any particular parametric form. The relationship is:</p>
+<div class="arithmatex">\[
+\hat{F}_n(t) = \frac{\#\{i : x_i \leq t\}}{n} \quad \xrightarrow{n \to \infty} \quad F(t)
+\]</div>
+<p>This convergence is guaranteed by the <strong>Glivenko–Cantelli theorem</strong> (the "Fundamental Theorem of Statistics"):</p>
+<div class="arithmatex">\[
+\sup_{t \in \mathbb{R}} \left| \hat{F}_n(t) - F(t) \right| \xrightarrow{a.s.} 0 \quad \text{as } n \to \infty
+\]</div>
+<p>In words: the ECDF converges <em>uniformly</em> to the true CDF almost surely. This means that with enough data, the ECDF approximates the theoretical CDF arbitrarily well at <em>every</em> point simultaneously.</p>
+<h4 id="how-this-connects-to-our-problem">How this connects to our problem</h4>
+<p>In our waiting-time analysis:</p>
+<ol>
+<li>
+<p><strong>We do not know the true CDF.</strong> We do not know the exact distribution generating the waiting times. It could be exponential, gamma, log-normal, or something else.</p>
+</li>
+<li>
+<p><strong>The ECDF gives us an empirical estimate.</strong> When we computed <span class="arithmatex">\( \hat{P}(T \leq 10) = 0.538 \)</span>, we were evaluating <span class="arithmatex">\( \hat{F}_{500}(10) \)</span> — an estimate of the true probability <span class="arithmatex">\( F(10) = P(T \leq 10) \)</span>.</p>
+</li>
+<li>
+<p><strong>We could fit a theoretical model.</strong> If we believed the data followed an exponential distribution, we could estimate <span class="arithmatex">\( \hat{\lambda} = 1/\bar{x} = 1/11.57 \approx 0.0864 \)</span> and compute the theoretical CDF:</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+F_{\text{exp}}(10) = 1 - e^{-0.0864 \times 10} = 1 - e^{-0.864} \approx 0.578
+\]</div>
+<p>This is close to but not exactly equal to our empirical estimate of 0.538, suggesting the exponential model is a reasonable but imperfect fit.</p>
+<ol>
+<li><strong>Goodness-of-fit tests</strong> compare the ECDF to a theoretical CDF. The <strong>Kolmogorov–Smirnov test</strong> uses the maximum distance <span class="arithmatex">\( D_n = \sup_t |\hat{F}_n(t) - F_0(t)| \)</span> to test whether the data come from a specified distribution <span class="arithmatex">\( F_0 \)</span>.</li>
+</ol>
+<h4 id="summary-of-the-connection">Summary of the connection</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concept</th>
+<th style="text-align: left;">Theoretical CDF <span class="arithmatex">\( F(t) \)</span></th>
+<th style="text-align: left;">Empirical CDF <span class="arithmatex">\( \hat{F}_n(t) \)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Nature</strong></td>
+<td style="text-align: left;">A mathematical function derived from a probability model</td>
+<td style="text-align: left;">A step function computed from data</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Parameters</strong></td>
+<td style="text-align: left;">Known or assumed (e.g., <span class="arithmatex">\( \lambda \)</span> for exponential)</td>
+<td style="text-align: left;">Non-parametric (no assumptions)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Exactness</strong></td>
+<td style="text-align: left;">Gives exact probabilities if the model is correct</td>
+<td style="text-align: left;">Gives approximate probabilities; improves with more data</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Use</strong></td>
+<td style="text-align: left;">Theoretical analysis, prediction</td>
+<td style="text-align: left;">Exploratory analysis, model checking</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Relationship</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\( F(t) = P(X \leq t) \)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\( \hat{F}_n(t) \approx F(t) \)</span> for large <span class="arithmatex">\( n \)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The empirical CDF is the bridge between <strong>observed data</strong> and <strong>theoretical probability models</strong>. It allows us to estimate probabilities without committing to a specific model, and it provides the benchmark against which parametric models are evaluated.</p>
+<hr />
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<p>This problem provided a thorough introduction to the analysis of <strong>continuous waiting-time data</strong> and the concept of the <strong>empirical CDF</strong>:</p>
+<ul>
+<li>The dataset consists of 500 service tickets with two service types: priority (160 tickets, mean 5.85 min) and standard (340 tickets, mean 14.26 min).</li>
+<li>Waiting-time distributions are inherently <strong>right-skewed</strong>, with the mean exceeding the median in all subgroups. This skewness arises from the hard lower bound at zero and the potential for very long waits.</li>
+<li>The ECDF allowed us to directly estimate probabilities: 24.4% of tickets are resolved within 5 minutes, 53.8% within 10 minutes, and 17.0% require more than 20 minutes.</li>
+<li><strong>Quantile comparison</strong> showed that standard service takes roughly 2.4–2.7× longer than priority service across the entire distribution, not just on average.</li>
+<li>The ECDF is a <strong>non-parametric estimator</strong> of the theoretical CDF. By the Glivenko–Cantelli theorem, it converges uniformly to the true CDF, making it a powerful tool for both exploratory analysis and as a stepping stone toward fitting parametric probability models.</li>
+<li>Understanding the distinction between histograms (density estimation) and ECDFs (cumulative probability estimation) is fundamental to statistical data analysis.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

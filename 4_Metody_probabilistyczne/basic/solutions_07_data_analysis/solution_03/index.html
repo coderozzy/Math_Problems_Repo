@@ -1,0 +1,4692 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dchorazkiewicz.github.io/Math_Problems_Repo/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_03/">
+      
+      
+        <link rel="prev" href="../solution_02/">
+      
+      
+        <link rel="next" href="../solution_04/">
+      
+      
+        
+          <link rel="alternate" href="../../../../pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_03/" hreflang="pl">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Solution 3 — Exam Scores - Math Problems</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#problem-3-exam-scores-in-two-groups" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Math Problems" class="md-header__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math Problems
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Solution 3 — Exam Scores
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../pl/4_Metody_probabilistyczne/basic/solutions_07_data_analysis/solution_03/" hreflang="pl" class="md-select__link">
+              Polski
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Math Problems" class="md-nav__button md-logo" aria-label="Math Problems" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math Problems
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture: Mathematics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture: Mathematics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algebra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/01_matrices_and_operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Matrices & Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/02_determinants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Determinants
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/03_matrix_inversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Matrix Inversion
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1_Algebra/04_systems_of_equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Systems of Equations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometry
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geometry
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/01_vectors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Vectors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/02_lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Lines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/03_planes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Planes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2_Geometria/04_line_and_plane/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Line and Plane
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/01_sequence_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Sequence Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/02_function_limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Function Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/03_derivatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Derivatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/04_function_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Function Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/05_integrals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Integrals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3_Analiza/06_applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Calculus Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture: Probabilistic Methods
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lecture: Probabilistic Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Probabilistic Methods
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Probabilistic Methods
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Basic
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_2" id="__nav_3_1_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Events & Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_01_events_and_probability/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02_combinatorics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Combinatorics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_4" id="__nav_3_1_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Combinatorics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Combinatorics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_02_combinatorics/solution_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_probability_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Probability Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_6" id="__nav_3_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Probability Distributions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Probability Distributions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_03_probability_distributions/solution_12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_discovery_formalism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Discovering Formalism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_8" id="__nav_3_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Discovering Formalism
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Discovering Formalism
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_04_discovery_formalism/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_pmf_pdf_cdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. PMF, PDF, and CDF
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_conditional_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Conditional Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_11" id="__nav_3_1_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Conditional Probability
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Conditional Probability
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions_06_conditional_probability/solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07_data_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Data Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1_13" id="__nav_3_1_1_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions — Data Analysis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_1_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1_1_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions — Data Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 1 — Die Rolls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 2 — Coin Tosses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3 — Exam Scores
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 3 — Exam Scores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-describe-what-one-row-of-the-dataset-represents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Describe what one row of the dataset represents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-compute-mean-median-min-max-variance-and-standard-deviation-of-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Compute mean, median, min, max, variance, and standard deviation of score
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-compute-the-same-quantities-separately-for-group-a-and-group-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Compute the same quantities separately for Group A and Group B
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-compute-the-pass-rate-in-each-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Compute the pass rate in each group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-draw-histograms-of-exam-scores-for-both-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: Draw histograms of exam scores for both groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-draw-boxplots-comparing-the-two-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 6: Draw boxplots comparing the two groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-which-group-has-the-higher-mean-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 7: Which group has the higher mean score?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-which-group-has-the-larger-standard-deviation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8: Which group has the larger standard deviation?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-9-explain-why-comparing-only-the-means-may-be-misleading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 9: Explain why comparing only the means may be misleading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-decide-which-group-performed-better-overall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 10: Decide which group performed better overall
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary and Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 4 — Delivery Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 5 — Customer Survey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 6 — Factory Measurements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 7 — Call Center
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 8 — Waiting Times
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 9 — Warehouse Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solution_10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution 10 — Correlation Traps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/01_events_and_probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Events & Probability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/02_random_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Random Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/03_distribution_parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Distribution Parameters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/04_selected_distributions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Selected Distributions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/05_limit_theorems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Limit Theorems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/06_basic_statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Basic Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/07_estimation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Estimation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/08_hypothesis_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Hypothesis Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/09_correlation_and_regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Correlation & Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/10_advanced_methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Advanced Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced/11_decision_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Decision Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Animations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Animations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../anim/4_Metody_probalistyczne/laboratory_3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generated-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-describe-what-one-row-of-the-dataset-represents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Describe what one row of the dataset represents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-compute-mean-median-min-max-variance-and-standard-deviation-of-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Compute mean, median, min, max, variance, and standard deviation of score
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-compute-the-same-quantities-separately-for-group-a-and-group-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Compute the same quantities separately for Group A and Group B
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-compute-the-pass-rate-in-each-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Compute the pass rate in each group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-draw-histograms-of-exam-scores-for-both-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: Draw histograms of exam scores for both groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-6-draw-boxplots-comparing-the-two-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 6: Draw boxplots comparing the two groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-7-which-group-has-the-higher-mean-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 7: Which group has the higher mean score?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-8-which-group-has-the-larger-standard-deviation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 8: Which group has the larger standard deviation?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-9-explain-why-comparing-only-the-means-may-be-misleading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 9: Explain why comparing only the means may be misleading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-10-decide-which-group-performed-better-overall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 10: Decide which group performed better overall
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary and Key Takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="problem-3-exam-scores-in-two-groups">Problem 3 — Exam Scores in Two Groups</h1>
+<h2 id="problem-statement">Problem Statement</h2>
+<p>We are given a dataset of 240 students who took an exam. Each student belongs to one of two groups — <strong>Group A</strong> or <strong>Group B</strong> (120 students each). For every student we know their exam score (numerical, on a scale roughly 0–100) and whether they passed (score ≥ 50). The goal is to compute descriptive statistics overall and by group, visualize the score distributions, and draw conclusions about which group performed better.</p>
+<h2 id="generated-files">Generated Files</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../problem_03_exam_scores/problem_03_exam_scores.csv">problem_03_exam_scores.csv</a></td>
+<td>Raw dataset (240 rows)</td>
+</tr>
+<tr>
+<td><a href="../problem_03_exam_scores/overall_score_summary.csv">overall_score_summary.csv</a></td>
+<td>Mean, median, min, max, variance, std dev for all students</td>
+</tr>
+<tr>
+<td><a href="../problem_03_exam_scores/score_summary_by_group.csv">score_summary_by_group.csv</a></td>
+<td>Same statistics split by group</td>
+</tr>
+<tr>
+<td><a href="../problem_03_exam_scores/pass_rate_by_group.csv">pass_rate_by_group.csv</a></td>
+<td>Pass counts and rates by group</td>
+</tr>
+<tr>
+<td><a href="../problem_03_exam_scores/score_histograms_by_group.png">score_histograms_by_group.png</a></td>
+<td>Histograms of scores for A and B</td>
+</tr>
+<tr>
+<td><a href="../problem_03_exam_scores/score_boxplots_by_group.png">score_boxplots_by_group.png</a></td>
+<td>Side-by-side boxplots</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="solution">Solution</h2>
+<h3 id="task-1-describe-what-one-row-of-the-dataset-represents">Task 1: Describe what one row of the dataset represents</h3>
+<p><strong>Answer:</strong></p>
+<p>Each row in <code>problem_03_exam_scores.csv</code> represents <strong>one student who took the exam</strong>. The columns are:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>student_id</code></td>
+<td>string</td>
+<td>Unique identifier for the student (e.g., <code>A001</code>, <code>B042</code>)</td>
+</tr>
+<tr>
+<td><code>group</code></td>
+<td>categorical</td>
+<td>The study group the student belongs to: <code>A</code> or <code>B</code></td>
+</tr>
+<tr>
+<td><code>score</code></td>
+<td>float</td>
+<td>The numerical exam score achieved by the student</td>
+</tr>
+<tr>
+<td><code>passed</code></td>
+<td>boolean</td>
+<td>Whether the student passed the exam (<span class="arithmatex">\(\text{score} \ge 50\)</span>)</td>
+</tr>
+</tbody>
+</table>
+<p>There are 240 rows in total — 120 from Group A (IDs <code>A001</code>–<code>A120</code>) and 120 from Group B (IDs <code>B001</code>–<code>B120</code>). The <strong>observational unit</strong> is a single student, and the <strong>response variable</strong> of primary interest is <code>score</code>.</p>
+<hr />
+<h3 id="task-2-compute-mean-median-min-max-variance-and-standard-deviation-of-score">Task 2: Compute mean, median, min, max, variance, and standard deviation of <code>score</code></h3>
+<p><strong>Answer:</strong></p>
+<p>We compute the six standard descriptive statistics over all 240 scores combined (ignoring the group variable).</p>
+<p><strong>Formulas used:</strong></p>
+<p>The <strong>sample mean</strong> of <span class="arithmatex">\( n \)</span> observations <span class="arithmatex">\( x_1, x_2, \ldots, x_n \)</span> is:</p>
+<div class="arithmatex">\[
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+\]</div>
+<p>The <strong>sample variance</strong> (with Bessel's correction) is:</p>
+<div class="arithmatex">\[
+s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2
+\]</div>
+<p>The <strong>sample standard deviation</strong> is <span class="arithmatex">\( s = \sqrt{s^2} \)</span>.</p>
+<p>The <strong>median</strong> is the middle value when all observations are sorted; for even <span class="arithmatex">\( n \)</span>, it is the average of the two central values.</p>
+<pre><code class="language-python">import pandas as pd
+
+df = pd.read_csv(&quot;problem_03_exam_scores.csv&quot;)
+stats = df[&quot;score&quot;].describe()
+variance = df[&quot;score&quot;].var()  # Bessel-corrected by default
+</code></pre>
+<p><strong>Results:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Statistic</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean</td>
+<td style="text-align: right;">71.128</td>
+</tr>
+<tr>
+<td>Median</td>
+<td style="text-align: right;">70.400</td>
+</tr>
+<tr>
+<td>Minimum</td>
+<td style="text-align: right;">27.600</td>
+</tr>
+<tr>
+<td>Maximum</td>
+<td style="text-align: right;">100.000</td>
+</tr>
+<tr>
+<td>Variance</td>
+<td style="text-align: right;">230.744</td>
+</tr>
+<tr>
+<td>Standard deviation</td>
+<td style="text-align: right;">15.190</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>The average exam score across all students is <strong>71.128</strong>, which is well above the pass threshold of 50. This tells us that the typical student performed reasonably well.</li>
+<li>The <strong>median of 70.400</strong> is close to the mean, suggesting the overall distribution is roughly symmetric (or only mildly skewed).</li>
+<li>The <strong>range</strong> is <span class="arithmatex">\( 100.0 - 27.6 = 72.4 \)</span> points, indicating substantial variability — some students scored near perfect while others scored below 30.</li>
+<li>The <strong>standard deviation of 15.190</strong> means that roughly 68% of scores (under a normal approximation) lie in the interval <span class="arithmatex">\( [71.128 - 15.190,\; 71.128 + 15.190] = [55.94, 86.32] \)</span>.</li>
+</ul>
+<hr />
+<h3 id="task-3-compute-the-same-quantities-separately-for-group-a-and-group-b">Task 3: Compute the same quantities separately for Group A and Group B</h3>
+<p><strong>Answer:</strong></p>
+<p>We repeat the descriptive statistics computation separately for each group.</p>
+<pre><code class="language-python">grouped = df.groupby(&quot;group&quot;)[&quot;score&quot;]
+summary = grouped.agg([&quot;mean&quot;, &quot;median&quot;, &quot;min&quot;, &quot;max&quot;, &quot;var&quot;, &quot;std&quot;])
+</code></pre>
+<p><strong>Results:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Statistic</th>
+<th style="text-align: right;">Group A</th>
+<th style="text-align: right;">Group B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean</td>
+<td style="text-align: right;">69.849</td>
+<td style="text-align: right;">72.406</td>
+</tr>
+<tr>
+<td>Median</td>
+<td style="text-align: right;">68.900</td>
+<td style="text-align: right;">72.450</td>
+</tr>
+<tr>
+<td>Minimum</td>
+<td style="text-align: right;">39.900</td>
+<td style="text-align: right;">27.600</td>
+</tr>
+<tr>
+<td>Maximum</td>
+<td style="text-align: right;">94.200</td>
+<td style="text-align: right;">100.000</td>
+</tr>
+<tr>
+<td>Variance</td>
+<td style="text-align: right;">132.194</td>
+<td style="text-align: right;">327.937</td>
+</tr>
+<tr>
+<td>Standard deviation</td>
+<td style="text-align: right;">11.498</td>
+<td style="text-align: right;">18.109</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<p>These numbers reveal a rich and nuanced picture:</p>
+<ol>
+<li>
+<p><strong>Central tendency:</strong> Group B has a higher mean (72.406 vs. 69.849) and a higher median (72.450 vs. 68.900). Both measures agree — the "center" of Group B's distribution is shifted to the right relative to Group A.</p>
+</li>
+<li>
+<p><strong>Spread:</strong> Group B's standard deviation (18.109) is <strong>substantially larger</strong> than Group A's (11.498). In fact, Group B's variance (<span class="arithmatex">\( 327.937 \)</span>) is roughly <strong>2.5 times</strong> that of Group A (<span class="arithmatex">\( 132.194 \)</span>):</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+\frac{s_B^2}{s_A^2} = \frac{327.937}{132.194} \approx 2.48
+\]</div>
+<ol>
+<li>
+<p><strong>Range:</strong> Group A's scores range from 39.9 to 94.2 (a span of 54.3 points), while Group B's range from 27.6 to 100.0 (a span of 72.4 points). Group B has both the lowest and the highest scores in the entire dataset.</p>
+</li>
+<li>
+<p><strong>Coefficient of variation:</strong> To compare variability in a scale-free way, we can compute:</p>
+</li>
+</ol>
+<div class="arithmatex">\[
+\text{CV}_A = \frac{s_A}{\bar{x}_A} = \frac{11.498}{69.849} \approx 0.165 \quad (16.5\%)
+\]</div>
+<div class="arithmatex">\[
+\text{CV}_B = \frac{s_B}{\bar{x}_B} = \frac{18.109}{72.406} \approx 0.250 \quad (25.0\%)
+\]</div>
+<p>Group B's relative variability is about 1.5 times higher than Group A's.</p>
+<hr />
+<h3 id="task-4-compute-the-pass-rate-in-each-group">Task 4: Compute the pass rate in each group</h3>
+<p><strong>Answer:</strong></p>
+<p>A student passes if their score is <strong>at least 50</strong>. The pass rate for a group is:</p>
+<div class="arithmatex">\[
+\text{Pass rate} = \frac{\text{Number of students with score} \ge 50}{\text{Total number of students in group}}
+\]</div>
+<pre><code class="language-python">pass_rates = df.groupby(&quot;group&quot;)[&quot;passed&quot;].agg([&quot;sum&quot;, &quot;count&quot;])
+pass_rates[&quot;rate&quot;] = pass_rates[&quot;sum&quot;] / pass_rates[&quot;count&quot;]
+</code></pre>
+<p><strong>Results:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Group</th>
+<th style="text-align: right;">Students who passed</th>
+<th style="text-align: right;">Total students</th>
+<th style="text-align: right;">Pass rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">A</td>
+<td style="text-align: right;">117</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">0.975 (97.5%)</td>
+</tr>
+<tr>
+<td style="text-align: center;">B</td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">0.875 (87.5%)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong></p>
+<ul>
+<li>Group A has an impressive pass rate of <strong>97.5%</strong> — only 3 students out of 120 failed (students A026 with 46.0, A084 with 39.9, and A111 with 46.7).</li>
+<li>Group B has a lower pass rate of <strong>87.5%</strong> — 15 students failed. These include some very low scores like 27.6 and 29.4.</li>
+</ul>
+<p>The difference in pass rates is:</p>
+<div class="arithmatex">\[
+\Delta = 0.975 - 0.875 = 0.100
+\]</div>
+<p>This 10 percentage point gap is a crucial finding. Even though Group B has the higher mean, it has <strong>far more failures</strong>. This is a direct consequence of Group B's larger spread — the wider distribution extends further below the 50-point threshold.</p>
+<hr />
+<h3 id="task-5-draw-histograms-of-exam-scores-for-both-groups">Task 5: Draw histograms of exam scores for both groups</h3>
+<p><strong>Answer:</strong></p>
+<p>The histograms below show the frequency distributions of exam scores for Group A and Group B side by side.</p>
+<p><img alt="Histograms of exam scores by group" src="../problem_03_exam_scores/score_histograms_by_group.png" /></p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
+for ax, grp in zip(axes, [&quot;A&quot;, &quot;B&quot;]):
+    subset = df[df[&quot;group&quot;] == grp][&quot;score&quot;]
+    ax.hist(subset, bins=15, edgecolor=&quot;black&quot;, alpha=0.7)
+    ax.set_title(f&quot;Group {grp}&quot;)
+    ax.set_xlabel(&quot;Score&quot;)
+    ax.set_ylabel(&quot;Frequency&quot;)
+plt.tight_layout()
+plt.savefig(&quot;score_histograms_by_group.png&quot;, dpi=150)
+</code></pre>
+<p><strong>What the histograms reveal:</strong></p>
+<ul>
+<li><strong>Group A</strong> has a distribution that is relatively <strong>compact and unimodal</strong>, concentrated roughly in the 55–90 range. There are very few observations below 50.</li>
+<li><strong>Group B</strong> has a <strong>wider spread</strong>. It has a noticeable cluster of high scores (some reaching 100), but also has a visible left tail with scores in the 27–50 range.</li>
+<li>The visual difference confirms what the numerical statistics showed: Group B is more dispersed, with both more top performers and more students who struggled.</li>
+</ul>
+<hr />
+<h3 id="task-6-draw-boxplots-comparing-the-two-groups">Task 6: Draw boxplots comparing the two groups</h3>
+<p><strong>Answer:</strong></p>
+<p>Boxplots provide a compact summary of each group's distribution, showing the median, interquartile range (IQR), whiskers, and potential outliers.</p>
+<p><img alt="Boxplots of exam scores by group" src="../problem_03_exam_scores/score_boxplots_by_group.png" /></p>
+<pre><code class="language-python">df.boxplot(column=&quot;score&quot;, by=&quot;group&quot;, figsize=(8, 6))
+plt.title(&quot;Exam Scores by Group&quot;)
+plt.suptitle(&quot;&quot;)
+plt.ylabel(&quot;Score&quot;)
+plt.savefig(&quot;score_boxplots_by_group.png&quot;, dpi=150)
+</code></pre>
+<p><strong>Reading the boxplots:</strong></p>
+<p>Recall the anatomy of a boxplot:
+- The <strong>box</strong> spans from <span class="arithmatex">\( Q_1 \)</span> to <span class="arithmatex">\( Q_3 \)</span> (the interquartile range).
+- The <strong>line inside the box</strong> is the median (<span class="arithmatex">\( Q_2 \)</span>).
+- The <strong>whiskers</strong> extend to the most extreme data point within <span class="arithmatex">\( 1.5 \times \text{IQR} \)</span> of the box.
+- Points beyond the whiskers are plotted individually as <strong>potential outliers</strong>.</p>
+<p>From the boxplots we can observe:
+- Group A's box is <strong>shorter</strong> (smaller IQR), confirming less variability.
+- Group B's box is <strong>taller</strong> and the whiskers are longer, especially the lower whisker, reflecting its wider range.
+- Group B's median line sits slightly higher than Group A's.
+- Group B may show low outliers in the sub-40 range.</p>
+<hr />
+<h3 id="task-7-which-group-has-the-higher-mean-score">Task 7: Which group has the higher mean score?</h3>
+<p><strong>Answer:</strong></p>
+<p><strong>Group B</strong> has the higher mean score:</p>
+<div class="arithmatex">\[
+\bar{x}_B = 72.406 &gt; 69.849 = \bar{x}_A
+\]</div>
+<p>The difference is:</p>
+<div class="arithmatex">\[
+\bar{x}_B - \bar{x}_A = 72.406 - 69.849 = 2.557 \text{ points}
+\]</div>
+<p>This means that on average, a student in Group B scored about <strong>2.6 points higher</strong> than a student in Group A. Group B also has the higher median (72.450 vs. 68.900), so both common measures of central tendency agree.</p>
+<p>However, this higher mean is partly driven by Group B's cluster of very high scores (including multiple students who scored 100), which pull the mean upward. The mean alone does not tell the full story — we must also consider the variability (see Tasks 8 and 9).</p>
+<hr />
+<h3 id="task-8-which-group-has-the-larger-standard-deviation">Task 8: Which group has the larger standard deviation?</h3>
+<p><strong>Answer:</strong></p>
+<p><strong>Group B</strong> has the larger standard deviation:</p>
+<div class="arithmatex">\[
+s_B = 18.109 &gt; 11.498 = s_A
+\]</div>
+<p>Group B's standard deviation is roughly <strong>57% larger</strong> than Group A's:</p>
+<div class="arithmatex">\[
+\frac{s_B - s_A}{s_A} = \frac{18.109 - 11.498}{11.498} \approx 0.575 \quad (57.5\%)
+\]</div>
+<p>In terms of variance, the comparison is even more dramatic:</p>
+<div class="arithmatex">\[
+s_B^2 = 327.937 \quad \text{vs.} \quad s_A^2 = 132.194
+\]</div>
+<p>This means Group B's scores are spread over a much wider range. Some Group B students achieved the highest possible score (100), but others scored as low as 27.6. Group A's scores, by contrast, are clustered more tightly around the group mean.</p>
+<p><strong>Practical meaning:</strong> If you picked a random student from Group B, there would be much more <strong>uncertainty</strong> about what their score might be compared to picking a random student from Group A.</p>
+<hr />
+<h3 id="task-9-explain-why-comparing-only-the-means-may-be-misleading">Task 9: Explain why comparing only the means may be misleading</h3>
+<p><strong>Answer:</strong></p>
+<p>Comparing only the means would lead to the simple conclusion: "Group B performed better because <span class="arithmatex">\( \bar{x}_B = 72.406 &gt; 69.849 = \bar{x}_A \)</span>." But this conclusion is <strong>incomplete and potentially misleading</strong> for several reasons:</p>
+<ol>
+<li>
+<p><strong>The mean hides variability.</strong> The mean is a single number that summarizes the center of a distribution, but says nothing about how spread out the data is. Two distributions with the same mean can look completely different. In our case, Group B's standard deviation is 18.109 — much larger than Group A's 11.498.</p>
+</li>
+<li>
+<p><strong>Outliers and extreme values inflate the mean.</strong> Group B contains multiple perfect scores (100) and several very high scores (95+). These values pull the mean upward. If we removed just a few of these extreme scores, Group B's mean could drop below Group A's.</p>
+</li>
+<li>
+<p><strong>The pass rate tells a different story.</strong> Group A has a pass rate of 97.5%, while Group B's is only 87.5%. So if "performing well" means "almost everyone passes," then Group A is clearly the better-performing group.</p>
+</li>
+<li>
+<p><strong>The mean is sensitive to skewness.</strong> If Group B's distribution is skewed (with a long right tail of high scores), the mean is pulled in the direction of the tail and no longer represents a "typical" score. The median is more robust in such cases.</p>
+</li>
+<li>
+<p><strong>Simpson's paradox-like reasoning.</strong> Looking at means alone can mask subgroup-level patterns. In this data, Group B has more students at the extremes (both very high and very low), while Group A is concentrated near the center.</p>
+</li>
+</ol>
+<p><strong>The lesson:</strong> Descriptive statistics should always be reported as a <strong>package</strong> — central tendency (mean, median), spread (variance, standard deviation, range), and shape (histograms, boxplots). Relying on any single number can lead to misleading conclusions.</p>
+<hr />
+<h3 id="task-10-decide-which-group-performed-better-overall">Task 10: Decide which group performed better overall</h3>
+<p><strong>Answer:</strong></p>
+<p>This question does not have a single definitive answer — it depends on <strong>which criterion</strong> we prioritize. Let us summarize the evidence:</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Group A</th>
+<th>Group B</th>
+<th>Winner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mean score</td>
+<td>69.849</td>
+<td>72.406</td>
+<td><strong>B</strong></td>
+</tr>
+<tr>
+<td>Median score</td>
+<td>68.900</td>
+<td>72.450</td>
+<td><strong>B</strong></td>
+</tr>
+<tr>
+<td>Standard deviation</td>
+<td>11.498</td>
+<td>18.109</td>
+<td><strong>A</strong> (lower is better for consistency)</td>
+</tr>
+<tr>
+<td>Minimum score</td>
+<td>39.900</td>
+<td>27.600</td>
+<td><strong>A</strong> (higher minimum)</td>
+</tr>
+<tr>
+<td>Maximum score</td>
+<td>94.200</td>
+<td>100.000</td>
+<td><strong>B</strong></td>
+</tr>
+<tr>
+<td>Pass rate</td>
+<td>97.5%</td>
+<td>87.5%</td>
+<td><strong>A</strong></td>
+</tr>
+<tr>
+<td>Failed students</td>
+<td>3</td>
+<td>15</td>
+<td><strong>A</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Arguments for Group B:</strong>
+- Higher mean and median — the "typical" Group B student scored higher.
+- Contains the top performers (multiple students scored 100).
+- If the goal is to maximize the average score, Group B wins.</p>
+<p><strong>Arguments for Group A:</strong>
+- Much more <strong>consistent</strong> performance (lower standard deviation).
+- Nearly all students passed (97.5% vs. 87.5%) — only 3 failures vs. 15.
+- Higher minimum score — no student scored below 39.9.
+- If the goal is to ensure as many students as possible pass, Group A wins decisively.</p>
+<p><strong>Balanced conclusion:</strong></p>
+<blockquote>
+<p>Group B achieved the higher typical score by both mean and median, making it stronger in terms of <strong>central tendency</strong>. However, Group A demonstrated far more <strong>reliable and consistent</strong> performance: its pass rate is 10 percentage points higher, its variability is much smaller, and its weakest student still scored close to the pass threshold.</p>
+<p>If the primary objective is maximizing the average score or producing top-tier students, <strong>Group B</strong> performed better. If the objective is ensuring consistent, above-threshold performance for the greatest number of students, <strong>Group A</strong> performed better overall.</p>
+<p>In most educational contexts, a pass rate of 97.5% with moderate average scores is arguably more desirable than a higher average accompanied by 15 failures. Therefore, a reasonable overall judgment is that <strong>Group A performed better from a reliability perspective</strong>, while <strong>Group B performed better from a peak-performance perspective</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<p>This problem illustrates a fundamental principle of data analysis: <strong>a single summary statistic never tells the full story</strong>. Group B's higher mean (72.4 vs. 69.8) might superficially suggest it is the better group, but this masks critical differences in variability and pass rates. Group B's large standard deviation (18.1 vs. 11.5) reflects a bimodal-like spread — it contains both the dataset's highest achievers and its weakest performers. Group A, meanwhile, is tightly clustered around its mean, resulting in a pass rate of 97.5% compared to Group B's 87.5%.</p>
+<p>The key statistical concepts reinforced here are:
+- <strong>Mean vs. Median</strong>: Both can describe the center but may diverge in skewed distributions.
+- <strong>Variance and Standard Deviation</strong>: Essential for understanding how representative the mean is.
+- <strong>Coefficient of Variation</strong>: Allows scale-free comparison of variability.
+- <strong>Pass rates</strong>: A threshold-based metric that can reverse conclusions drawn from means.
+- <strong>Visual tools</strong> (histograms and boxplots): Irreplaceable for understanding distribution shape.</p>
+<p>Always present multiple statistics and visualizations before drawing conclusions about group comparisons.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
